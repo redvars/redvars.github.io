@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<students>
+  <student id="100026">
+    <name>Joe Average</name>
+    <age>21</age>
+    <major>Biology</major>
+    <results>
+      <result course="Math 101" grade="C-"/>
+      <result course="Biology 101" grade="C+"/>
+      <result course="Statistics 101" grade="D"/>
+    </results>
+  </student>
+  <student id="100078">
+    <name>Jack Doe</name>
+    <age>18</age>
+    <major>Physics</major>
+    <major>XML Science</major>
+    <results>
+      <result course="Math 101" grade="A"/>
+      <result course="XML 101" grade="A-"/>
+      <result course="Physics 101" grade="B+"/>
+      <result course="XML 102" grade="A"/>
+    </results>
+  </student>
+</students>

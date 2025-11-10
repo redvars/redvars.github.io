@@ -1,0 +1,9 @@
+{
+  "name": "assets",
+  "version": "1.0.0",
+  "dependencies": {
+    "@goatui/components": "^0.10.4",
+    "jquery": "^3.5.1",
+    "bootstrap": "^5.1.3"
+  }
+}

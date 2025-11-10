@@ -1,0 +1,48 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+@charset "utf-8";
+@import "mixin";
+
+.project-details {
+  display: flex;
+  gap: var(--spacing-4);
+  margin: var(--spacing-8) 0;
+  .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 7rem;
+    width: 7rem;
+    gap: var(--spacing-2);
+    img {
+      width: 7rem;
+      max-height: 100%;
+    }
+    goat-svg {
+      width: 7rem;
+    }
+  }
+  .role {
+    [type="heading"] {
+      margin-bottom: var(--spacing-2);
+    }
+  }
+}
+
+.read-more {
+  a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    gap: var(--spacing-2);
+  }
+}
+
+
+.item-separator {
+  --border-color: var(--active-ui);
+  padding: var(--spacing-2) 0;
+}
+
+

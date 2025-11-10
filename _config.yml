@@ -6,25 +6,25 @@ include: ['.gitignore']
 sass:
   style: compressed
 
-title: JUSTAOS
-email: support@justaos.com
+title: REDVARS
+email: support@redvars.com
 description: Sleek and powerful platform for faster and easier application development
 tagline: Sleek and powerful platform for faster and easier application development
 
 # Author details
 author:
   name:           'Shivaji Varma'
-  location:        'Bangalore, India'
+  location:        'Hyderabad, India'
   gpage:          +ShivajivarmaDotCom
   email:          contact@shivajivarma.com
   avatar:         /profile.min.png
-  github:         justaos
-  linkedin:       justaos
-  twitter:        just_a_os
+  github:         redvars
+  linkedin:       redvars
+  twitter:        red_vars
 
 # Your website URL (e.g. http://barryclark.github.io or http://www.barryclark.co)
 # Used for Sitemap.xml and your RSS feed
-url: https://justaos.com
+url: https://redvars.com
 
 script: 'https://cdn.jsdelivr.net/npm/@goatui/components@1.3.0/dist/goatui/goatui.esm.js'
 themeCss: 'https://cdn.jsdelivr.net/npm/@goatui/components@1.3.0/dist/goatui/assets/styles/theme.css'
