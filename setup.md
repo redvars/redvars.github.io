@@ -1,12 +1,3 @@
-## Installation
-```bash
-bundle install
-```
-
-## Running
-bundle exec jekyll serve
-
-
 Goal
 ----
 The goal of a REDVARS is to provide developers with a scalable and reliable environment to build products quickly and efficiently.
