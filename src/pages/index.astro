@@ -1,123 +1,236 @@
 ---
 import Layout from '../layouts/Default.astro';
 import site from '../_data/site.json';
-import '../styles/index.page.scss';
+import '../styles/pages/index.scss';
+import Footer from '../components/Footer.astro';
+import BuildBySection from '../components/BuildBySection.astro';
+import { getScriptUrl, getThemeCssUrl } from '../_data/utils.ts';
+
+const isProd = import.meta.env.PROD;
+let envProps;
+
+if (isProd) {
+  envProps = site['prod'];
+} else {
+  envProps = site['dev'];
+}
+
+function jumpingSentence(sentence: string) {
+  let len = sentence.length;
+  return sentence.split(' ').map((word) => {
+    return `<div class='jumping-word'>${word.split('').map((char, index) => {
+      if (char === ' ')
+        return char;
+      return `<h1 style='z-index:${len--};' class='jumping-text'>${char}</h1>`;
+    }).join('')}</div>`;
+  }).join(' ');
+}
+
+const keywords = 'web components, button, input, grid, ui library, calendar, table, accordion, select, search, notifications, modal, card, breadcrumb, tree view, tabs, pagination, tooltip, popover, dropdown, menu, slider, toggle, switch, progress bar, spinner, loader, toast, alert, badge, tag, avatar, chip, divider, list, icon, text, heading, paragraph, label, link, image, checkbox, radio, form, form group, form field';
 ---
 
-<Layout root={true}
-        keywords='SAAS BUILDER, MVP BUILDER, PROTOTYPE BUILDER'>
+<Layout keywords={keywords}>
+
+  <div class='banner'>
 
 
-    <div class="banner">
-        <goat-container>
+    <div class='banner-content'>
 
-            <div class="section-container">
-                <div class="banner-content-section">
-                    <div class="banner-content">
-                        <goat-text type="heading">
-                            Start Here
-                        </goat-text>
-                        <goat-text expressive><b>{site.title}</b> is a sleek and powerful platform for faster and easier
-                            application
-                            development.
-                        </goat-text>
+      <div class="logo-card-container">
+        <div class="logo-card">
+          <img alt="Peacock LOGO" src="/assets/img/logo-plain.webp">
+          <div class="title"><Fragment set:html={jumpingSentence('Peacock')} /></div>
+        </div>
+      </div>
 
-                        <br/><br/>
-                        <goat-button href="https://demo.app.justaos.com" icon="launch">Launch demo instance
-                        </goat-button>
-                        <goat-text>Note: Use username: <b>admin</b> and password: <b>admin</b> to login into instance
-                        </goat-text>
+      <h1 class='banner-title text-display'>
+        The foundation for beautiful user interfaces.
+      </h1>
+      <p class='text-headline'>A light weight customisable web component + css library</p>
 
-                        <br/>
-
-                        <goat-text expressive>Watch demo of TODO application build using {site.title} platform</goat-text>
-                        <goat-button href="https://www.youtube.com/watch?v=PKmrT1YZtE8" color="error"
-                                     icon="logo--youtube">Watch demo
-                        </goat-button>
-                    </div>
-                </div>
-                <div class="banner-image-section">
-                    <img src="/assets/img/demo.png" alt="Image" class="img-fluid">
-                </div>
-            </div>
-
-        </goat-container>
+      <div class='banner-actions '>
+        <wc-button href='#getting-started' size='md' type='primary' icon='arrow--right'>Get
+          Started
+        </wc-button>
+        <wc-button href='/components/' size='md' type='secondary' variant='tonal'>Browse Components</wc-button>
+      </div>
     </div>
 
-    <div class="sections-wrapper">
-        <goat-container class="section">
-            <goat-text type="heading" heading-size="5">Prerequisites</goat-text>
 
-            <div class="tools-item">
-                <img class="tools-icon"
-                     src="https://raw.githubusercontent.com/devicons/devicon/master/icons/denojs/denojs-original.svg"/>
-                Deno v1.30.0 (<goat-link href="https://deno.land/manual@v1.30.0/getting_started/installation" target="_blank">
-                    https://deno.land/manual@v1.30.0/getting_started/installation
-                </goat-link>)
-            </div>
-            <div class="tools-item"><img class="tools-icon"
-                                         src="https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-original.svg"/>
-                PostgreSQL 16 (<goat-link href="https://www.postgresql.org/download/windows/" target="_blank">
-                    https://www.postgresql.org/download/windows/
-                </goat-link>)
-            </div>
+    <wc-toolbar variant="floating" class='social-icons'>
+      <wc-icon-button
+        variant="text"
+        size="xs"
+        color="surface"
+        class='social-icon'
+        aria-label='Github'
+        target='_blank'
+        href={`https://www.github.com/${site.github_username}`}>
+        <wc-icon name="logo--github" provider='carbon'></wc-icon>
+      </wc-icon-button>
+      <wc-icon-button
+        variant="text"
+        size="xs"
+        color="surface"
+        class='social-icon'
+        aria-label='Twitter'
+        target='_blank'
+        href={`https://x.com/${site.twitter_username}`}>
+        <wc-icon name="logo--x" provider='carbon'></wc-icon>
+      </wc-icon-button>
+    </wc-toolbar>
 
-        </goat-container>
+    <BuildBySection />
 
-        <goat-container class="section">
-            <goat-text type='heading' heading-size="5">Install redvars</goat-text>
-            <goat-code-highlighter language="bash">
-      <pre>
-<code>deno install -A --unstable -n justaos https://deno.land/x/justaos/mod.ts</code>
-      </pre>
-            </goat-code-highlighter>
-        </goat-container>
 
-        <goat-container class="section">
-            <goat-text type='heading' heading-size="5">Run application</goat-text>
-            <goat-code-highlighter language="bash">
-<pre>
-<code>justaos new project-name
-cd project-name
-deno run -A --unstable main.ts</code></pre>
-            </goat-code-highlighter>
-            <br/>
-            <goat-text>Run using pm2, as background service</goat-text>
-            <goat-code-highlighter language="bash"><pre>
-<code>pm2 start main.ts --interpreter="deno" --interpreter-args="run -A --unstable"</code></pre>
-            </goat-code-highlighter>
-        </goat-container>
-    </div>
 
-    <div class='social-icons'>
-        <goat-button
-                icon='logo--github'
-                icon-size='lg'
-                variant='ghost'
-                color='dark'
-                dark-mode-color='light'
-                target='_blank'
-                aria-label='Github'
-                href={`https://www.github.com/${site.github_username}`}
-        ></goat-button>
-        <goat-button
-                icon-size='lg'
-                icon='logo--linkedin'
-                color='dark'
-                dark-mode-color='light'
-                variant='ghost'
-                target='_blank'
-                aria-label='Linkedin'
-                href={`https://www.linkedin.com/company/${site.linked_username}`}
-        ></goat-button>
-    </div>
 
-    <div class='made-in-india'>
-        <span>&copy; 2023 <goat-link class='no-decoration' href={site.author_url}>{site.author}</goat-link>.</span>
-        <goat-svg class='country-flag' size='1.5rem'
-                  src='https://cdn.jsdelivr.net/gh/hampusborgos/country-flags@main/svg/in.svg'></goat-svg>
-        Made in India.
-    </div>
+  </div>
 
+
+  <div class='intro-section sections-wrapper'>
+    <wc-container size='max'>
+      <div class='section'>
+        <h2 class='text-headline-large heading-scrollable' id='introduction'>Introduction</h2>
+        <p class='text-large'>{site.title} contains most used web components built using Stencil. So you don't need to
+          include any additional framework dependencies, You can simply import required
+          component js, and right away start using it.
+        </p>
+        <p class='text-large'>Can easily be consumed by any other framework, like Vue, React, Angular, etc.</p>
+        <br />
+        <p class='text-large'>{site.title} components are beautiful Open Source web components under MIT license. They are maintained by
+          <a class='link' href='https://shivajivarma.com'>Shivaji Varma</a>
+          . Do not miss any updates and announcements, stay tuned on our social pages. You can contribute to the project
+          by creating pull requests or issues.
+        </p>
+      </div>
+
+      <div class='section'>
+        <h3 class='text-title-large heading-scrollable' id='getting-started'>Getting Started</h3>
+        <ul style='padding-inline-start: 1.5rem'>
+          <li class='text-body-large'>
+              Put a script tag similar to this
+              <code class='text-code-block'>&lt;script type="module" src="{getScriptUrl()}"&gt;&lt;/script&gt;</code>
+              in the head of your index.html
+          </li>
+          <li class='text-body-large'>Then you can use the element anywhere in your template, JSX, html etc</li>
+        </ul>
+        <div class='container-code'>
+          <wc-tab-group>
+            <wc-tabs>
+              <wc-tab>Usage</wc-tab>
+              <wc-tab>Load single component</wc-tab>
+            </wc-tabs>
+
+            <wc-tab-panel>
+              <wc-code-highlighter language='html' id='get-started-code' class='code-highlighter' />
+              <script is:inline define:vars={{ title: site.title, scriptUrl: getScriptUrl(), themeCss:  getThemeCssUrl()}}>
+                document.getElementById('get-started-code').value = `
+                 &lt;head>
+
+                  &lt;link rel="preconnect" href="https://fonts.googleapis.com">
+                  &lt;link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+                  &lt;link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@100..900&family=Pacifico&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+                  <!-- include your custom theme variable values, view variable names at ${themeCss} -->
+                  &lt;link rel="stylesheet" href='${themeCss}'/>
+                  &lt;script type='module' src='${scriptUrl}'>&lt;/script>
+
+
+                 &lt;/head>
+
+                 &lt;body>
+
+                  <wc-button size='lg' color='primary'>Click me</wc-button>
+
+                 &lt;/body>`;
+              </script>
+            </wc-tab-panel>
+
+            <wc-tab-panel>
+              <wc-code-highlighter language='html' id='load-single-component-code' class='code-highlighter' />
+              <script is:inline define:vars={{ title: site.title, version: site.version, themeCss:  getThemeCssUrl()}}>
+                document.getElementById('load-single-component-code').value = `&lt;head>
+
+                  &lt;link rel="preconnect" href="https://fonts.googleapis.com">
+                  &lt;link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+                  &lt;link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@100..900&family=Pacifico&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+                  <!-- include your custom theme variable values, view variable names at ${themeCss} -->
+                  &lt;link rel="stylesheet" href='${themeCss}' />
+
+                  &lt;script type='module'>
+    import {Button} from "https://cdn.jsdelivr.net/npm/@redvars/peacock@${version}/dist/button.js";
+    customElements.define('my-button', Button);
+ &lt;/script>
+
+
+                 &lt;/head>
+
+                &lt;body>
+
+                  <my-button size='lg' color='primary'>Click me</my-button>
+
+                 &lt;/body>`;
+              </script>
+            </wc-tab-panel>
+          </wc-tab-group>
+        </div>
+      </div>
+
+    </wc-container>
+  </div>
+
+  <Footer />
+
+  <script
+    src='https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js'
+    integrity='sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q=='
+    crossorigin='anonymous'
+    referrerpolicy='no-referrer'
+  ></script>
+
+  <script is:inline>
+    document.addEventListener('DOMContentLoaded', function() {
+
+      document.querySelectorAll('.jumping-text').forEach((elm, index) => {
+
+        setTimeout(() => {
+          elm.classList.add('hover');
+          setTimeout(function() {
+            elm.classList.remove('hover');
+          }, 1800);
+        }, 1000 + (20 * index));
+
+
+        elm.addEventListener('mouseover', () => {
+          if (!elm.classList.contains('hover')) {
+            elm.classList.add('hover');
+            setTimeout(function() {
+              elm.classList.remove('hover');
+            }, 1800);
+          }
+        });
+
+
+      });
+
+      document.querySelector('.title').addEventListener('touchmove', (evt) => {
+        // get the touch element
+        const touch = evt.touches[0];
+
+        // get the DOM element
+        const elm = document.elementFromPoint(touch.clientX, touch.clientY);
+
+
+        if (!elm.classList.contains('hover')) {
+          elm.classList.add('hover');
+          setTimeout(function() {
+            elm.classList.remove('hover');
+          }, 1800);
+        }
+      }, { passive: true });
+    });
+  </script>
 
 </Layout>

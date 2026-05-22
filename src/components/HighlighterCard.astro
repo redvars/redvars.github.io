@@ -9,18 +9,19 @@ const { lang, cssClasses } = Astro.props;
 let html = '';
 if (Astro.slots.has('default')) {
   html = await Astro.slots.render('default');
+  html = html.replaceAll('<', '&lt;');
   html = html.replaceAll('<script>', '&lt;script&gt;').replaceAll('</script>', '&lt;/script&gt;');
 }
 ---
-<goat-card class={cssClasses}>
-  <goat-card-content class='demo-area'>
+<pc-card class={cssClasses}>
+  <pc-card-content class='demo-area'>
     <div class='demo-area-inner'>
       <slot></slot>
     </div>
-  </goat-card-content>
-  <goat-card-content class='no-padding code-area'>
-    <goat-code-highlighter language={lang} class='demo-html'>
+  </pc-card-content>
+  <pc-card-content class='no-padding code-area'>
+    <wc-code-highlighter language={lang} class='demo-html'>
       <pre><code><Fragment set:html={html} /></code></pre>
-    </goat-code-highlighter>
-  </goat-card-content>
-</goat-card>
+    </wc-code-highlighter>
+  </pc-card-content>
+</pc-card>

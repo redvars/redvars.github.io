@@ -1,63 +1,49 @@
 ---
+import Layout from './Base.astro';
+import SideNavigation from '../components/navigation/SideNavigation.astro';
+import MobileNavigation from '../components/navigation/MobileNavigation.astro';
+import PagefindModal from '../components/navigation/PagefindModal.astro';
+import '../styles/layout/default.scss';
+
 interface Props {
   title?: string;
   description?: string;
-  root?: boolean;
   keywords?: string;
 }
 
-const { title, root, description, keywords } = Astro.props;
 
-import Layout from './Base.astro';
-import site from '../_data/site.json';
-
+const {
+  title,
+  description,
+  keywords
+} = Astro.props;
 ---
 
-<Layout title={title || site.title} description={site.tagline} keywords={keywords}>
+<Layout title={title} description={description} keywords={keywords}>
 
-  <nav class='top-nav'>
-    <goat-header color="brand-primary" class="hide-mobile">
-      <div slot='left'>
-        <goat-header-brand logo='/assets/img/logo.png' href='/#' sub-title={site.tagline}></goat-header-brand>
-      </div>
+  <div class="default-layout">
 
-      <div slot='right'>
-
-
-          <goat-header-action
-                  class='show-desktop'
-                  icon='github'
-                  kind="simple"
-                  href={`https://github.com/${site.github_username}/${site.github_project}/issues`}
-                  target='_blank'
-          >Report a issue
-          </goat-header-action>
-      </div>
-    </goat-header>
-
-      <goat-header color="brand-primary" class="show-mobile">
-          <div slot='left'>
-              <goat-header-brand logo='/assets/img/logo.png' href='/#' sub-title={"SAAS Builder"}></goat-header-brand>
-          </div>
-
-          <div slot='right'>
+    <!-- For desktop and tablet -->
+    <div class='side-navigation-container'>
+      <SideNavigation/>
+    </div>
 
 
-              <goat-header-action
-                      class='show-desktop'
-                      icon='github'
-                      kind="simple"
-                      href={`https://github.com/${site.github_username}/${site.github_project}/issues`}
-                      target='_blank'
-              >Report a issue
-              </goat-header-action>
-          </div>
-      </goat-header>
+    <div class="default-layout-content">
 
-  </nav>
+       <!-- For mobile -->
+      <MobileNavigation />
 
-  <main>
-    <slot />
-  </main>
+      <slot />
+    </div>
+  </div>
+
+  <wc-notification-manager position='bottom-right' class="page-notification-manager"></wc-notification-manager>
+
+  <PagefindModal />
+
+
+  <!-- Scripts -->
+  <script src="/assets/js/main.js" is:inline></script>
 
 </Layout>

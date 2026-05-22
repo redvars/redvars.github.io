@@ -1,21 +1,33 @@
 ---
+import GoogleAnalyticsScript from '../components/analytics/GoogleAnalyticsScript.astro';
 interface Props {
   title?: string;
   description?: string;
-  root?: boolean;
   keywords?: any;
 }
 
-const { title, root, description, keywords } = Astro.props;
+const { title, description, keywords } = Astro.props;
 import site from '../_data/site.json';
-import '../styles/base.layout.scss';
+import '../styles/layout/base.scss';
+import { getScriptUrl, getFallbackScriptUrl, getThemeCssUrl } from '../_data/utils.ts';
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
+
+const isProd = import.meta.env.PROD;
 
 function getKeywords() {
   if (keywords) {
     return Astro.props.title + ', ' + keywords;
   } else {
-    return 'Web component, ' + Astro.props.title;
+    return Astro.props.title;
+  }
+}
+
+function getPageTitle() {
+  if (title) {
+    return `${title}  &middot; ${site.title}`;
+  } else {
+    return `${site.title} &middot; ${site.tagline}`;
   }
 }
 ---
@@ -24,13 +36,14 @@ function getKeywords() {
 <html lang='en'>
 <head>
   <!-- Title -->
-  {title ? (<title>{title}  &middot; {site.title}</title>) : <title>{site.title} &middot; {site.tagline}</title>}
+  <title set:html={getPageTitle()}></title>
 
   <!-- Required Meta Tags Always Come First -->
-  <meta charset='utf-8' />
+  <meta charset="utf-8"/>
   <meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no' />
+  <link rel="sitemap" href="/sitemap-index.xml" />
 
-  <link rel='canonical' href={Astro.url + ''} />
+  <link rel='canonical' href={canonicalURL} />
 
   <!-- Author Meta Tags -->
   <meta name='author' content={site.author} />
@@ -41,33 +54,55 @@ function getKeywords() {
   <meta name='description' content={description ? description : site.description} />
 
   <!-- Favicon -->
-  <link rel='shortcut icon' href='/assets/img/favicon.svg' />
+  <link rel='shortcut icon' href='/favicon.svg' />
 
-  <!- Styles -->
-  <link rel='stylesheet' href={site.themeCss} />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-  <!-- GoatUI scripts -->
-  <script type='module' src={site.script}></script>
+
+  <style>
+    body {
+      background: var(--color-surface-container-highest);
+      color: var(--color-on-surface);
+    }
+  </style>
+
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@100..900&family=Pacifico&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+  <!-- Peacock styles -->
+  {isProd ?
+    (
+    <link href={getThemeCssUrl()} rel="stylesheet" />
+    )
+    :
+    (
+    <link href="/assets/peacock/assets/styles.css" rel="stylesheet" />
+    )
+  }
+
 </head>
 <body>
 
 <slot />
 
-<goat-notification-manager position='bottom-right'></goat-notification-manager>
+<!-- GoatUI scripts -->
+{isProd ?
+  (
+  <script
+      type="module"
+      src={getScriptUrl()}
+      onerror={`let s=document.createElement('script'); s.type='module'; s.src='${getFallbackScriptUrl()}'; document.head.appendChild(s);`}>
+      </script>
+  )
+  :
+  (
+  <script
+      type="module"
+      src="/assets/peacock/loader.js"></script>
+  )
+}
 
-<!-- Scripts -->
-<script src='/assets/js/main.js' is:inline></script>
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async is:inline src='https://www.googletagmanager.com/gtag/js?id=G-YVVYZC1HFF'></script>
-<script is:inline>
-  window.dataLayer = window.dataLayer || [];
 
-  function gtag() {
-    dataLayer.push(arguments);
-  }
-
-  gtag('js', new Date());
-  gtag('config', 'G-YVVYZC1HFF');
-</script>
+<GoogleAnalyticsScript/>
 </body>
 </html>

@@ -1,4 +1,3 @@
 User-agent: *
-Disallow:
-Disallow: /no-search/
-Sitemap: https://justaos.com/sitemap.xml
+Allow: /
+Sitemap: https://redvars.com/sitemap-index.xml
