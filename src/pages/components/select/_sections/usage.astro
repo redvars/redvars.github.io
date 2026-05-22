@@ -1,0 +1,66 @@
+---
+export const title = 'Usage';
+export const order = 100;
+import DemoComponentCard from '../../../../components/DemoComponentCard.astro';
+---
+<p>
+  Use <code>&lt;wc-option&gt;</code> children to declare options directly in HTML.
+</p>
+
+<DemoComponentCard lang={'html'}>
+  <wc-select
+    label="Fruit"
+    placeholder="Pick a fruit..."
+    style="width: 20rem"
+  >
+    <wc-option value="">None</wc-option>
+    <wc-option value="apple">Apple</wc-option>
+    <wc-option value="banana">Banana</wc-option>
+    <wc-option value="cherry">Cherry</wc-option>
+    <wc-option value="dragonfruit">Dragonfruit</wc-option>
+    <wc-option value="elderberry">Elderberry</wc-option>
+  </wc-select>
+</DemoComponentCard>
+
+<p>Options can include a Material Symbol icon via the <code>icon</code> attribute.</p>
+
+<DemoComponentCard lang={'html'}>
+  <wc-select
+    label="Action"
+    placeholder="Choose an action..."
+    style="width: 20rem"
+  >
+    <wc-option value="">None</wc-option>
+    <wc-option value="new" icon="add">New file</wc-option>
+    <wc-option value="save" icon="save">Save</wc-option>
+    <wc-option value="delete" icon="delete">Delete</wc-option>
+  </wc-select>
+</DemoComponentCard>
+
+<p>
+  Alternatively, set the <code>options</code> property programmatically when options are
+  determined at runtime.
+</p>
+
+<DemoComponentCard lang={'html'}>
+  <wc-select
+    id="basic-select"
+    label="Fruit"
+    placeholder="Pick a fruit..."
+    variant="outlined"
+    style="width: 20rem"
+  ></wc-select>
+
+  <script is:inline>
+    const sel = document.getElementById('basic-select');
+    sel.options = [
+      { label: 'None', value: '' },
+      { label: 'Apple', value: 'apple' },
+      { label: 'Banana', value: 'banana' },
+      { label: 'Cherry', value: 'cherry' },
+    ];
+    sel.addEventListener('change', function (evt) {
+      console.log('change', evt.detail);
+    });
+  </script>
+</DemoComponentCard>

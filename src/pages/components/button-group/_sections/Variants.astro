@@ -1,0 +1,39 @@
+---
+export const title = 'Variants';
+export const order = 200;
+import DemoComponentCard from '../../../../components/DemoComponentCard.astro';
+---
+<p>The button group supports two layout variants: <strong>standard</strong> (buttons with a gap) and <strong>connected</strong> (buttons with a 2px gap; outer buttons have fully rounded outer corners, middle buttons keep standard rounded corners).</p>
+
+<p><strong>Standard</strong> — buttons are independent with a visible gap between them.</p>
+<DemoComponentCard lang={'html'}>
+  <wc-button-group>
+    <wc-button>First</wc-button>
+    <wc-button>Second</wc-button>
+    <wc-button>Third</wc-button>
+  </wc-button-group>
+</DemoComponentCard>
+
+<p><strong>Connected</strong> — buttons share a 2px gap; outer buttons have fully rounded outer corners and middle buttons use standard rounded corners.</p>
+<DemoComponentCard lang={'html'}>
+  <wc-button-group connected>
+    <wc-button toggle>First</wc-button>
+    <wc-button toggle>Second</wc-button>
+    <wc-button toggle>Third</wc-button>
+  </wc-button-group>
+</DemoComponentCard>
+
+<p>Connected variant also works with icon buttons.</p>
+<DemoComponentCard lang={'html'}>
+  <wc-button-group connected>
+    <wc-icon-button toggle><wc-icon name='format_bold'></wc-icon></wc-icon-button>
+    <wc-icon-button toggle><wc-icon name='format_italic'></wc-icon></wc-icon-button>
+    <wc-icon-button toggle><wc-icon name='format_underlined'></wc-icon></wc-icon-button>
+  </wc-button-group>
+</DemoComponentCard>
+
+<style is:inline>
+  strong {
+    font-weight: bold;
+  }
+</style>

@@ -1,0 +1,23 @@
+---
+export const title = 'Search / Typeahead';
+export const order = 200;
+import DemoComponentCard from '../../../../components/DemoComponentCard.astro';
+---
+<p>Use <code>search="contains"</code> for client-side typeahead filtering.</p>
+
+<DemoComponentCard lang={'html'}>
+  <wc-select
+    label="Action"
+    placeholder="Type to filter..."
+    search="contains"
+    style="width: 20rem"
+  >
+    <wc-option value="">None</wc-option>
+    <wc-option value="new" icon="add">New file</wc-option>
+    <wc-option value="save" icon="save">Save</wc-option>
+    <wc-option value="save-as">Save As</wc-option>
+    <wc-option value="nadine">Nadine Brooks</wc-option>
+    <wc-option value="laura">Laura Ballard</wc-option>
+    <wc-option value="jack">Jack Thompson</wc-option>
+  </wc-select>
+</DemoComponentCard>

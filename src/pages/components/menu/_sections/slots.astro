@@ -1,0 +1,55 @@
+---
+export const title = 'Slots';
+export const order = 200;
+import HighlighterCard from '../../../../components/HighlighterCard.astro';
+---
+
+<HighlighterCard lang={'html'}>
+    <wc-menu class='menu' preview>
+      <wc-menu-item value='cut'>
+        <wc-icon name='cut' slot='start' size='sm'></wc-icon>
+        Cut
+        <span slot='end'>⌘X</span>
+      </wc-menu-item>
+      <wc-menu-item value='copy'>
+        <wc-icon name='copy' slot='start' size='sm'></wc-icon>
+        Copy
+        <span slot='end'>⌘C</span>
+      </wc-menu-item>
+      <wc-menu-item value='paste'>
+        <wc-icon name='paste' slot='start' size='sm'></wc-icon>
+        Paste
+        <span slot='end'>⌘X</span>
+      </wc-menu-item>
+      <wc-divider></wc-divider>
+      <wc-menu-item value='delete'>
+        <wc-icon name='trash-can' slot='start' size='sm'></wc-icon>
+        Delete
+        <span slot='end'>←</span>
+      </wc-menu-item>
+    </wc-menu>
+</HighlighterCard>
+
+<HighlighterCard lang={'html'}>
+  <wc-menu class='menu' preview style='width: 300px'>
+    <wc-menu-item value='shivaji' selected>
+      <pc-avatar src='https://doodleipsum.com/40x40/avatar-3?i=74943b7fc5a9da2affe8c2d8b8558812' size='40px'
+                   slot='start'></pc-avatar>
+      <div slot='headline'>Shivaji Varma</div>
+      <div slot='supporting-text'>Software Engineer</div>
+    </wc-menu-item>
+    <wc-menu-item value='john'>
+      <pc-avatar src='https://doodleipsum.com/40x40/avatar-3?i=6801be2ffb4809eefe713e4fefd7b9ae' size='40px'
+                   slot='start'></pc-avatar>
+      <div slot='headline'>John doe</div>
+      <div slot='supporting-text'>Manager</div>
+    </wc-menu-item>
+
+    <wc-menu-item value='fred'>
+      <pc-avatar src='https://doodleipsum.com/40x40/avatar-3?i=5ff278e220eacb10b8e37efefef406a6' size='40px'
+                   slot='start'></pc-avatar>
+      <div slot='headline'>Fred</div>
+      <div slot='supporting-text'>Director</div>
+    </wc-menu-item>
+  </wc-menu>
+</HighlighterCard>

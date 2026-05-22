@@ -1,0 +1,14 @@
+---
+export const title = 'Usage';
+export const order = 100;
+import DemoComponentCard from '../../../../components/DemoComponentCard.astro';
+---
+<p>Here are different types of inputs.</p>
+
+<DemoComponentCard lang={'html'}>
+  <wc-number-field label='Number'></wc-number-field>
+</DemoComponentCard>
+
+<DemoComponentCard lang={'html'}>
+  <wc-number-field label='Number' stepper></wc-number-field>
+</DemoComponentCard>

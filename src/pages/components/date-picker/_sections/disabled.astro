@@ -1,0 +1,20 @@
+---
+export const title = 'Disabled';
+export const order = 300;
+import HighlighterCard from '../../../../components/HighlighterCard.astro';
+---
+
+<pc-text type='body'
+>Make input look inactive by adding the disabled <code class='highlighter-rouge' data-lang='html'>boolean</code>
+  attribute to any
+  <code class='highlighter-rouge' data-lang='html'>&lt;input&gt;</code> element.
+</pc-text>
+
+<HighlighterCard lang={'html'}>
+  <goat-date-picker disabled></goat-date-picker>
+</HighlighterCard>
+
+<pc-text type="heading" heading-size="3">Read only</pc-text>
+<HighlighterCard lang={'html'}>
+  <goat-date-picker readonly></goat-date-picker>
+</HighlighterCard>

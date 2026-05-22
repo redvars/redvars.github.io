@@ -1,0 +1,122 @@
+---
+export const title = 'Usage';
+export const order = 100;
+import DemoComponentCard from '../../../../components/DemoComponentCard.astro';
+---
+<style is:inline>
+
+  .demo-area-content {
+    position: relative;
+  }
+  .application {
+    height: 20rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .application::before {
+    content: 'application container';
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+  .sub-container {
+    position: relative;
+    height: 13rem;
+    border: 1px dashed var(--color-outline);
+    width: 40rem;
+    padding: 1rem;
+  }
+
+  .sub-container::before {
+    content: 'sub container';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--layer-01);
+  }
+
+  #clear-btn {
+    margin-top: 3rem;
+  }
+</style>
+
+
+
+<DemoComponentCard lang='html' cssClasses='demo-container'>
+
+  <wc-button color=danger id='clear-btn'>Clear</wc-button>
+
+  <div class='application'>
+    <wc-notification-manager name='application-manager' position='bottom-right'></wc-notification-manager>
+
+    <div class='sub-container'>
+
+      <wc-notification-manager name='sub-container-manager' position='top-right'></wc-notification-manager>
+      <wc-button id='notification-btn'>Notification</wc-button>
+      <br /><br />
+      <wc-button id='notification-btn-dismissible'>Dismissible notification</wc-button>
+    </div>
+  </div>
+
+  <script is:inline>
+    let count = 1;
+    let notifications = [];
+    document.getElementById('notification-btn').addEventListener('click', () => {
+      window.dispatchEvent(
+        new CustomEvent('notification', {
+          bubbles: true,
+          detail: {
+            target: 'application-manager',
+            title: 'This is automatic closing notification ' + count++,
+            variant: 'success',
+            subtitle: `This is a subtitle for the notification message ${count - 1}`,
+            callback: function(notificationId) {
+              notifications.push(notificationId);
+            }
+          },
+        }),
+      );
+    });
+
+    document.getElementById('clear-btn').addEventListener('click', () => {
+      window.dispatchEvent(
+        new CustomEvent('notification-dismiss', {
+          bubbles: true,
+          detail: {
+            target: 'application-manager',
+            notifications: notifications,
+          },
+        }),
+      );
+
+      notifications = [];
+    });
+
+    document.getElementById('notification-btn-dismissible').addEventListener('click', () => {
+      window.dispatchEvent(
+        new CustomEvent('notification', {
+          bubbles: true,
+          detail: {
+            target: 'sub-container-manager',
+            title: 'This is dismissible notification ' + count++,
+            variant: 'warning',
+            dismissible: true,
+            subtitle: `This is a subtitle for the notification message ${count - 1}`,
+            action: 'Action',
+          },
+        }),
+      );
+    });
+  </script>
+</DemoComponentCard>

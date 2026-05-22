@@ -1,0 +1,45 @@
+---
+export const title = 'Multi Select';
+export const order = 400;
+import DemoComponentCard from '../../../../components/DemoComponentCard.astro';
+---
+<p>
+  Add the <code>multiple</code> attribute to enable multi-select. Selected options are shown as
+  dismissible chips inside the field.
+</p>
+
+<DemoComponentCard lang={'html'}>
+  <wc-select
+    label="Fruits"
+    placeholder="Pick fruits..."
+    multiple
+    style="width: 24rem"
+  >
+    <wc-option value="apple">Apple</wc-option>
+    <wc-option value="banana">Banana</wc-option>
+    <wc-option value="cherry">Cherry</wc-option>
+    <wc-option value="dragonfruit">Dragonfruit</wc-option>
+    <wc-option value="elderberry">Elderberry</wc-option>
+  </wc-select>
+</DemoComponentCard>
+
+<p>
+  Multi-select also works with typeahead (<code>search="contains"</code>).
+</p>
+
+<DemoComponentCard lang={'html'}>
+  <wc-select
+    label="Tags"
+    placeholder="Search and pick tags..."
+    multiple
+    search="contains"
+    style="width: 24rem"
+  >
+    <wc-option value="js">JavaScript</wc-option>
+    <wc-option value="ts">TypeScript</wc-option>
+    <wc-option value="python">Python</wc-option>
+    <wc-option value="rust">Rust</wc-option>
+    <wc-option value="go">Go</wc-option>
+    <wc-option value="elixir">Elixir</wc-option>
+  </wc-select>
+</DemoComponentCard>

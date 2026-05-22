@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="en" data-astro-cid-5hce7sga>
+<head>
+  <!-- Title -->
+  <title>Table  &middot; Peacock</title>
+
+  <!-- Required Meta Tags Always Come First -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="sitemap" href="/sitemap-index.xml">
+
+  <link rel="canonical" href="https://redvars.com/components/table/">
+
+  <!-- Author Meta Tags -->
+  <meta name="author" content="Shivaji Varma">
+  <meta name="copyright" content="(c) 2026 Shivaji Varma">
+
+  <!--  Meta tags -->
+  <meta name="keywords" content="Table">
+  <meta name="description" content="GOAT UI contains design system and most used web components built using Stencil. So you don't need to include any additional framework dependencies, You can simple import required component js, and right away start using it.">
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="/favicon.svg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+
+  
+
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@100..900&family=Pacifico&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+  <!-- Peacock styles -->
+  <link href="https://cdn.jsdelivr.net/npm/@redvars/peacock@3.8.4/dist/assets/styles.css" rel="stylesheet">
+
+<style>@media(max-width:671px){.show-mobile{display:unset}.hide-mobile,.hide-tablet-portrait-below{display:none}.show-tablet-portrait-below{display:unset}.hide-tablet-landscape-below,.show-desktop{display:none}.hide-desktop{display:unset}}@media(min-width:672px){.show-mobile,.hide-tablet-portrait-below{display:none}.show-tablet-portrait-below{display:unset}.hide-tablet-landscape-below,.show-desktop{display:none}.hide-desktop{display:unset}}@media(min-width:1056px){.show-mobile,.hide-tablet-landscape-below,.show-tablet-portrait-below{display:none}.hide-tablet-portrait-below,.hide-desktop{display:unset}.show-desktop{display:none}}@media(min-width:1312px){.hide-tablet-landscape-below{display:unset}.show-tablet-portrait-below{display:none}.hide-tablet-portrait-below{display:unset}.hide-desktop{display:none}.show-desktop{display:unset}}.with-sidebar-layout{display:flex;background:var(--color-surface-container)}@media(min-width:1056px){.with-sidebar-layout{height:100vh}}.with-sidebar-layout-content{background:var(--color-surface);flex:1}@media(min-width:1056px){.with-sidebar-layout-content{overflow-x:auto}}.sidenav-container{position:relative;display:none;height:100vh;overflow-y:auto;border-right:1px solid var(--color-outline-variant);width:15rem}.sidenav{position:absolute;width:100%;padding-bottom:var(--spacing-150);padding-inline:var(--spacing-100)}@media(min-width:1056px){.sidenav-container{display:block}}
+.article-layout{display:flex}.article-layout .article{flex:1}@media(min-width:1056px){.article-layout .article{margin-inline-end:15rem;margin-block-start:4rem}}.article-layout .article .article-title{margin-block-end:1rem}.article-layout .article .article-description{margin-block-end:2rem}.article-layout .article .section{margin-block-end:3rem}.article-layout .article .section>h2{font-family:var(--typography-headline-large-font-family)!important;font-size:var(--typography-headline-large-font-size)!important;font-weight:var(--typography-headline-large-font-weight)!important;line-height:var(--typography-headline-large-line-height)!important;letter-spacing:var(--typography-headline-large-letter-spacing)!important;margin-block-end:1rem}.article-layout .article .section>h3{font-family:var(--typography-title-large-font-family)!important;font-size:var(--typography-title-large-font-size)!important;font-weight:var(--typography-title-large-font-weight)!important;line-height:var(--typography-title-large-line-height)!important;letter-spacing:var(--typography-title-large-letter-spacing)!important;margin-block-end:1rem}.article-layout .article .section>p{font-family:var(--typography-body-large-font-family)!important;font-size:var(--typography-body-large-font-size)!important;font-weight:var(--typography-body-large-font-weight)!important;line-height:var(--typography-body-large-line-height)!important;letter-spacing:var(--typography-body-large-letter-spacing)!important;margin-block-end:.5rem}.article-layout .article .section code{background-color:var(--color-surface-variant);text-shadow:0 1px 1px var(--color-surface-variant);color:var(--color-on-surface);border-radius:var(--shape-corner-extra-small);padding:var(--spacing-050);font-family:var(--font-family-monospace);display:inline-block;max-width:100%;white-space:pre-wrap;word-break:break-word;overflow-wrap:anywhere;vertical-align:middle}.on-this-page{display:none}@media(min-width:1056px){.on-this-page{display:block}}.on-this-page{width:12rem;margin-inline-end:1rem;margin-block-start:4rem;position:fixed;right:0;top:0}.on-this-page .section-nav{display:flex;flex-direction:column;margin-block:.5rem;margin-inline-start:-.5rem}.on-this-page .section-nav wc-sidebar-menu-item[level="1"]{position:relative;--typography-label-large-font-size: .8rem;--sidebar-menu-item-height: 2.25rem;--sidebar-menu-item-content-padding: 1.75rem .75rem}.on-this-page .section-nav wc-sidebar-menu-item[level="1"]:before{content:"";position:absolute;inset-inline-start:.75rem;top:50%;transform:translateY(-50%);width:5px;height:5px;border-radius:50%;border:1.5px solid currentColor;opacity:.5;z-index:3;pointer-events:none}.on-this-page .sub-section-nav-links{list-style:circle;padding-inline-start:1rem;margin-block-start:.25rem}.on-this-page .sub-section-nav-links li{margin-block:.25rem}.on-this-page .sub-section-nav-links li wc-link{overflow:hidden;text-overflow:ellipsis;display:block;font-size:.85em}.on-this-page .sponser-icon{--icon-color: var(--color-red)}
+.footer-with-about{width:100%;background:var(--color-surface);border-top:1px solid var(--color-outline-variant);padding:1.5rem 2rem;display:flex;gap:1rem}.footer-with-about .section-title{margin-block-end:var(--spacing-200)}.footer-with-about .about-content .section-title{font-family:Pacifico,sans-serif!important}.footer-with-about .about-content p{margin-block-end:var(--spacing-200)}.footer-with-about .footer-links .section-nav-links{margin-block:0;padding-inline-start:1.25rem}.footer-with-about .footer-social-links .section-nav-links{list-style:none;display:flex;margin:0;padding:0;gap:1rem}.footer-with-about{flex-direction:column}.footer-with-about .about,.footer-with-about .footer-links{flex:1}.footer-with-about .footer-social-links{flex:1;justify-content:center}@media(min-width:1056px){.footer-with-about{flex-direction:row}.footer-with-about .about{flex:2}.footer-with-about .footer-links{flex:1}.footer-with-about .footer-social-links{flex:1;justify-content:flex-start}}
+.navigation-rail[data-astro-cid-3uomyaio]{position:fixed;--nav-rail-width: var(--side-navigation-width);--nav-rail-container-color: var(--container-surface-container-high)}#hide-main-menu[data-astro-cid-jrsah6v3]{margin-inline-start:-1.25rem;margin-block-start:-1rem}#app-bar-title[data-astro-cid-jrsah6v3]{display:inline-flex;align-items:center;gap:.5rem;color:var(--color-on-surface);text-decoration:none}#app-bar-title[data-astro-cid-jrsah6v3] img[data-astro-cid-jrsah6v3]{width:22px}@media(max-width:671px){.show-mobile{display:unset}.hide-mobile,.hide-tablet-portrait-below{display:none}.show-tablet-portrait-below{display:unset}.hide-tablet-landscape-below,.show-desktop{display:none}.hide-desktop{display:unset}}@media(min-width:672px){.show-mobile,.hide-tablet-portrait-below{display:none}.show-tablet-portrait-below{display:unset}.hide-tablet-landscape-below,.show-desktop{display:none}.hide-desktop{display:unset}}@media(min-width:1056px){.show-mobile,.hide-tablet-landscape-below,.show-tablet-portrait-below{display:none}.hide-tablet-portrait-below,.hide-desktop{display:unset}.show-desktop{display:none}}@media(min-width:1312px){.hide-tablet-landscape-below{display:unset}.show-tablet-portrait-below{display:none}.hide-tablet-portrait-below{display:unset}.hide-desktop{display:none}.show-desktop{display:unset}}.default-layout{display:flex;height:100vh;--side-navigation-width: 6rem}.default-layout .side-navigation-container,.default-layout .default-layout-content{height:100%;overflow-y:auto}.default-layout .side-navigation-container{display:none;width:var(--side-navigation-width)}.default-layout .default-layout-content{flex:1}@media(min-width:1056px){.default-layout .side-navigation-container{display:block}}html[dir=ltr] [data-pf-sr-hidden]{left:-10000px}html[dir=ltr] [data-pf-sr-hidden]{right:-10000px}.heading-scrollable:before{content:"";display:block;height:calc(var(--header-height) + 1rem);margin-top:calc(-1 * var(--header-height) - 1rem);visibility:hidden;pointer-events:none}.sections-wrapper{padding-block:var(--spacing-1000)}.sections-wrapper .section{padding-bottom:var(--spacing-600)}.sections-wrapper .section:last-child{padding-bottom:0}@media(max-width:671px){.container-code{margin-inline:-1rem}}.mobile-bottom-nav{position:fixed;bottom:0;left:0;right:0;z-index:1000}.page-notification-manager{position:fixed}
+@media(max-width:671px){.show-mobile{display:unset}.hide-mobile,.hide-tablet-portrait-below{display:none}.show-tablet-portrait-below{display:unset}.hide-tablet-landscape-below,.show-desktop{display:none}.hide-desktop{display:unset}}@media(min-width:672px){.show-mobile,.hide-tablet-portrait-below{display:none}.show-tablet-portrait-below{display:unset}.hide-tablet-landscape-below,.show-desktop{display:none}.hide-desktop{display:unset}}@media(min-width:1056px){.show-mobile,.hide-tablet-landscape-below,.show-tablet-portrait-below{display:none}.hide-tablet-portrait-below,.hide-desktop{display:unset}.show-desktop{display:none}}@media(min-width:1312px){.hide-tablet-landscape-below{display:unset}.show-tablet-portrait-below{display:none}.hide-tablet-portrait-below{display:unset}.hide-desktop{display:none}.show-desktop{display:unset}}*{box-sizing:border-box;font-family:var(--font-family-sans)}html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font:inherit;vertical-align:baseline}html{scroll-behavior:smooth;font-size:16px}:not(:defined){visibility:hidden}.primary-scrollbar::selection{color:var(--color-surface);background:var(--color-primary)}.primary-scrollbar::-webkit-scrollbar{background-color:transparent;width:var(--scrollbar-width)}.primary-scrollbar::-webkit-scrollbar-thumb{background-color:var(--color-primary);border-radius:calc(var(--scrollbar-width) / 2)}.primary-scrollbar.stop-scroll{overflow-y:hidden}.markdown h1{font-family:var(--typography-display-large-font-family)!important;font-size:var(--typography-display-large-font-size)!important;font-weight:var(--typography-display-large-font-weight)!important;line-height:var(--typography-display-large-line-height)!important;letter-spacing:var(--typography-display-large-letter-spacing)!important;margin-bottom:var(--spacing-200)}.markdown h2{font-family:var(--typography-headline-large-font-family)!important;font-size:var(--typography-headline-large-font-size)!important;font-weight:var(--typography-headline-large-font-weight)!important;line-height:var(--typography-headline-large-line-height)!important;letter-spacing:var(--typography-headline-large-letter-spacing)!important;margin-bottom:var(--spacing-150)}.markdown h3{font-family:var(--typography-headline-medium-font-family)!important;font-size:var(--typography-headline-medium-font-size)!important;font-weight:var(--typography-headline-medium-font-weight)!important;line-height:var(--typography-headline-medium-line-height)!important;letter-spacing:var(--typography-headline-medium-letter-spacing)!important;margin-bottom:var(--spacing-100)}.markdown p{font-family:var(--typography-body-large-font-family)!important;font-size:var(--typography-body-large-font-size)!important;font-weight:var(--typography-body-large-font-weight)!important;line-height:var(--typography-body-large-line-height)!important;letter-spacing:var(--typography-body-large-letter-spacing)!important;margin-bottom:var(--spacing-150)}body{background:var(--color-surface-container-highest);color:var(--color-on-surface)}
+</style></head>
+<body data-astro-cid-5hce7sga>
+
+
+
+  <div class="default-layout">
+
+    <!-- For desktop and tablet -->
+    <div class="side-navigation-container">
+      
+
+<wc-navigation-rail class="navigation-rail" data-astro-cid-3uomyaio="true">
+
+
+
+  <wc-fab slot="header" id="search-btn" class="search-button" lowered="true" color="primary" aria-label="Search components" data-astro-cid-3uomyaio="true"><wc-icon name="search" data-astro-cid-3uomyaio="true"></wc-icon></wc-fab>
+
+  <wc-navigation-rail-item href="/#" aria-label="Go to Home" data-astro-cid-3uomyaio="true">
+    <img src="/assets/img/logo-plain.webp" slot="icon" class="logo" alt="peacock" style="width: 32px;" data-astro-cid-3uomyaio>
+    Home
+  </wc-navigation-rail-item>
+  <wc-navigation-rail-item href="/components" aria-label="Go to Components" active="true" data-astro-cid-3uomyaio="true">
+    <wc-icon slot="icon" name="settings" data-astro-cid-3uomyaio="true"></wc-icon>
+    Components
+  </wc-navigation-rail-item>
+  <wc-navigation-rail-item href="/color" aria-label="Go to Colors" data-astro-cid-3uomyaio="true">
+    <wc-icon slot="icon" name="palette" data-astro-cid-3uomyaio="true"></wc-icon>
+    Colors
+  </wc-navigation-rail-item>
+  <wc-navigation-rail-item href="/components/text" aria-label="Go to Typography" data-astro-cid-3uomyaio="true">
+    <wc-icon slot="icon" name="font_download" data-astro-cid-3uomyaio="true"></wc-icon>
+    Typography
+  </wc-navigation-rail-item>
+
+  <wc-navigation-rail-item href="/blog" title="Go to Blog" data-astro-cid-3uomyaio="true">
+    <wc-icon slot="icon" name="pages" data-astro-cid-3uomyaio="true"></wc-icon>
+    Blog
+  </wc-navigation-rail-item>
+
+  <wc-navigation-rail-item href="/blocks" aria-label="Go to Blocks" data-astro-cid-3uomyaio="true">
+    <wc-icon slot="icon" name="grid_view" data-astro-cid-3uomyaio="true"></wc-icon>
+    Blocks
+  </wc-navigation-rail-item>
+
+
+  <wc-navigation-rail-item slot="footer" class="dir-switcher" aria-label="Toggle ltr/rtl direction" data-astro-cid-3uomyaio="true">
+    <wc-icon slot="icon" class="icon" data-astro-cid-3uomyaio="true"></wc-icon>
+  </wc-navigation-rail-item>
+
+  <wc-navigation-rail-item slot="footer" class="theme-switcher" aria-label="Toggle light/dark mode" data-astro-cid-3uomyaio="true">
+    <wc-icon slot="icon" class="icon" data-astro-cid-3uomyaio="true"></wc-icon>
+  </wc-navigation-rail-item>
+</wc-navigation-rail>
+    </div>
+
+
+    <div class="default-layout-content">
+
+       <!-- For mobile -->
+      
+
+<wc-app-bar class="show-tablet-portrait-below" data-astro-cid-jrsah6v3="true">
+  <wc-icon-button slot="leading" variant="text" id="show-main-menu" data-astro-cid-jrsah6v3="true">
+    <wc-icon name="menu" data-astro-cid-jrsah6v3="true"></wc-icon>
+  </wc-icon-button>
+
+  <a id="app-bar-title" href="/" data-astro-cid-jrsah6v3>
+    <img src="/assets/img/logo-plain.webp" class="logo" alt="peacock" data-astro-cid-jrsah6v3>
+    Peacock
+  </a>
+  <wc-icon-button slot="trailing" variant="text" class="search-button" data-astro-cid-jrsah6v3="true">
+    <wc-icon name="search" data-astro-cid-jrsah6v3="true"></wc-icon>
+  </wc-icon-button>
+</wc-app-bar>
+
+<wc-side-sheet id="main-menu-modal" variant="modal" position="left" class="show-tablet-portrait-below" data-astro-cid-jrsah6v3="true">
+
+  <wc-icon-button variant="text" id="hide-main-menu" data-astro-cid-jrsah6v3="true">
+    <wc-icon name="close" data-astro-cid-jrsah6v3="true"></wc-icon>
+  </wc-icon-button>
+
+  <wc-list style="width: min(100%, 28rem);" data-astro-cid-jrsah6v3="true">
+
+    <wc-list-item href="/#" aria-label="Go to Home" data-astro-cid-jrsah6v3="true">
+      <img src="/assets/img/logo-plain.webp" slot="leading" class="logo" alt="peacock" style="width: 32px;" data-astro-cid-jrsah6v3>
+      Home
+    </wc-list-item>
+    <wc-list-item href="/components" aria-label="Go to Components" active="true" data-astro-cid-jrsah6v3="true">
+      <wc-icon slot="leading" name="settings" data-astro-cid-jrsah6v3="true"></wc-icon>
+      Components
+    </wc-list-item>
+    <wc-list-item href="/color" aria-label="Go to Colors" data-astro-cid-jrsah6v3="true">
+      <wc-icon slot="leading" name="palette" data-astro-cid-jrsah6v3="true"></wc-icon>
+      Colors
+    </wc-list-item>
+    <wc-list-item href="/components/text" aria-label="Go to Typography" data-astro-cid-jrsah6v3="true">
+      <wc-icon slot="leading" name="font_download" data-astro-cid-jrsah6v3="true"></wc-icon>
+      Typography
+    </wc-list-item>
+
+    <wc-list-item href="/blog" title="Go to Blog" data-astro-cid-jrsah6v3="true">
+      <wc-icon slot="leading" name="pages" data-astro-cid-jrsah6v3="true"></wc-icon>
+      Blog
+    </wc-list-item>
+
+    <wc-list-item href="/blocks" aria-label="Go to Blocks" data-astro-cid-jrsah6v3="true">
+      <wc-icon slot="leading" name="grid_view" data-astro-cid-jrsah6v3="true"></wc-icon>
+      Blocks
+    </wc-list-item>
+
+
+    <wc-list-item class="dir-switcher" aria-label="Toggle ltr/rtl direction" title="Go to Blog" data-astro-cid-jrsah6v3="true">
+      <wc-icon slot="leading" class="icon" data-astro-cid-jrsah6v3="true"></wc-icon>
+      Direction
+    </wc-list-item>
+
+    <wc-list-item class="theme-switcher" aria-label="Toggle light/dark mode" data-astro-cid-jrsah6v3="true">
+      <wc-icon slot="leading" class="icon" data-astro-cid-jrsah6v3="true"></wc-icon>
+      Theme
+    </wc-list-item>
+
+  </wc-list>
+</wc-side-sheet>
+
+<script type="module">const e=document.querySelector("#main-menu-modal");document.querySelector("#show-main-menu").addEventListener("click",()=>{e.show()});document.querySelector("#hide-main-menu").addEventListener("click",()=>{e.hide()});</script>
+
+      
+
+  <div class="with-sidebar-layout">
+
+    <div class="sidenav-container">
+      <wc-sidebar-menu class="sidenav" selected-item="/components/table/">
+        <wc-sidebar-menu-item label="Components Overview" value="/components/" href="/components/"></wc-sidebar-menu-item><wc-sidebar-menu-item label="Accordion" value="/components/accordion/" href="/components/accordion/"></wc-sidebar-menu-item><wc-sidebar-menu-item label="Alert" value="/components/alert/" href="/components/alert/"></wc-sidebar-menu-item><wc-sidebar-menu-item label="App Bar" value="/components/app-bar/" href="/components/app-bar/"></wc-sidebar-menu-item><wc-sidebar-menu-item label="Avatar" value="/components/avatar/" href="/components/avatar/"></wc-sidebar-menu-item><wc-sidebar-menu-item label="Badge" value="/components/badge/" href="/components/badge/"></wc-sidebar-menu-item><wc-sidebar-menu-item label="Bottom Sheet" value="/components/bottom-sheet/" href="/components/bottom-sheet/"></wc-sidebar-menu-item><wc-sidebar-menu-item label="Breadcrumb" value="/components/breadcrumb/" href="/components/breadcrumb/"></wc-sidebar-menu-item><wc-sidebar-menu-item label="Button" value="/components/button/" href="/components/button/"></wc-sidebar-menu-item><wc-sidebar-menu-item label="Button Group" value="/components/button-group/" href="/components/button-group/"></wc-sidebar-menu-item><wc-sidebar-menu-item label="Calendar" value="/components/calendar/" href="/components/calendar/"></wc-sidebar-menu-item><wc-sidebar-menu-item label="Canvas" value="/components/canvas/" href="/components/canvas/"></wc-sidebar-menu-item><wc-sidebar-menu-item label="Card" value="/components/card/" href="/components/card/"></wc-sidebar-menu-item><wc-sidebar-menu-item label="Chart Bar" value="/components/chart-bar/" href="/components/chart-bar/"></wc-sidebar-menu-item><wc-sidebar-menu-item label="Chart Doughnut" value="/components/chart-doughnut/" href="/components/chart-doughnut/"></wc-sidebar-menu-item><wc-sidebar-menu-item label="Chart Pie" value="/components/chart-pie/" href="/components/chart-pie/"></wc-sidebar-menu-item><wc-sidebar-menu-item label="Chart Stacked Bar" value="/components/chart-stacked-bar/" href="/components/chart-stacked-bar/"></wc-sidebar-menu-item><wc-sidebar-menu-item label="Checkbox" value="/components/checkbox/" href="/components/checkbox/"></wc-sidebar-menu-item><wc-sidebar-menu-item label="Chip" value="/components/chip/" href="/components/chip/"></wc-sidebar-menu-item><wc-sidebar-menu-item label="Circular Progress" value="/components/circular-progress/" href="/components/circular-progress/"></wc-sidebar-menu-item><wc-sidebar-menu-item label="Clock" value="/components/clock/" href="/components/clock/"></wc-sidebar-menu-item><wc-sidebar-menu-item label="Code Editor" value="/components/code-editor/" href="/components/code-editor/"></wc-sidebar-menu-item><wc-sidebar-menu-item label="Code Highlighter" value="/components/code-highlighter/" href="/components/code-highlighter/"></wc-sidebar-menu-item><wc-sidebar-menu-item label="Color Picker" value="/components/color-picker/" href="/components/color-picker/"></wc-sidebar-menu-item><wc-sidebar-menu-item label="Condition Builder" value="/components/condition-builder/" href="/components/condition-builder/"></wc-sidebar-menu-item><wc-sidebar-menu-item label="Container" value="/components/container/" href="/components/container/"></wc-sidebar-menu-item><wc-sidebar-menu-item label="Date Picker" value="/components/date-picker/" href="/components/date-picker/"></wc-sidebar-menu-item><wc-sidebar-menu-item label="Divider" value="/components/divider/" href="/components/divider/"></wc-sidebar-menu-item><wc-sidebar-menu-item label="Dropdown Button" value="/components/dropdown-button/" href="/components/dropdown-button/"></wc-sidebar-menu-item><wc-sidebar-menu-item label="Elevation" value="/components/elevation/" href="/components/elevation/"></wc-sidebar-menu-item><wc-sidebar-menu-item label="Empty State" value="/components/empty-state/" href="/components/empty-state/"></wc-sidebar-menu-item><wc-sidebar-menu-item label="FAB" value="/components/fab/" href="/components/fab/"></wc-sidebar-menu-item><wc-sidebar-menu-item label="Field" value="/components/field/" href="/components/field/"></wc-sidebar-menu-item><wc-sidebar-menu-item label="Flow Designer" value="/components/flow-designer/" href="/components/flow-designer/"></wc-sidebar-menu-item><wc-sidebar-menu-item label="Focus Ring" value="/components/focus-ring/" href="/components/focus-ring/"></wc-sidebar-menu-item><wc-sidebar-menu-item label="HTML Editor" value="/components/html-editor/" href="/components/html-editor/"></wc-sidebar-menu-item><wc-sidebar-menu-item label="Icon" value="/components/icon/" href="/components/icon/"></wc-sidebar-menu-item><wc-sidebar-menu-item label="Icon Button" value="/components/icon-button/" href="/components/icon-button/"></wc-sidebar-menu-item><wc-sidebar-menu-item label="Image" value="/components/image/" href="/components/image/"></wc-sidebar-menu-item><wc-sidebar-menu-item label="Input" value="/components/input/" href="/components/input/"></wc-sidebar-menu-item><wc-sidebar-menu-item label="Item" value="/components/item/" href="/components/item/"></wc-sidebar-menu-item><wc-sidebar-menu-item label="Linear Progress" value="/components/linear-progress/" href="/components/linear-progress/"></wc-sidebar-menu-item><wc-sidebar-menu-item label="Link" value="/components/link/" href="/components/link/"></wc-sidebar-menu-item><wc-sidebar-menu-item label="List" value="/components/list/" href="/components/list/"></wc-sidebar-menu-item><wc-sidebar-menu-item label="Menu" value="/components/menu/" href="/components/menu/"></wc-sidebar-menu-item><wc-sidebar-menu-item label="Modal" value="/components/modal/" href="/components/modal/"></wc-sidebar-menu-item><wc-sidebar-menu-item label="Navigation Rail" value="/components/navigation-rail/" href="/components/navigation-rail/"></wc-sidebar-menu-item><wc-sidebar-menu-item label="Notification" value="/components/notification/" href="/components/notification/"></wc-sidebar-menu-item><wc-sidebar-menu-item label="Notification Manager" value="/components/notification-manager/" href="/components/notification-manager/"></wc-sidebar-menu-item><wc-sidebar-menu-item label="Number Counter" value="/components/number-counter/" href="/components/number-counter/"></wc-sidebar-menu-item><wc-sidebar-menu-item label="Number Field" value="/components/number-field/" href="/components/number-field/"></wc-sidebar-menu-item><wc-sidebar-menu-item label="Pagination" value="/components/pagination/" href="/components/pagination/"></wc-sidebar-menu-item><wc-sidebar-menu-item label="Popover" value="/components/popover/" href="/components/popover/"></wc-sidebar-menu-item><wc-sidebar-menu-item label="Ripple" value="/components/ripple/" href="/components/ripple/"></wc-sidebar-menu-item><wc-sidebar-menu-item label="Search" value="/components/search/" href="/components/search/"></wc-sidebar-menu-item><wc-sidebar-menu-item label="Segmented Button Group" value="/components/segmented-button-group/" href="/components/segmented-button-group/"></wc-sidebar-menu-item><wc-sidebar-menu-item label="Select" value="/components/select/" href="/components/select/"></wc-sidebar-menu-item><wc-sidebar-menu-item label="Sidebar Menu" value="/components/sidebar-menu/" href="/components/sidebar-menu/"></wc-sidebar-menu-item><wc-sidebar-menu-item label="Side Sheet" value="/components/side-sheet/" href="/components/side-sheet/"></wc-sidebar-menu-item><wc-sidebar-menu-item label="Skeleton" value="/components/skeleton/" href="/components/skeleton/"></wc-sidebar-menu-item><wc-sidebar-menu-item label="Slider" value="/components/slider/" href="/components/slider/"></wc-sidebar-menu-item><wc-sidebar-menu-item label="Snackbar" value="/components/snackbar/" href="/components/snackbar/"></wc-sidebar-menu-item><wc-sidebar-menu-item label="Spinner" value="/components/spinner/" href="/components/spinner/"></wc-sidebar-menu-item><wc-sidebar-menu-item label="Split Button" value="/components/split-button/" href="/components/split-button/"></wc-sidebar-menu-item><wc-sidebar-menu-item label="SVG" value="/components/svg/" href="/components/svg/"></wc-sidebar-menu-item><wc-sidebar-menu-item label="Switch" value="/components/switch/" href="/components/switch/"></wc-sidebar-menu-item><wc-sidebar-menu-item label="Table" value="/components/table/" href="/components/table/"></wc-sidebar-menu-item><wc-sidebar-menu-item label="Tabs" value="/components/tabs/" href="/components/tabs/"></wc-sidebar-menu-item><wc-sidebar-menu-item label="Tag" value="/components/tag/" href="/components/tag/"></wc-sidebar-menu-item><wc-sidebar-menu-item label="Textarea" value="/components/textarea/" href="/components/textarea/"></wc-sidebar-menu-item><wc-sidebar-menu-item label="Time Picker" value="/components/time-picker/" href="/components/time-picker/"></wc-sidebar-menu-item><wc-sidebar-menu-item label="Toolbar" value="/components/toolbar/" href="/components/toolbar/"></wc-sidebar-menu-item><wc-sidebar-menu-item label="Tooltip" value="/components/tooltip/" href="/components/tooltip/"></wc-sidebar-menu-item><wc-sidebar-menu-item label="URL Field" value="/components/url-field/" href="/components/url-field/"></wc-sidebar-menu-item><wc-sidebar-menu-item label="Footer" value="/components/footer/" href="/components/footer/"></wc-sidebar-menu-item><wc-sidebar-menu-item label="Text" value="/components/text/" href="/components/text/"></wc-sidebar-menu-item>
+      </wc-sidebar-menu>
+    </div>
+
+    <div class="with-sidebar-layout-content">
+      
+
+
+  <div class="with-components-sidebar-layout">
+    
+    
+  <div class="article-layout">
+
+  <article class="article">
+    <wc-container size="lg">
+
+        <h1 class="text-display article-title">Table</h1>
+        <div class="article-description text-title-large"><p>A configurable component for displaying tabular data.</p>
+</div>
+
+        <section id="section-usage" class="section">
+              <h2 class="section-title heading-scrollable text-headline">Usage</h2>
+
+              <style>
+  .table-demo {
+    width: 90%;
+  }
+</style>
+
+<style>
+  .demo-card {
+    container: democardcontainer / inline-size;
+    margin-bottom: var(--spacing-200);
+
+    .demo-area {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 10rem;
+
+      background: var(--color-surface);
+      padding: var(--spacing-200);
+      border-bottom: 1px solid var(--color-outline-variant);
+    }
+
+    .demo-area-content {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: start;
+      justify-content: center;
+      gap: var(--spacing-200);
+      width: 100%;
+    }
+
+    .demo-area.inline {
+      flex-direction: row;
+    }
+
+    .demo-component-divider {
+      --divider-spacing: 0;
+    }
+  }
+</style>
+
+<wc-card variant="outlined" class="demo-card">
+  <wc-card-content class="demo-area ">
+    <div class="demo-area-content">
+       
+
+  <div class="table-demo">
+
+    <wc-table id="table" key-field="_id" selection-type="checkbox" paginate="true" sortable="true"></wc-table>
+
+    <pc-card-content>
+      <div class="result">
+        <p class="text-title">Cell Click Result :</p>
+        <div>
+          <b>Cell Data :</b>
+          <pre id="record"></pre>
+        </div>
+        <div><b>Column :</b> <span id="column"></span></div>
+        <br>
+        <div><b>Selected Rows :</b> <span id="selected-rows"></span></div>
+        <br>
+        <div>Check console for full event detail.</div>
+      </div>
+  </pc-card-content>
+
+   </div>
+
+    <script>(function(){const dataSource = [{"_id":"5e7118ddce4b3d577956457f","index":0,"guid":"ae04f5ed-5cd3-491e-8e9a-6c6b31a4ba7d","isActive":false,"balance":"$2,443.30","age":21,"eyeColor":"blue","name":"Courtney Courtney Courtney Courtney Courtney Courtney Courtney Courtney Courtney Courtney Courtney Courtney ","company":"XYQAG","email":"undefined.undefined@xyqag.co.uk","phone":"+1 (839) 560-3581","address":"326 Irving Street, Grimsley, Texas, 4048"},{"_id":"5e7118dd240daa9a2f209fd9","index":1,"guid":"c9db5a9f-069e-4343-8c11-3d65e92275c2","isActive":true,"balance":"$1,623.55","age":34,"eyeColor":"red","name":"Wilcox","company":"STRALOY","email":"undefined.undefined@straloy.io","phone":"+1 (826) 447-3398","address":"624 Sullivan Street, Waterford, Mississippi, 5396"},{"_id":"5e7118ddc9e046778096d134","index":2,"guid":"6b298b9c-98c1-4fc0-b27d-656b2957fb74","isActive":false,"balance":"$1,506.91","age":22,"eyeColor":"red","name":"Lucas","company":"LUNCHPOD","email":"undefined.undefined@lunchpod.us","phone":"+1 (883) 503-3953","address":"257 Colonial Road, Odessa, South Carolina, 9336"},{"_id":"5e7118dd71803419299a491f","index":3,"guid":"a4a40c2f-cbbe-426c-9eca-72edb79276ab","isActive":true,"balance":"$3,574.16","age":23,"eyeColor":"green","name":"David","company":"VELOS","email":"undefined.undefined@velos.info","phone":"+1 (923) 580-3316","address":"330 Saratoga Avenue, Richford, Tennessee, 4924"},{"_id":"5e7118dd8259ab09b69b933d","index":4,"guid":"bb0c5530-4912-421c-bd05-d21c5549780c","isActive":true,"balance":"$1,597.90","age":30,"eyeColor":"blue","name":"Dorothea","company":"ZILLAN","email":"undefined.undefined@zillan.net","phone":"+1 (826) 421-2410","address":"472 Hutchinson Court, Gila, South Dakota, 2145"},{"_id":"5e7118dd257ef0fd4c3f777a","index":5,"guid":"8b972c44-af1b-4f87-9655-b16a7f8d18d6","isActive":false,"balance":"$2,619.84","age":25,"eyeColor":"blue","name":"Guy","company":"ISOTERNIA","email":"undefined.undefined@isoternia.com","phone":"+1 (885) 454-2649","address":"662 Battery Avenue, Trinway, Arizona, 1492"},{"_id":"5e7118ddc207ba62b6ea05f3","index":6,"guid":"fbfec03e-3cb3-4436-a232-9a4ce1d0ca37","isActive":true,"balance":"$3,340.48","age":35,"eyeColor":"green","name":"Cristina","company":"ASSURITY","email":"undefined.undefined@assurity.tv","phone":"+1 (949) 576-2111","address":"468 Junius Street, Kipp, District Of Columbia, 5425"},{"_id":"5e7118ddb536a4b1810b5bd1","index":7,"guid":"ee503e84-5cc9-407e-849d-ca38ab5bac8f","isActive":false,"balance":"$2,727.70","age":23,"eyeColor":"red","name":"Mueller","company":"KIGGLE","email":"undefined.undefined@kiggle.ca","phone":"+1 (905) 490-3690","address":"315 Eckford Street, Sussex, Kentucky, 4357"},{"_id":"5e7118dddc93cdbe95b60ab7","index":8,"guid":"b2482927-e36a-4825-aae2-c3434727b7cd","isActive":true,"balance":"$2,672.79","age":21,"eyeColor":"green","name":"Leann","company":"NORSUL","email":"undefined.undefined@norsul.name","phone":"+1 (810) 482-2496","address":"628 Glenmore Avenue, Tibbie, Pennsylvania, 3409"},{"_id":"5e71196d67aab3989f8d3f75","index":0,"guid":"96a33233-58c5-410d-b3cc-3499181536bc","isActive":false,"balance":"$1,647.95","age":24,"eyeColor":"green","name":"Sanford","company":"LIMAGE","email":"undefined.undefined@limage.biz","phone":"+1 (962) 538-3987","address":"440 Church Lane, Bowie, Marshall Islands, 4466"},{"_id":"5e71196d655f0bb3f4afff17","index":1,"guid":"887d8bfd-4a2e-43c9-805a-9333119bf331","isActive":false,"balance":"$1,993.08","age":31,"eyeColor":"red","name":"Small","company":"XEREX","email":"undefined.undefined@xerex.tv","phone":"+1 (896) 428-3080","address":"558 Lyme Avenue, Verdi, Connecticut, 7664"},{"_id":"5e71196d590f4aaede6c4868","index":2,"guid":"fc9ca29c-0ce5-4e10-a25b-83bcb755cf30","isActive":false,"balance":"$2,211.18","age":31,"eyeColor":"red","name":"Sharp","company":"COMBOGENE","email":"undefined.undefined@combogene.biz","phone":"+1 (840) 508-3359","address":"288 Bank Street, Camptown, Georgia, 6714"},{"_id":"5e71196d836001631b93427f","index":3,"guid":"a6fbfe66-d856-4113-96b7-d237e87573d5","isActive":true,"balance":"$3,940.72","age":33,"eyeColor":"red","name":"Annette","company":"OCEANICA","email":"undefined.undefined@oceanica.io","phone":"+1 (828) 550-3764","address":"678 Benson Avenue, Knowlton, Federated States Of Micronesia, 1324"},{"_id":"5e71196dab2a55d8b9d57b1a","index":4,"guid":"446ffd0d-8a89-41da-b5db-7fe54e8ecf20","isActive":true,"balance":"$1,777.16","age":27,"eyeColor":"green","name":"Carroll","company":"KANGLE","email":"undefined.undefined@kangle.me","phone":"+1 (845) 423-2085","address":"125 Beayer Place, Wakarusa, New Jersey, 2845"},{"_id":"5e71196d33c69c8f61a1665c","index":5,"guid":"998177a4-6204-4256-8cb9-098977ece595","isActive":false,"balance":"$2,010.32","age":38,"eyeColor":"green","name":"Karyn","company":"DIGIGENE","email":"undefined.undefined@digigene.name","phone":"+1 (950) 562-3309","address":"505 Seagate Terrace, Cetronia, South Carolina, 3168"},{"_id":"5e71196d12a52caeee7f4794","index":6,"guid":"72c223c3-1cad-4ce4-b993-5284aa6ca691","isActive":true,"balance":"$3,255.32","age":36,"eyeColor":"blue","name":"Juliet","company":"PROSELY","email":"undefined.undefined@prosely.ca","phone":"+1 (950) 503-2772","address":"232 Hutchinson Court, Westphalia, North Carolina, 1852"},{"_id":"5e71196d12a52caeee7f4794","index":6,"guid":"72c223c3-1cad-4ce4-b993-5284aa6ca691","isActive":true,"balance":"$3,255.32","age":36,"eyeColor":"blue","name":"Juliet","company":"PROSELY","email":"undefined.undefined@prosely.ca","phone":"+1 (950) 503-2772","address":"232 Hutchinson Court, Westphalia, North Carolina, 1852"},{"_id":"5e71196d12a52caeee7f4794","index":6,"guid":"72c223c3-1cad-4ce4-b993-5284aa6ca691","isActive":true,"balance":"$3,255.32","age":36,"eyeColor":"blue","name":"Juliet","company":"PROSELY","email":"undefined.undefined@prosely.ca","phone":"+1 (950) 503-2772","address":"232 Hutchinson Court, Westphalia, North Carolina, 1852"}];
+
+      const $table = document.getElementById('table');
+      // Columns
+      $table.columns = [
+        {
+          'name': 'name',
+          'label': 'Name',
+          'width': 16,
+          'fixed': true,
+        },
+        {
+          'name': 'age',
+          'label': 'Age',
+          'width': 7,
+        },
+        {
+          'name': 'eyeColor',
+          'label': 'Eye Color',
+          'template': function(row, column) {
+            return `<pc-tag style='padding: 10px; max-width: 100%;' color='${row[column.name]}'>${row[column.name]}</pc-tag>`;
+          },
+        },
+        {
+          'name': 'company',
+          'label': 'Company',
+        },
+        {
+          'name': 'email',
+          'label': 'Email',
+          'width': 25,
+        },
+        {
+          'name': 'address',
+          'label': 'Address',
+          'width': 20,
+        },
+        {
+          'name': 'actions',
+          'label': 'Actions',
+          'template': function(row, column) {
+            return `<pc-dropdown id='dropdown'>
+      <wc-icon-button color='secondary' variant='outlined'><wc-icon name='more_vert'></wc-icon></wc-icon-button>
+      <pc-menu slot='dropdown-content' class='menu' style='width: 200px'>
+        <pc-menu-item value='cut'>
+          <wc-icon name='scissors' slot='start'></wc-icon>
+          Cut
+          <span slot='end'>⌘X</span>
+        </pc-menu-item>
+        <pc-menu-item value='copy'>
+          <wc-icon name='files' slot='start'></wc-icon>
+          Copy
+          <span slot='end'>⌘C</span>
+        </pc-menu-item>
+        <pc-menu-item value='paste'>
+          <wc-icon name='clipboard' slot='start'></wc-icon>
+          Paste
+          <span slot='end'>⌘X</span>
+        </pc-menu-item>
+        <pc-divider></pc-divider>
+        <pc-menu-item value='delete'>
+          <wc-icon name='trash' slot='start'></wc-icon>
+          Delete
+          <span slot='end'>←</span>
+        </pc-menu-item>
+      </pc-menu>
+    </pc-dropdown>`;
+          },
+        },
+      ];
+      // Data
+      $table.data = dataSource;
+
+      // Events
+      $table.addEventListener('cell-click', function(evt) {
+        document.getElementById('record').innerText = JSON.stringify(evt.detail.record, null, 3);
+        document.getElementById('column').innerText = evt.detail.column.label;
+      });
+      $table.addEventListener('selection-change', function(evt) {
+        document.getElementById('selected-rows').innerText = JSON.stringify(evt.detail.value, null, 4);
+      });
+    })();</script>
+  
+    </div>
+  </wc-card-content>
+  <div class="body">
+    <wc-code-highlighter language="html">
+      <pre><code>
+
+  &lt;div class="table-demo">
+
+    &lt;wc-table id="table" key-field="_id" selection-type="checkbox" paginate="true" sortable="true">&lt;/wc-table>
+
+    &lt;pc-card-content>
+      &lt;div class="result">
+        &lt;p class="text-title">Cell Click Result :&lt;/p>
+        &lt;div>
+          &lt;b>Cell Data :&lt;/b>
+          &lt;pre id="record">&lt;/pre>
+        &lt;/div>
+        &lt;div>&lt;b>Column :&lt;/b> &lt;span id="column">&lt;/span>&lt;/div>
+        &lt;br>
+        &lt;div>&lt;b>Selected Rows :&lt;/b> &lt;span id="selected-rows">&lt;/span>&lt;/div>
+        &lt;br>
+        &lt;div>Check console for full event detail.&lt;/div>
+      &lt;/div>
+  &lt;/pc-card-content>
+
+   &lt;/div>
+
+    &lt;script>(function(){const dataSource = [{"_id":"5e7118ddce4b3d577956457f","index":0,"guid":"ae04f5ed-5cd3-491e-8e9a-6c6b31a4ba7d","isActive":false,"balance":"$2,443.30","age":21,"eyeColor":"blue","name":"Courtney Courtney Courtney Courtney Courtney Courtney Courtney Courtney Courtney Courtney Courtney Courtney ","company":"XYQAG","email":"undefined.undefined@xyqag.co.uk","phone":"+1 (839) 560-3581","address":"326 Irving Street, Grimsley, Texas, 4048"},{"_id":"5e7118dd240daa9a2f209fd9","index":1,"guid":"c9db5a9f-069e-4343-8c11-3d65e92275c2","isActive":true,"balance":"$1,623.55","age":34,"eyeColor":"red","name":"Wilcox","company":"STRALOY","email":"undefined.undefined@straloy.io","phone":"+1 (826) 447-3398","address":"624 Sullivan Street, Waterford, Mississippi, 5396"},{"_id":"5e7118ddc9e046778096d134","index":2,"guid":"6b298b9c-98c1-4fc0-b27d-656b2957fb74","isActive":false,"balance":"$1,506.91","age":22,"eyeColor":"red","name":"Lucas","company":"LUNCHPOD","email":"undefined.undefined@lunchpod.us","phone":"+1 (883) 503-3953","address":"257 Colonial Road, Odessa, South Carolina, 9336"},{"_id":"5e7118dd71803419299a491f","index":3,"guid":"a4a40c2f-cbbe-426c-9eca-72edb79276ab","isActive":true,"balance":"$3,574.16","age":23,"eyeColor":"green","name":"David","company":"VELOS","email":"undefined.undefined@velos.info","phone":"+1 (923) 580-3316","address":"330 Saratoga Avenue, Richford, Tennessee, 4924"},{"_id":"5e7118dd8259ab09b69b933d","index":4,"guid":"bb0c5530-4912-421c-bd05-d21c5549780c","isActive":true,"balance":"$1,597.90","age":30,"eyeColor":"blue","name":"Dorothea","company":"ZILLAN","email":"undefined.undefined@zillan.net","phone":"+1 (826) 421-2410","address":"472 Hutchinson Court, Gila, South Dakota, 2145"},{"_id":"5e7118dd257ef0fd4c3f777a","index":5,"guid":"8b972c44-af1b-4f87-9655-b16a7f8d18d6","isActive":false,"balance":"$2,619.84","age":25,"eyeColor":"blue","name":"Guy","company":"ISOTERNIA","email":"undefined.undefined@isoternia.com","phone":"+1 (885) 454-2649","address":"662 Battery Avenue, Trinway, Arizona, 1492"},{"_id":"5e7118ddc207ba62b6ea05f3","index":6,"guid":"fbfec03e-3cb3-4436-a232-9a4ce1d0ca37","isActive":true,"balance":"$3,340.48","age":35,"eyeColor":"green","name":"Cristina","company":"ASSURITY","email":"undefined.undefined@assurity.tv","phone":"+1 (949) 576-2111","address":"468 Junius Street, Kipp, District Of Columbia, 5425"},{"_id":"5e7118ddb536a4b1810b5bd1","index":7,"guid":"ee503e84-5cc9-407e-849d-ca38ab5bac8f","isActive":false,"balance":"$2,727.70","age":23,"eyeColor":"red","name":"Mueller","company":"KIGGLE","email":"undefined.undefined@kiggle.ca","phone":"+1 (905) 490-3690","address":"315 Eckford Street, Sussex, Kentucky, 4357"},{"_id":"5e7118dddc93cdbe95b60ab7","index":8,"guid":"b2482927-e36a-4825-aae2-c3434727b7cd","isActive":true,"balance":"$2,672.79","age":21,"eyeColor":"green","name":"Leann","company":"NORSUL","email":"undefined.undefined@norsul.name","phone":"+1 (810) 482-2496","address":"628 Glenmore Avenue, Tibbie, Pennsylvania, 3409"},{"_id":"5e71196d67aab3989f8d3f75","index":0,"guid":"96a33233-58c5-410d-b3cc-3499181536bc","isActive":false,"balance":"$1,647.95","age":24,"eyeColor":"green","name":"Sanford","company":"LIMAGE","email":"undefined.undefined@limage.biz","phone":"+1 (962) 538-3987","address":"440 Church Lane, Bowie, Marshall Islands, 4466"},{"_id":"5e71196d655f0bb3f4afff17","index":1,"guid":"887d8bfd-4a2e-43c9-805a-9333119bf331","isActive":false,"balance":"$1,993.08","age":31,"eyeColor":"red","name":"Small","company":"XEREX","email":"undefined.undefined@xerex.tv","phone":"+1 (896) 428-3080","address":"558 Lyme Avenue, Verdi, Connecticut, 7664"},{"_id":"5e71196d590f4aaede6c4868","index":2,"guid":"fc9ca29c-0ce5-4e10-a25b-83bcb755cf30","isActive":false,"balance":"$2,211.18","age":31,"eyeColor":"red","name":"Sharp","company":"COMBOGENE","email":"undefined.undefined@combogene.biz","phone":"+1 (840) 508-3359","address":"288 Bank Street, Camptown, Georgia, 6714"},{"_id":"5e71196d836001631b93427f","index":3,"guid":"a6fbfe66-d856-4113-96b7-d237e87573d5","isActive":true,"balance":"$3,940.72","age":33,"eyeColor":"red","name":"Annette","company":"OCEANICA","email":"undefined.undefined@oceanica.io","phone":"+1 (828) 550-3764","address":"678 Benson Avenue, Knowlton, Federated States Of Micronesia, 1324"},{"_id":"5e71196dab2a55d8b9d57b1a","index":4,"guid":"446ffd0d-8a89-41da-b5db-7fe54e8ecf20","isActive":true,"balance":"$1,777.16","age":27,"eyeColor":"green","name":"Carroll","company":"KANGLE","email":"undefined.undefined@kangle.me","phone":"+1 (845) 423-2085","address":"125 Beayer Place, Wakarusa, New Jersey, 2845"},{"_id":"5e71196d33c69c8f61a1665c","index":5,"guid":"998177a4-6204-4256-8cb9-098977ece595","isActive":false,"balance":"$2,010.32","age":38,"eyeColor":"green","name":"Karyn","company":"DIGIGENE","email":"undefined.undefined@digigene.name","phone":"+1 (950) 562-3309","address":"505 Seagate Terrace, Cetronia, South Carolina, 3168"},{"_id":"5e71196d12a52caeee7f4794","index":6,"guid":"72c223c3-1cad-4ce4-b993-5284aa6ca691","isActive":true,"balance":"$3,255.32","age":36,"eyeColor":"blue","name":"Juliet","company":"PROSELY","email":"undefined.undefined@prosely.ca","phone":"+1 (950) 503-2772","address":"232 Hutchinson Court, Westphalia, North Carolina, 1852"},{"_id":"5e71196d12a52caeee7f4794","index":6,"guid":"72c223c3-1cad-4ce4-b993-5284aa6ca691","isActive":true,"balance":"$3,255.32","age":36,"eyeColor":"blue","name":"Juliet","company":"PROSELY","email":"undefined.undefined@prosely.ca","phone":"+1 (950) 503-2772","address":"232 Hutchinson Court, Westphalia, North Carolina, 1852"},{"_id":"5e71196d12a52caeee7f4794","index":6,"guid":"72c223c3-1cad-4ce4-b993-5284aa6ca691","isActive":true,"balance":"$3,255.32","age":36,"eyeColor":"blue","name":"Juliet","company":"PROSELY","email":"undefined.undefined@prosely.ca","phone":"+1 (950) 503-2772","address":"232 Hutchinson Court, Westphalia, North Carolina, 1852"}];
+
+      const $table = document.getElementById('table');
+      // Columns
+      $table.columns = [
+        {
+          'name': 'name',
+          'label': 'Name',
+          'width': 16,
+          'fixed': true,
+        },
+        {
+          'name': 'age',
+          'label': 'Age',
+          'width': 7,
+        },
+        {
+          'name': 'eyeColor',
+          'label': 'Eye Color',
+          'template': function(row, column) {
+            return `&lt;pc-tag style='padding: 10px; max-width: 100%;' color='${row[column.name]}'>${row[column.name]}&lt;/pc-tag>`;
+          },
+        },
+        {
+          'name': 'company',
+          'label': 'Company',
+        },
+        {
+          'name': 'email',
+          'label': 'Email',
+          'width': 25,
+        },
+        {
+          'name': 'address',
+          'label': 'Address',
+          'width': 20,
+        },
+        {
+          'name': 'actions',
+          'label': 'Actions',
+          'template': function(row, column) {
+            return `&lt;pc-dropdown id='dropdown'>
+      &lt;wc-icon-button color='secondary' variant='outlined'>&lt;wc-icon name='more_vert'>&lt;/wc-icon>&lt;/wc-icon-button>
+      &lt;pc-menu slot='dropdown-content' class='menu' style='width: 200px'>
+        &lt;pc-menu-item value='cut'>
+          &lt;wc-icon name='scissors' slot='start'>&lt;/wc-icon>
+          Cut
+          &lt;span slot='end'>⌘X&lt;/span>
+        &lt;/pc-menu-item>
+        &lt;pc-menu-item value='copy'>
+          &lt;wc-icon name='files' slot='start'>&lt;/wc-icon>
+          Copy
+          &lt;span slot='end'>⌘C&lt;/span>
+        &lt;/pc-menu-item>
+        &lt;pc-menu-item value='paste'>
+          &lt;wc-icon name='clipboard' slot='start'>&lt;/wc-icon>
+          Paste
+          &lt;span slot='end'>⌘X&lt;/span>
+        &lt;/pc-menu-item>
+        &lt;pc-divider>&lt;/pc-divider>
+        &lt;pc-menu-item value='delete'>
+          &lt;wc-icon name='trash' slot='start'>&lt;/wc-icon>
+          Delete
+          &lt;span slot='end'>←&lt;/span>
+        &lt;/pc-menu-item>
+      &lt;/pc-menu>
+    &lt;/pc-dropdown>`;
+          },
+        },
+      ];
+      // Data
+      $table.data = dataSource;
+
+      // Events
+      $table.addEventListener('cell-click', function(evt) {
+        document.getElementById('record').innerText = JSON.stringify(evt.detail.record, null, 3);
+        document.getElementById('column').innerText = evt.detail.column.label;
+      });
+      $table.addEventListener('selection-change', function(evt) {
+        document.getElementById('selected-rows').innerText = JSON.stringify(evt.detail.value, null, 4);
+      });
+    })();&lt;/script>
+  </code></pre>
+    </wc-code-highlighter>
+  </div>
+</wc-card>
+
+<goat-card></goat-card>
+            </section>
+
+    </wc-container>
+  </article>
+
+  <div class="on-this-page">
+    <div class="text-label">On this page</div>
+    <h2 class="text-headline">Table</h2>
+    <nav class="section-nav">
+      <wc-sidebar-menu-item href="#section-usage" label="Usage" data-section="section-usage"></wc-sidebar-menu-item>
+    </nav>
+
+    <wc-button href="https://github.com/sponsors/shivajivarma" target="_blank" variant="tonal" color="surface" block="true">
+      <wc-icon slot="icon" name="favorite" class="sponser-icon"></wc-icon>
+      Sponsor
+    </wc-button>
+
+    <ins class="adsbygoogle" data-ad-client="ca-pub-3120721550776061" data-ad-slot="1398164690" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const nav = document.querySelector('.on-this-page .section-nav');
+        if (!nav) return;
+
+        // Build id → nav item map for h2 sections
+        const navMap = {};
+        nav.querySelectorAll('wc-sidebar-menu-item').forEach(function (item) {
+          navMap[item.dataset.section] = item;
+        });
+
+        // Inject wc-sidebar-menu-item for each h3, assign ids, and register in navMap
+        const tracked = [];
+        document.querySelectorAll('.article .section').forEach(function (section) {
+          // Track the h2 heading, not the whole section — sections are too large
+          // and stay in the visible set even when a subsection is active
+          const h2 = section.querySelector('h2.section-title');
+          if (h2) {
+            h2.dataset.navId = section.id;
+            tracked.push(h2);
+          }
+
+          const sectionNavItem = navMap[section.id];
+          let lastInserted = sectionNavItem;
+
+          section.querySelectorAll('h3').forEach(function (h3) {
+            if (!h3.id) {
+              h3.id = 'sub-' + h3.textContent.trim().toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '');
+            }
+            h3.dataset.navId = h3.id;
+            tracked.push(h3);
+
+            if (sectionNavItem) {
+              const sub = document.createElement('wc-sidebar-menu-item');
+              sub.setAttribute('href', '#' + h3.id);
+              sub.setAttribute('label', h3.textContent.trim());
+              sub.setAttribute('level', '1');
+              sub.dataset.section = h3.id;
+              navMap[h3.id] = sub;
+              lastInserted.insertAdjacentElement('afterend', sub);
+              lastInserted = sub;
+            }
+          });
+        });
+
+        // Immediately activate on click + smooth scroll
+        Object.values(navMap).forEach(function (item) {
+          item.addEventListener('click', function (e) {
+            e.preventDefault();
+            Object.values(navMap).forEach(function (i) { i.selected = false; });
+            item.selected = true;
+            const target = document.getElementById(item.dataset.section);
+            if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          });
+        });
+
+        // Scrollspy: last heading whose top is above 25% of the viewport is active
+        function updateActive() {
+          const threshold = window.innerHeight * 0.25;
+          let activeId = null;
+          for (var i = 0; i < tracked.length; i++) {
+            if (tracked[i].getBoundingClientRect().top <= threshold) {
+              activeId = tracked[i].dataset.navId;
+            }
+          }
+          Object.values(navMap).forEach(function (item) { item.selected = false; });
+          if (activeId && navMap[activeId]) navMap[activeId].selected = true;
+        }
+
+        let ticking = false;
+        document.addEventListener('scroll', function () {
+          if (!ticking) {
+            requestAnimationFrame(function () { updateActive(); ticking = false; });
+            ticking = true;
+          }
+        }, true);
+
+        updateActive();
+      });
+    </script>
+
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({});
+      const interval = window.setInterval(() => {
+        if (window.document.documentElement.classList.contains('hydrated') || true) {
+          window.clearInterval(interval);
+
+          setTimeout(function () {
+            const script = document.createElement('script');
+            script.type = 'text/javascript';
+            script.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3120721550776061';
+            script.crossOrigin = 'anonymous';
+            script.async = true;
+            document.body.appendChild(script);
+          }, 800);
+        }
+      }, 300);
+    </script>
+  </div>
+</div>
+
+
+    <div class="footer">
+      <footer class="footer-with-about">
+
+  <section class="about">
+      <div class="about-content">
+        <h2 class="text-headline section-title">Peacock</h2>
+        <p class="text-body-large">Our mission is to empower developers with high-quality, customizable, and accessible web components that promote web standards and best practices.</p>
+        <p class="text-body-large">
+
+          Built by&nbsp;<wc-link href="https://shivajivarma.com" target="_blank">Shivaji Varma</wc-link>. Built using&nbsp;<wc-link class="link" href="//lit.dev" target="_blank">Lit</wc-link>.
+          Source code on&nbsp;<wc-link class="link" href="https://github.com/redvars/peacock" target="_blank">GitHub</wc-link>.
+        </p>
+      </div>
+  </section>
+
+  <nav class="footer-links" aria-label="Footer links">
+    <h2 class="text-title-large section-title">Links</h2>
+    <ul class="section-nav-links">
+      <li><wc-link href="/privacy">Privacy Policy</wc-link></li>
+      <li><wc-link href="/license">License</wc-link></li>
+      <li><wc-link href="https://github.com/sponsors/shivajivarma" target="_blank">Sponsor</wc-link></li>
+    </ul>
+  </nav>
+
+  <div class="footer-social-links" aria-label="Social links">
+    <h2 class="text-title-large section-title">Social</h2>
+
+    <ul class="section-nav-links">
+      <li>
+        <wc-icon-button variant="outlined" color="surface" href="https://github.com/redvars/peacock" target="_blank" aria-label="GitHub">
+          <wc-icon name="logo--github" provider="carbon"></wc-icon>
+        </wc-icon-button>
+      </li>
+      <li>
+        <wc-icon-button variant="outlined" color="surface" href="https://twitter.com/red_vars" target="_blank" aria-label="X (Twitter)">
+          <wc-icon name="logo--x" provider="carbon"></wc-icon>
+        </wc-icon-button>
+      </li>
+    </ul>
+  </div>
+</footer>
+    </div>
+  </div>
+
+
+
+    </div>
+  </div>
+
+
+    </div>
+  </div>
+
+  <wc-notification-manager position="bottom-right" class="page-notification-manager"></wc-notification-manager>
+
+  <pagefind-modal></pagefind-modal>
+ <link href="/pagefind/pagefind-component-ui.css" rel="stylesheet">
+ <script src="/pagefind/pagefind-component-ui.js" type="module"></script>
+
+ <script type="module">
+   // Wire the search FAB to open the Pagefind UI when clicked.
+   // Try several common selectors and call the public open/show method
+   // or set the `open` attribute as a fallback.
+   document.addEventListener('DOMContentLoaded', () => {
+     const btn = document.querySelectorAll('.search-button');
+     if (!btn.length) return;
+     btn.forEach((el) => {
+       el.addEventListener('click', (ev) => {
+         ev.preventDefault();
+
+         const candidates = [
+           'pagefind-modal',
+           'pagefind-component-ui',
+           'pagefind-ui',
+           'pagefind',
+         ];
+
+         let found = null;
+         for (const sel of candidates) {
+           const el = document.querySelector(sel);
+           if (el) {
+             found = el;
+             break;
+           }
+         }
+
+         function openFound(el) {
+           try {
+             if (!el) return;
+             if (typeof el.open === 'function') el.open();
+             else if (typeof el.show === 'function') el.show();
+             else el.setAttribute('open', '');
+           } catch (err) {
+             // ignore
+           }
+         }
+
+         if (!found) {
+           // pagefind may create its element asynchronously; try shortly after.
+           setTimeout(() => {
+             for (const sel of candidates) {
+               const el = document.querySelector(sel);
+               if (el) {
+                 found = el;
+                 break;
+               }
+             }
+             openFound(found);
+           }, 50);
+           return;
+         }
+
+         openFound(found);
+       });
+     });
+   });
+ </script>
+
+
+  
+  <script src="/assets/js/main.js"></script>
+
+
+
+<!-- GoatUI scripts -->
+<script type="module" src="https://cdn.jsdelivr.net/npm/@redvars/peacock@3.8.4/dist/loader.js" onerror="let s=document.createElement('script'); s.type='module'; s.src='https://cdn.jsdelivr.net/npm/@redvars/peacock@3.8.3/dist/loader.js'; document.head.appendChild(s);">
+      </script>
+
+
+<!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-YVVYZC1HFF"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag('js', new Date());
+  gtag('config', 'G-YVVYZC1HFF');
+</script>
+</body></html>

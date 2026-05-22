@@ -1,0 +1,70 @@
+---
+export const title = 'Usage';
+export const order = 100;
+import HighlighterCard from '../../../../components/HighlighterCard.astro';
+import DemoComponentCard from '../../../../components/DemoComponentCard.astro';
+---
+
+<p>Here are several predefined checkbox styles, each serving its own semantic purpose.</p>
+
+<p>Horizontal Divider Usage</p>
+
+<DemoComponentCard lang={'html'}>
+  <style is:inline>
+    .container-horizontal {
+      display: inline-block;
+      margin-right: 1rem;
+      padding: 1rem;
+      width: 200px;
+      border: 1px solid var(--color-outline);
+    }
+  </style>
+
+  <div class='container-horizontal'>
+    <p>Content A</p>
+    <wc-divider></wc-divider>
+    <p>Content B</p>
+  </div>
+
+  <div class='container-horizontal'>
+    <p>Content A</p>
+    <wc-divider> or</wc-divider>
+    <p>Content B</p>
+  </div>
+</DemoComponentCard>
+
+
+<br/>
+
+<p>Vertical Divider Usage</p>
+
+<DemoComponentCard lang={'html'}>
+
+  <style is:inline>
+    .container-vertical {
+      display: flex;
+      height: 150px;
+      margin-bottom: 1rem;
+      padding: 1rem;
+      width: 250px;
+      border: 1px solid var(--color-outline);
+    }
+
+    .container-vertical p {
+      display: flex;
+      align-items: center;
+    }
+  </style>
+
+  <div class='container-vertical'>
+    <p>Content A</p>
+    <wc-divider vertical></wc-divider>
+    <p>Content B</p>
+  </div>
+
+  <div class='container-vertical'>
+    <p>Content A</p>
+    <wc-divider vertical> or</wc-divider>
+    <p>Content B</p>
+  </div>
+</DemoComponentCard>

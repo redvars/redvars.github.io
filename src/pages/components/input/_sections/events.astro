@@ -1,0 +1,22 @@
+---
+export const title = 'Events';
+export const order = 400;
+import DemoComponentCard from '../../../../components/DemoComponentCard.astro';
+---
+<p>On input change a <b>CustomEvent</b> <code class='highlighter-rouge'
+                                                                  data-lang='html'>pc-input--change</code> is triggered by
+  the element.
+</p>
+
+<DemoComponentCard lang={'html'}>
+  <wc-input variant='default' id='name-input-field' placeholder='Type here'></wc-input>
+
+  <script is:inline>
+    document.querySelector('#name-input-field').addEventListener('input', function(event) {
+      myConsole.log('pc-input--input :: ' + event.target.value);
+    });
+    document.querySelector('#name-input-field').addEventListener('change', function(event) {
+      myConsole.warn('pc-input--change :: ' + event.target.value);
+    });
+  </script>
+</DemoComponentCard>

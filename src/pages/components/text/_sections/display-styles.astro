@@ -1,0 +1,27 @@
+---
+export const title = 'Display styles';
+export const order = 100;
+import DemoComponentCard from '../../../../components/DemoComponentCard.astro';
+---
+
+<p class='text-body-large'>
+  There are three display styles in the default type scale: Large, medium, and small. As the largest text on the screen, display styles are reserved for short, important text or numerals. They work best on large screens.
+</p>
+<p class='text-body-large'>
+  For display type, consider choosing a more expressive font, such as a handwritten or script style.
+</p>
+
+<DemoComponentCard lang={'html'} alignStart={true}>
+
+  <h1 class='text-display-large'>
+    Display Large
+  </h1>
+
+  <h1 class='text-display'>
+    Display
+  </h1>
+
+  <h1 class='text-display-small'>
+    Display Small
+  </h1>
+</DemoComponentCard>

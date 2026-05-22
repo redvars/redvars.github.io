@@ -1,0 +1,24 @@
+---
+export const title = 'Events';
+export const order = 300;
+import Highlighter from '../../../../components/Highlighter.astro';
+import DemoComponentCard from '../../../../components/DemoComponentCard.astro';
+---
+<p>On input change a <b>CustomEvent</b> <code class='highlighter-rouge'
+                                                                  data-lang='html'>wc-textarea--change</code> is triggered by
+  the element.
+</p>
+
+
+<DemoComponentCard lang={'html'}>
+  <wc-textarea variant='default' id='name-input-field'></wc-textarea>
+
+  <script is:inline>
+    document.querySelector('#name-input-field').addEventListener('input', function(event) {
+      myConsole.log(event.target.value, event.type);
+    });
+    document.querySelector('#name-input-field').addEventListener('change', function(event) {
+      myConsole.warn(event.target.value, event.type);
+    });
+  </script>
+</DemoComponentCard>

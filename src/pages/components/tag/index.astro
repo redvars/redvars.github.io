@@ -1,0 +1,16 @@
+---
+import Layout from '../../../layouts/LitComponent.astro';
+import { buildSections } from '../../../_data/getSections.ts';
+
+const astroModules = import.meta.glob('./_sections/*.astro', { eager: true });
+const mdxModules = import.meta.glob('./_sections/*.mdx', { eager: true });
+const sections = buildSections({ ...astroModules, ...mdxModules });
+---
+
+<style is:inline>
+  pc-tag {
+    margin-inline-end: .5rem;
+  }
+</style>
+
+<Layout componentName='tag' sections={sections}></Layout>

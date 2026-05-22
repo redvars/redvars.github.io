@@ -1,0 +1,18 @@
+---
+export const title = 'Slots';
+export const order = 200;
+import DemoComponentCard from '../../../../components/DemoComponentCard.astro';
+---
+<p>Fancy larger or smaller input? Add size attribute for additional sizes.</p>
+
+<DemoComponentCard lang={'html'}>
+
+    <wc-number-field size='sm' label='Slots'>
+      <wc-icon slot='start' name='currency_rupee'></wc-icon>
+
+      <wc-link slot='end' href='#'>
+        <wc-icon name='link' size='sm'></wc-icon>
+      </wc-link>
+    </wc-number-field>
+
+</DemoComponentCard>

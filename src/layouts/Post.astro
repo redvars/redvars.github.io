@@ -1,0 +1,49 @@
+---
+import site from '../_data/site.json';
+import Layout from './Default.astro';
+interface Props {
+  title: any;
+  description: string;
+}
+
+const {title, description} = Astro.props;
+---
+<Layout title={title} description={description}  classes='surface'>
+<div class='main-content'>
+
+  <wc-container class='page-container'>
+    <div class='post-header'>
+      <wc-breadcrumb>
+        <wc-breadcrumb-item href="/">Home</wc-breadcrumb-item>
+        <wc-breadcrumb-item href="/blog">Blog</wc-breadcrumb-item>
+        <wc-breadcrumb-item active>{title}</wc-breadcrumb-item>
+      </wc-breadcrumb>
+
+      <pc-text type='heading' heading-size='6'>{title}</pc-text>
+    </div>
+
+
+    <div class='post-body'>
+
+      <div class='post'>
+        <slot/>
+      </div>
+
+      <div class='side-panel'>
+
+      </div>
+    </div>
+  </wc-container>
+  <wc-container>
+    <div class='footer container'>
+      <pc-divider></pc-divider>
+      <div class='footer-content'>
+        <pc-text class='legal' type='legal' expressive>
+          &copy; {new Date().getFullYear()} <goat-link href={site.author_url}>{site.author}</goat-link>. All Rights Reserved.
+        </pc-text>
+      </div>
+    </div>
+  </wc-container>
+
+</div>
+</Layout>

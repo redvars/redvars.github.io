@@ -1,0 +1,21 @@
+---
+export const title = 'Sizes';
+export const order = 300;
+import DemoComponentCard from '../../../../components/DemoComponentCard.astro';
+---
+
+<p>The FAB comes in three sizes: small (40dp), standard (56dp), and large (96dp).</p>
+
+<DemoComponentCard lang={'html'}>
+  <wc-fab size='sm'><wc-icon name='add'></wc-icon></wc-fab>
+  <wc-fab><wc-icon name='add'></wc-icon></wc-fab>
+  <wc-fab size='lg'><wc-icon name='add'></wc-icon></wc-fab>
+</DemoComponentCard>
+
+<p>Extended FABs with different sizes.</p>
+
+<DemoComponentCard lang={'html'}>
+  <wc-fab size='sm' label='Small'><wc-icon name='add'></wc-icon></wc-fab>
+  <wc-fab label='Standard'><wc-icon name='add'></wc-icon></wc-fab>
+  <wc-fab size='lg' label='Large'><wc-icon name='add'></wc-icon></wc-fab>
+</DemoComponentCard>

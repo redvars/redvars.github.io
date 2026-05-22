@@ -1,0 +1,17 @@
+---
+export const title = 'Usage';
+export const order = 100;
+import DemoComponentCard from '../../../../components/DemoComponentCard.astro';
+---
+
+<p>A FAB represents the primary action on a screen. Use it for the most important action a user can take.</p>
+
+<DemoComponentCard lang={'html'}>
+  <wc-fab><wc-icon name='add'></wc-icon></wc-fab>
+</DemoComponentCard>
+
+<p>The extended FAB displays a text label alongside the icon by setting the <code>label</code> attribute.</p>
+
+<DemoComponentCard lang={'html'}>
+  <wc-fab label='Create'><wc-icon name='add'></wc-icon></wc-fab>
+</DemoComponentCard>

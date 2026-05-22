@@ -1,0 +1,31 @@
+---
+export const title = 'Events';
+export const order = 600;
+import Highlighter from '../../../../components/Highlighter.astro';
+---
+<p>The checkbox component emits custom events for user interactions. The <code class='highlighter-rouge' data-lang='html'>change</code> event is triggered when the checkbox value changes.</p>
+
+<pc-card>
+  <pc-card-content>
+    <wc-checkbox id='change-checkbox-field'>Change Event?</wc-checkbox>
+    <script is:inline>
+      document.querySelector('#change-checkbox-field').addEventListener('change', function(event) {
+        console.log('Checkbox changed to:', event.detail.value);
+      });
+    </script>
+  </pc-card-content>
+  <!-- prettier-ignore -->
+  <pc-card-content class='no-padding'>
+    <Highlighter lang='javascript' is:raw>
+      document.querySelector('#change-checkbox-field').addEventListener('change', function(event) {
+        console.log('Checkbox changed to:', event.detail.value);
+        console.log('Original event:', event.detail.originalEvent);
+      });
+
+      // Also available: focus and blur events
+      document.querySelector('#change-checkbox-field').addEventListener('focus', function(event) {
+        console.log('Checkbox focused');
+      });
+    </Highlighter>
+  </pc-card-content>
+</pc-card>

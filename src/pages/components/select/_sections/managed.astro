@@ -1,0 +1,44 @@
+---
+export const title = 'Managed Search';
+export const order = 300;
+import DemoComponentCard from '../../../../components/DemoComponentCard.astro';
+---
+<p>
+  Use <code>search="managed"</code> for server-side filtering. The component emits a
+  <code>select-search</code> event with the current query so you can load options asynchronously.
+</p>
+
+<DemoComponentCard lang={'html'}>
+  <wc-select
+    id="managed-select"
+    label="User"
+    placeholder="Type to search users..."
+    search="managed"
+    style="width: 20rem"
+  ></wc-select>
+
+  <script is:inline>
+    const managedSel = document.getElementById('managed-select');
+    let counter = 1;
+
+    managedSel.options = [];
+
+    managedSel.addEventListener('select-search', function (evt) {
+      const query = evt.detail.value;
+      // Simulate an async server call
+      setTimeout(function () {
+        managedSel.options = [
+          { label: 'None', value: '' },
+          ...Array.from({ length: 5 }, function (_, i) {
+            return { label: `${query} result ${counter + i}`, value: String(counter + i) };
+          }),
+        ];
+        counter += 5;
+      }, 300);
+    });
+
+    managedSel.addEventListener('change', function (evt) {
+      console.log('change', evt.detail);
+    });
+  </script>
+</DemoComponentCard>

@@ -1,0 +1,42 @@
+---
+export const title = 'Usage';
+export const order = 100;
+import DemoComponentCard from '../../../../components/DemoComponentCard.astro';
+---
+<p>Here are different types of inputs.</p>
+
+<DemoComponentCard lang={'html'}>
+  <wc-input type='text'
+              required
+              label='Text input label'
+              helper-text='Optional help text'
+              placeholder='Optional placeholder text'
+  ></wc-input>
+</DemoComponentCard>
+
+<DemoComponentCard lang={'html'}>
+  <wc-input type='text'
+           required
+           variant='outlined'
+           label='Text input label'
+           helper-text='Optional help text'
+           placeholder='Optional placeholder text'
+  ></wc-input>
+</DemoComponentCard>
+
+<DemoComponentCard lang={'html'}>
+  <wc-input type='password'
+           label='Password'
+           helper-text='Optional help text'
+           placeholder='Optional placeholder text'></wc-input>
+</DemoComponentCard>
+
+<DemoComponentCard lang={'html'}>
+  <wc-input type='text'
+           skeleton
+           required
+           label='Text input label'
+           helper-text=''
+           placeholder='Optional placeholder text'
+  ></wc-input>
+</DemoComponentCard>

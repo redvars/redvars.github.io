@@ -1,0 +1,20 @@
+---
+export const title = 'Slots';
+export const order = 200;
+import HighlighterCard from '../../../../components/HighlighterCard.astro';
+import DemoComponentCard from '../../../../components/DemoComponentCard.astro';
+---
+<p>Fancy larger or smaller input? Add size attribute for additional sizes.</p>
+<DemoComponentCard lang={'html'}>
+
+    <wc-input label='Email' type='text' size='lg'>
+      <wc-icon slot='start' name='mail'></wc-icon>
+      <div slot='end'>@example.com</div>
+    </wc-input>
+
+    <wc-input type='text' label='Card Number'>
+      <wc-icon slot='start' name='credit_card'></wc-icon>
+      <circular-progress slot='end' indeterminate></circular-progress>
+    </wc-input>
+
+</DemoComponentCard>

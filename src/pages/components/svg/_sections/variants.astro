@@ -1,0 +1,18 @@
+---
+export const title = 'Color Variants';
+export const order = 200;
+import DemoComponentCard from '../../../../components/DemoComponentCard.astro';
+---
+
+<p>Use the <code>--svg-color</code> CSS custom property or the inherited <code>color</code> to tint an SVG. The color cascades from a parent element when not set explicitly.</p>
+
+<DemoComponentCard lang={'html'} inline>
+  <wc-svg src="https://icons.getbootstrap.com/assets/icons/bug.svg" style="--svg-size: 2rem; --svg-color: var(--color-primary)"></wc-svg>
+  <wc-svg src="https://icons.getbootstrap.com/assets/icons/bug.svg" style="--svg-size: 2rem; --svg-color: var(--color-success)"></wc-svg>
+  <wc-svg src="https://icons.getbootstrap.com/assets/icons/bug.svg" style="--svg-size: 2rem; --svg-color: var(--color-warning)"></wc-svg>
+  <wc-svg src="https://icons.getbootstrap.com/assets/icons/bug.svg" style="--svg-size: 2rem; --svg-color: var(--color-error)"></wc-svg>
+
+  <span style="color: pink; display: inline-flex;">
+    <wc-svg src="https://icons.getbootstrap.com/assets/icons/bug.svg" style="--svg-size: 2rem;"></wc-svg>
+  </span>
+</DemoComponentCard>

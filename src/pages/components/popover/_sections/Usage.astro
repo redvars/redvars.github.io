@@ -1,0 +1,29 @@
+---
+export const title = 'Usage';
+export const order = 100;
+import DemoComponentCard from '../../../../components/DemoComponentCard.astro';
+---
+
+<style is:inline>
+  .demo-usage-container .demo-area {
+    min-height: 20rem !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+</style>
+
+<DemoComponentCard lang='html' cssClasses='demo-usage-container'>
+  <wc-popover trigger='click'>
+    <wc-button>Open popover</wc-button>
+    <wc-popover-content>
+      <div style='display:flex;flex-direction:column;gap:0.75rem;'>
+        <wc-input label='Name'></wc-input>
+        <wc-input label='Email'></wc-input>
+        <wc-button>Submit</wc-button>
+      </div>
+    </wc-popover-content>
+  </wc-popover>
+</DemoComponentCard>
+
+

@@ -1,0 +1,13 @@
+---
+export const title = 'Readonly';
+export const order = 400;
+import DemoComponentCard from '../../../../components/DemoComponentCard.astro';
+---
+<p>
+Readonly checkboxes display the current state without allowing user interaction. Unlike disabled, readonly checkboxes maintain full opacity. Add the <code class='highlighter-rouge' data-lang='html'>readonly</code> boolean attribute.
+</p>
+
+<DemoComponentCard lang={'html'}>
+  <wc-checkbox readonly>Readonly checkbox</wc-checkbox>
+  <wc-checkbox readonly value='true'>Readonly checked</wc-checkbox>
+</DemoComponentCard>

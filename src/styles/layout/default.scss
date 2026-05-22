@@ -1,0 +1,83 @@
+@charset "utf-8";
+@use '../mixin';
+@use '../device-utils';
+
+.default-layout {
+  display: flex;
+  height: 100vh;
+  --side-navigation-width: 6rem;
+
+  .side-navigation-container,
+  .default-layout-content {
+    height: 100%;
+    overflow-y: auto;
+  }
+}
+
+/** Mobile and tablet portrait styles */
+.default-layout {
+  .side-navigation-container {
+    display: none;
+    width: var(--side-navigation-width);
+  }
+
+  .default-layout-content {
+    flex: 1;
+  }
+}
+
+/** Desktop and tablet landscape styles */
+@include mixin.for-tablet-landscape-up {
+  .default-layout {
+    .side-navigation-container {
+      display: block;
+    }
+  }
+}
+
+html[dir='ltr'] [data-pf-sr-hidden] {
+  left: -10000px;
+}
+
+html[dir='ltr'] [data-pf-sr-hidden] {
+  right: -10000px;
+}
+
+.heading-scrollable::before {
+  content: '';
+  display: block;
+  height: calc(var(--header-height) + 1rem);
+  margin-top: calc(-1 * var(--header-height) - 1rem);
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.sections-wrapper {
+  padding-block: var(--spacing-1000);
+
+  .section {
+    padding-bottom: var(--spacing-600);
+  }
+
+  .section:last-child {
+    padding-bottom: 0;
+  }
+}
+
+@include mixin.for-phone-only {
+  .container-code {
+    margin-inline: -1rem;
+  }
+}
+
+.mobile-bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+.page-notification-manager {
+  position: fixed;
+}

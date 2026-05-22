@@ -1,0 +1,40 @@
+---
+import { getAllComponentsForShowcase, getTextTag } from '../_data/getLitComponentDetails.ts';
+interface Props {
+  description: any;
+  title: string;
+}
+
+const {description, title} = Astro.props;
+import Layout from './WithSidebar.astro';
+import Footer from '../components/Footer.astro';
+
+const componentEntries = getAllComponentsForShowcase();
+
+const sidebarItems = [];
+sidebarItems.push({
+  label: 'Components Overview',
+  href: '/components/'
+})
+sidebarItems.push(...componentEntries.map((component) => {
+  return {
+    label: getTextTag(component, 'label'),
+    href: `/components/${getTextTag(component, 'rawTag')}/`,
+  };
+}));
+---
+
+<Layout title={title} description={description} sidebarItems={sidebarItems}>
+
+
+  <div class='with-components-sidebar-layout'>
+    
+    <slot/>
+
+    <div class='footer'>
+      <Footer/>
+    </div>
+  </div>
+
+
+</Layout>

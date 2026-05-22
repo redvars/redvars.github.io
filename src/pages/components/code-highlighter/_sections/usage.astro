@@ -1,0 +1,22 @@
+---
+export const title = 'Usage';
+export const order = 100;
+import DemoComponentCard from '../../../../components/DemoComponentCard.astro';---
+
+
+<DemoComponentCard lang={'html'}>
+  <wc-code-highlighter line-numbers language="javascript" is:raw>
+    <pre><code>
+      const helloWorld = () => alert ('Hello World!');
+      export { helloWorld };
+</code></pre>
+  </wc-code-highlighter>
+</DemoComponentCard>
+
+
+
+<DemoComponentCard lang='html'>
+  <h3>In line code
+    <code>const helloWorld = () => alert ('Hello World!');</code>
+  </h3>
+</DemoComponentCard>

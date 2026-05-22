@@ -1,0 +1,44 @@
+@charset "utf-8";
+@use '../mixin';
+@use '../device-utils';
+
+.with-sidebar-layout {
+  display: flex;
+  background: var(--color-surface-container);
+  
+  @include mixin.for-tablet-landscape-up {
+    height: 100vh;
+  }
+}
+
+.with-sidebar-layout-content {
+  background: var(--color-surface);
+  flex: 1;
+  @include mixin.for-tablet-landscape-up {
+    overflow-x: auto;
+  }
+}
+
+
+.sidenav-container {
+  position: relative;
+  display: none;
+  height: 100vh;
+  overflow-y: auto;
+  border-right: 1px solid var(--color-outline-variant);
+  width: 15rem;
+}
+
+.sidenav {
+  position: absolute;
+  width: 100%;
+  padding-bottom: var(--spacing-150);
+  padding-inline: var(--spacing-100);
+}
+
+/** Desktop and tablet landscape styles */
+@include mixin.for-tablet-landscape-up {
+  .sidenav-container {
+    display: block;
+  }
+}

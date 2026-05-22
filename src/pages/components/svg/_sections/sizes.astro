@@ -1,0 +1,14 @@
+---
+export const title = 'Sizes';
+export const order = 300;
+import DemoComponentCard from '../../../../components/DemoComponentCard.astro';
+---
+
+<p>Control the rendered size using the <code>--svg-size</code> CSS custom property.</p>
+
+<DemoComponentCard lang={'html'} inline>
+  <wc-svg src='https://icons.getbootstrap.com/assets/icons/bug.svg' style='--svg-size: 1rem;'></wc-svg>
+  <wc-svg src='https://icons.getbootstrap.com/assets/icons/bug.svg' style='--svg-size: 2rem;'></wc-svg>
+  <wc-svg src='https://icons.getbootstrap.com/assets/icons/bug.svg' style='--svg-size: 3rem;'></wc-svg>
+  <wc-svg src='https://icons.getbootstrap.com/assets/icons/bug.svg' style='--svg-size: 4rem;'></wc-svg>
+</DemoComponentCard>

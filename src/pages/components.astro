@@ -1,0 +1,174 @@
+---
+import Layout from '../layouts/WithComponentsSidebar.astro';
+import '../styles/components.page.scss';
+
+import { getAllComponentsForShowcase } from '../_data/getLitComponentDetails.ts';
+import WebComponentCard from '../components/WebComponentCard.astro';
+const title = 'Components Overview';
+const description =
+  'The overview page is the first page you see when you visit the components section of the website. It shows all the components that are available to use in the Goat UI library. It also shows the components that are coming soon.';
+const componentEntries = getAllComponentsForShowcase();
+
+const componentGroups = [
+  {
+    name: 'Primitive',
+    components: ['text', 'ripple', 'elevation', 'icon'],
+  },
+  {
+    name: 'Buttons',
+    components: [
+      'button',
+      'icon-button',
+      'fab',
+      'button-group',
+      'dropdown-button',
+    ],
+  },
+  {
+    name: 'Charts',
+    components: ['chart-bar', 'chart-doughnut', 'chart-pie'],
+  },
+  {
+    name: 'Navigation',
+    components: [
+      'navigation-rail',
+      'sidebar-menu',
+      'breadcrumb',
+      'pagination',
+      'tabs',
+      'toolbar',
+      ,
+    ],
+  },
+  {
+    name: 'Inputs',
+    components: [
+      'input',
+      'number-field',
+      'textarea',
+      'select',
+      'checkbox',
+      'radio',
+      'switch',
+      'search',
+      'url-field',
+    ],
+  },
+  {
+    name: 'Date & Time',
+    components: ['date-picker', 'time-picker', 'calendar'],
+  },
+  {
+    name: 'Loading & Progress',
+    components: ['spinner', 'circular-progress', 'linear-progress'],
+  },
+];
+
+const groupedTags = componentGroups.flatMap(g => g.components);
+componentGroups.push(
+  ...(() => {
+    const othersArr = componentEntries.filter(
+      c => !groupedTags.includes(c.rawTag),
+    );
+    return othersArr.length
+      ? [
+          {
+            name: 'Others',
+            components: othersArr.map(c => c.rawTag),
+            entries: othersArr,
+          },
+        ]
+      : [];
+  })(),
+);
+
+const groupsWithEntries = componentGroups.map(g => ({
+  ...g,
+  entries:
+    g.entries ?? componentEntries.filter(c => g.components.includes(c.rawTag)),
+}));
+
+const sortedComponents = [...componentEntries].sort((a, b) =>
+  a.rawTag.localeCompare(b.rawTag),
+);
+---
+
+<Layout
+  title={title}
+  description={description}
+  classes="surface-container-lowest"
+>
+  <wc-container size="lg">
+    <h1 class="text-display page-title">Overview</h1>
+
+    <div id="search-container">
+      <wc-search id="component-search" layer="01" placeholder="Search"
+      ></wc-search>
+    </div>
+
+    <div id="grouped-view" class="cards-holder">
+      {
+        groupsWithEntries.map(
+          group =>
+            group.entries.length > 0 && (
+              <section class="component-group">
+                <h2 class="text-headline group-title">{group.name}</h2>
+                <div class="cards">
+                  {group.entries.map(component => (
+                    <WebComponentCard component={component} />
+                  ))}
+                </div>
+              </section>
+            ),
+        )
+      }
+    </div>
+
+    <div id="flat-view" class="cards-holder hidden">
+      <div class="cards">
+        {sortedComponents.map(component => (
+          <WebComponentCard component={component} />
+        ))}
+      </div>
+    </div>
+  </wc-container>
+
+  <script is:inline>
+    const $componentSearchElm = document.getElementById('component-search');
+    customElements.whenDefined('wc-search').then(function () {
+      $componentSearchElm.focus();
+    });
+
+    const $groupedView = document.getElementById('grouped-view');
+    const $flatView = document.getElementById('flat-view');
+
+    $componentSearchElm.addEventListener('input', function (e) {
+      window.scrollTo({ top: 0, behavior: 'instant' });
+      const query = e.target.value.toLowerCase();
+
+      if (query) {
+        $groupedView.classList.add('hidden');
+        $flatView.classList.remove('hidden');
+        $flatView.querySelectorAll('.component-card').forEach(elm => {
+          elm.classList.toggle('hidden', elm.innerText.toLowerCase().indexOf(query) === -1);
+        });
+      } else {
+        $flatView.classList.add('hidden');
+        $groupedView.classList.remove('hidden');
+      }
+    });
+
+
+    const $searchContainer = document.querySelector('#search-container');
+
+    document.querySelector('.with-sidebar-layout-content').addEventListener('scroll', function (event) {
+      const scrollPosition = event.target.scrollTop;
+
+      if (scrollPosition > 0) {
+        $searchContainer.classList.add('scrolled');
+      } else {
+        $searchContainer.classList.remove('scrolled');
+      }
+    });
+  </script>
+</Layout>

@@ -1,0 +1,53 @@
+---
+export const title = 'Usage';
+export const order = 100;
+import DemoComponentCard from '../../../../components/DemoComponentCard.astro';
+---
+<p> Here are several predefined button styles, each serving its own semantic purpose.</p>
+
+
+<style is:inline>
+  .demo-stack {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-300);
+  }
+</style>
+
+<DemoComponentCard lang={'html'}>
+
+  <div class="demo-stack">
+    <wc-button-group connected>
+      <wc-button toggle>
+        <wc-icon slot=icon name='star'></wc-icon>
+        Label
+      </wc-button>
+      <wc-button toggle>
+        <wc-icon slot=icon name='star'></wc-icon>
+        Label
+      </wc-button>
+      <wc-button toggle>
+        <wc-icon slot=icon name='star'></wc-icon>
+        Label
+      </wc-button>
+    </wc-button-group>
+
+  <wc-button-group>
+    <wc-button toggle selected>
+      <wc-icon slot=icon name='star'></wc-icon>
+      Label
+    </wc-button>
+    <wc-button toggle>
+      <wc-icon slot=icon name='star'></wc-icon>
+      Label
+    </wc-button>
+    <wc-button toggle>
+      <wc-icon slot=icon name='star'></wc-icon>
+      Label
+    </wc-button>
+  </wc-button-group>
+
+  </div>
+</DemoComponentCard>

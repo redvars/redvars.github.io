@@ -1,0 +1,48 @@
+---
+export const title = 'Usage';
+export const order = 100;
+import DemoComponentCard from '../../../../components/DemoComponentCard.astro';
+---
+
+<style is:inline>
+  .demo-component-card .demo-area {
+    min-height: 20rem !important;
+  }
+</style>
+
+<DemoComponentCard lang='html'>
+
+  <span class='tooltiwc-link' tabindex='1'>
+     hover here
+      <wc-tooltip open>Save the record</wc-tooltip>
+    </span>
+</DemoComponentCard>
+
+<br/>
+
+<h3>Rich Tooltip</h3>
+
+<DemoComponentCard lang='html'>
+  <span class='tooltiwc-link' tabindex='1'>
+     hover here
+      <wc-tooltip variant='rich' open>
+        <span slot='title'>Rich tooltip</span>
+        Rich tooltips bring attention to important information or actions.
+        <div slot='actions'>
+          <wc-button variant='text' size='xs'>Action</wc-button>
+           <wc-button variant='text' size='xs'>Action</wc-button>
+        </div>
+      </wc-tooltip>
+    </span>
+</DemoComponentCard>
+
+
+
+<DemoComponentCard lang='html'>
+  <div style='position:relative;'>
+    <wc-button id='tooltip-btn' variant='outlined'><wc-icon slot='icon' name='save'></wc-icon></wc-button>
+    <wc-tooltip for='tooltip-btn'>Relative tooltup using for attribute</wc-tooltip>
+  </div>
+</DemoComponentCard>
+
+

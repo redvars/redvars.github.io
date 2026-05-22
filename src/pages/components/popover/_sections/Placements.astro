@@ -1,0 +1,46 @@
+---
+export const title = 'Placements';
+export const order = 200;
+import DemoComponentCard from '../../../../components/DemoComponentCard.astro';
+---
+
+<p class='text-body-medium'>
+  The popover can be positioned relative to the trigger element. Accepted values for <code>placement</code> include:
+  <code>top</code>, <code>top-start</code>, <code>top-end</code>,
+  <code>right</code>, <code>right-start</code>, <code>right-end</code>,
+  <code>bottom</code> (default), <code>bottom-start</code>, <code>bottom-end</code>,
+  <code>left</code>, <code>left-start</code>, and <code>left-end</code>.
+  floating-ui automatically flips or shifts the panel to keep it visible inside the viewport.
+</p>
+
+<style is:inline>
+  .demo-placements-container .demo-area {
+    min-height: 16rem !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+</style>
+
+<DemoComponentCard lang='html' cssClasses='demo-placements-container'>
+  <wc-popover trigger='click' placement='top'>
+    <wc-button variant='outlined'>top</wc-button>
+    <wc-popover-content>Placed on top</wc-popover-content>
+  </wc-popover>
+  <wc-popover trigger='click' placement='bottom'>
+    <wc-button variant='outlined'>bottom</wc-button>
+    <wc-popover-content>Placed on bottom</wc-popover-content>
+  </wc-popover>
+  <wc-popover trigger='click' placement='left'>
+    <wc-button variant='outlined'>left</wc-button>
+    <wc-popover-content>Placed on left</wc-popover-content>
+  </wc-popover>
+  <wc-popover trigger='click' placement='right'>
+    <wc-button variant='outlined'>right</wc-button>
+    <wc-popover-content>Placed on right</wc-popover-content>
+  </wc-popover>
+</DemoComponentCard>
+
+

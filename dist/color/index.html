@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+<html lang="en" data-astro-cid-5hce7sga>
+<head>
+  <!-- Title -->
+  <title>Peacock &middot; Rapidly build web applications</title>
+
+  <!-- Required Meta Tags Always Come First -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="sitemap" href="/sitemap-index.xml">
+
+  <link rel="canonical" href="https://redvars.com/color/">
+
+  <!-- Author Meta Tags -->
+  <meta name="author" content="Shivaji Varma">
+  <meta name="copyright" content="(c) 2026 Shivaji Varma">
+
+  <!--  Meta tags -->
+  <meta name="keywords" content="undefined, web components, button, input, grid, ui library, calendar, table, accordion, select, search, notifications, modal, card, breadcrumb, tree view, tabs, pagination, tooltip, popover, dropdown, menu, slider, toggle, switch, progress bar, spinner, loader, toast, alert, badge, tag, avatar, chip, divider, list, icon, text, heading, paragraph, label, link, image, checkbox, radio, form, form group, form field">
+  <meta name="description" content="GOAT UI contains design system and most used web components built using Stencil. So you don't need to include any additional framework dependencies, You can simple import required component js, and right away start using it.">
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="/favicon.svg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+
+  
+
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@100..900&family=Pacifico&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+  <!-- Peacock styles -->
+  <link href="https://cdn.jsdelivr.net/npm/@redvars/peacock@3.8.4/dist/assets/styles.css" rel="stylesheet">
+
+<style>.color-cards[data-astro-cid-o5eku6zw]{display:grid;grid-template-columns:repeat(auto-fit,minmax(100px,1fr));gap:1rem;margin-top:1rem;margin-bottom:2rem}.color-card[data-astro-cid-o5eku6zw]{width:100%;height:50px;border-radius:.25rem;box-shadow:var(--shadow-1)}
+.footer-with-about{width:100%;background:var(--color-surface);border-top:1px solid var(--color-outline-variant);padding:1.5rem 2rem;display:flex;gap:1rem}.footer-with-about .section-title{margin-block-end:var(--spacing-200)}.footer-with-about .about-content .section-title{font-family:Pacifico,sans-serif!important}.footer-with-about .about-content p{margin-block-end:var(--spacing-200)}.footer-with-about .footer-links .section-nav-links{margin-block:0;padding-inline-start:1.25rem}.footer-with-about .footer-social-links .section-nav-links{list-style:none;display:flex;margin:0;padding:0;gap:1rem}.footer-with-about{flex-direction:column}.footer-with-about .about,.footer-with-about .footer-links{flex:1}.footer-with-about .footer-social-links{flex:1;justify-content:center}@media(min-width:1056px){.footer-with-about{flex-direction:row}.footer-with-about .about{flex:2}.footer-with-about .footer-links{flex:1}.footer-with-about .footer-social-links{flex:1;justify-content:flex-start}}
+.navigation-rail[data-astro-cid-3uomyaio]{position:fixed;--nav-rail-width: var(--side-navigation-width);--nav-rail-container-color: var(--container-surface-container-high)}#hide-main-menu[data-astro-cid-jrsah6v3]{margin-inline-start:-1.25rem;margin-block-start:-1rem}#app-bar-title[data-astro-cid-jrsah6v3]{display:inline-flex;align-items:center;gap:.5rem;color:var(--color-on-surface);text-decoration:none}#app-bar-title[data-astro-cid-jrsah6v3] img[data-astro-cid-jrsah6v3]{width:22px}@media(max-width:671px){.show-mobile{display:unset}.hide-mobile,.hide-tablet-portrait-below{display:none}.show-tablet-portrait-below{display:unset}.hide-tablet-landscape-below,.show-desktop{display:none}.hide-desktop{display:unset}}@media(min-width:672px){.show-mobile,.hide-tablet-portrait-below{display:none}.show-tablet-portrait-below{display:unset}.hide-tablet-landscape-below,.show-desktop{display:none}.hide-desktop{display:unset}}@media(min-width:1056px){.show-mobile,.hide-tablet-landscape-below,.show-tablet-portrait-below{display:none}.hide-tablet-portrait-below,.hide-desktop{display:unset}.show-desktop{display:none}}@media(min-width:1312px){.hide-tablet-landscape-below{display:unset}.show-tablet-portrait-below{display:none}.hide-tablet-portrait-below{display:unset}.hide-desktop{display:none}.show-desktop{display:unset}}.default-layout{display:flex;height:100vh;--side-navigation-width: 6rem}.default-layout .side-navigation-container,.default-layout .default-layout-content{height:100%;overflow-y:auto}.default-layout .side-navigation-container{display:none;width:var(--side-navigation-width)}.default-layout .default-layout-content{flex:1}@media(min-width:1056px){.default-layout .side-navigation-container{display:block}}html[dir=ltr] [data-pf-sr-hidden]{left:-10000px}html[dir=ltr] [data-pf-sr-hidden]{right:-10000px}.heading-scrollable:before{content:"";display:block;height:calc(var(--header-height) + 1rem);margin-top:calc(-1 * var(--header-height) - 1rem);visibility:hidden;pointer-events:none}.sections-wrapper{padding-block:var(--spacing-1000)}.sections-wrapper .section{padding-bottom:var(--spacing-600)}.sections-wrapper .section:last-child{padding-bottom:0}@media(max-width:671px){.container-code{margin-inline:-1rem}}.mobile-bottom-nav{position:fixed;bottom:0;left:0;right:0;z-index:1000}.page-notification-manager{position:fixed}
+@media(max-width:671px){.show-mobile{display:unset}.hide-mobile,.hide-tablet-portrait-below{display:none}.show-tablet-portrait-below{display:unset}.hide-tablet-landscape-below,.show-desktop{display:none}.hide-desktop{display:unset}}@media(min-width:672px){.show-mobile,.hide-tablet-portrait-below{display:none}.show-tablet-portrait-below{display:unset}.hide-tablet-landscape-below,.show-desktop{display:none}.hide-desktop{display:unset}}@media(min-width:1056px){.show-mobile,.hide-tablet-landscape-below,.show-tablet-portrait-below{display:none}.hide-tablet-portrait-below,.hide-desktop{display:unset}.show-desktop{display:none}}@media(min-width:1312px){.hide-tablet-landscape-below{display:unset}.show-tablet-portrait-below{display:none}.hide-tablet-portrait-below{display:unset}.hide-desktop{display:none}.show-desktop{display:unset}}*{box-sizing:border-box;font-family:var(--font-family-sans)}html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font:inherit;vertical-align:baseline}html{scroll-behavior:smooth;font-size:16px}:not(:defined){visibility:hidden}.primary-scrollbar::selection{color:var(--color-surface);background:var(--color-primary)}.primary-scrollbar::-webkit-scrollbar{background-color:transparent;width:var(--scrollbar-width)}.primary-scrollbar::-webkit-scrollbar-thumb{background-color:var(--color-primary);border-radius:calc(var(--scrollbar-width) / 2)}.primary-scrollbar.stop-scroll{overflow-y:hidden}.markdown h1{font-family:var(--typography-display-large-font-family)!important;font-size:var(--typography-display-large-font-size)!important;font-weight:var(--typography-display-large-font-weight)!important;line-height:var(--typography-display-large-line-height)!important;letter-spacing:var(--typography-display-large-letter-spacing)!important;margin-bottom:var(--spacing-200)}.markdown h2{font-family:var(--typography-headline-large-font-family)!important;font-size:var(--typography-headline-large-font-size)!important;font-weight:var(--typography-headline-large-font-weight)!important;line-height:var(--typography-headline-large-line-height)!important;letter-spacing:var(--typography-headline-large-letter-spacing)!important;margin-bottom:var(--spacing-150)}.markdown h3{font-family:var(--typography-headline-medium-font-family)!important;font-size:var(--typography-headline-medium-font-size)!important;font-weight:var(--typography-headline-medium-font-weight)!important;line-height:var(--typography-headline-medium-line-height)!important;letter-spacing:var(--typography-headline-medium-letter-spacing)!important;margin-bottom:var(--spacing-100)}.markdown p{font-family:var(--typography-body-large-font-family)!important;font-size:var(--typography-body-large-font-size)!important;font-weight:var(--typography-body-large-font-weight)!important;line-height:var(--typography-body-large-line-height)!important;letter-spacing:var(--typography-body-large-letter-spacing)!important;margin-bottom:var(--spacing-150)}body{background:var(--color-surface-container-highest);color:var(--color-on-surface)}
+</style></head>
+<body data-astro-cid-5hce7sga>
+
+
+
+  <div class="default-layout">
+
+    <!-- For desktop and tablet -->
+    <div class="side-navigation-container">
+      
+
+<wc-navigation-rail class="navigation-rail" data-astro-cid-3uomyaio="true">
+
+
+
+  <wc-fab slot="header" id="search-btn" class="search-button" lowered="true" color="primary" aria-label="Search components" data-astro-cid-3uomyaio="true"><wc-icon name="search" data-astro-cid-3uomyaio="true"></wc-icon></wc-fab>
+
+  <wc-navigation-rail-item href="/#" aria-label="Go to Home" data-astro-cid-3uomyaio="true">
+    <img src="/assets/img/logo-plain.webp" slot="icon" class="logo" alt="peacock" style="width: 32px;" data-astro-cid-3uomyaio>
+    Home
+  </wc-navigation-rail-item>
+  <wc-navigation-rail-item href="/components" aria-label="Go to Components" data-astro-cid-3uomyaio="true">
+    <wc-icon slot="icon" name="settings" data-astro-cid-3uomyaio="true"></wc-icon>
+    Components
+  </wc-navigation-rail-item>
+  <wc-navigation-rail-item href="/color" aria-label="Go to Colors" data-astro-cid-3uomyaio="true">
+    <wc-icon slot="icon" name="palette" data-astro-cid-3uomyaio="true"></wc-icon>
+    Colors
+  </wc-navigation-rail-item>
+  <wc-navigation-rail-item href="/components/text" aria-label="Go to Typography" data-astro-cid-3uomyaio="true">
+    <wc-icon slot="icon" name="font_download" data-astro-cid-3uomyaio="true"></wc-icon>
+    Typography
+  </wc-navigation-rail-item>
+
+  <wc-navigation-rail-item href="/blog" title="Go to Blog" data-astro-cid-3uomyaio="true">
+    <wc-icon slot="icon" name="pages" data-astro-cid-3uomyaio="true"></wc-icon>
+    Blog
+  </wc-navigation-rail-item>
+
+  <wc-navigation-rail-item href="/blocks" aria-label="Go to Blocks" data-astro-cid-3uomyaio="true">
+    <wc-icon slot="icon" name="grid_view" data-astro-cid-3uomyaio="true"></wc-icon>
+    Blocks
+  </wc-navigation-rail-item>
+
+
+  <wc-navigation-rail-item slot="footer" class="dir-switcher" aria-label="Toggle ltr/rtl direction" data-astro-cid-3uomyaio="true">
+    <wc-icon slot="icon" class="icon" data-astro-cid-3uomyaio="true"></wc-icon>
+  </wc-navigation-rail-item>
+
+  <wc-navigation-rail-item slot="footer" class="theme-switcher" aria-label="Toggle light/dark mode" data-astro-cid-3uomyaio="true">
+    <wc-icon slot="icon" class="icon" data-astro-cid-3uomyaio="true"></wc-icon>
+  </wc-navigation-rail-item>
+</wc-navigation-rail>
+    </div>
+
+
+    <div class="default-layout-content">
+
+       <!-- For mobile -->
+      
+
+<wc-app-bar class="show-tablet-portrait-below" data-astro-cid-jrsah6v3="true">
+  <wc-icon-button slot="leading" variant="text" id="show-main-menu" data-astro-cid-jrsah6v3="true">
+    <wc-icon name="menu" data-astro-cid-jrsah6v3="true"></wc-icon>
+  </wc-icon-button>
+
+  <a id="app-bar-title" href="/" data-astro-cid-jrsah6v3>
+    <img src="/assets/img/logo-plain.webp" class="logo" alt="peacock" data-astro-cid-jrsah6v3>
+    Peacock
+  </a>
+  <wc-icon-button slot="trailing" variant="text" class="search-button" data-astro-cid-jrsah6v3="true">
+    <wc-icon name="search" data-astro-cid-jrsah6v3="true"></wc-icon>
+  </wc-icon-button>
+</wc-app-bar>
+
+<wc-side-sheet id="main-menu-modal" variant="modal" position="left" class="show-tablet-portrait-below" data-astro-cid-jrsah6v3="true">
+
+  <wc-icon-button variant="text" id="hide-main-menu" data-astro-cid-jrsah6v3="true">
+    <wc-icon name="close" data-astro-cid-jrsah6v3="true"></wc-icon>
+  </wc-icon-button>
+
+  <wc-list style="width: min(100%, 28rem);" data-astro-cid-jrsah6v3="true">
+
+    <wc-list-item href="/#" aria-label="Go to Home" data-astro-cid-jrsah6v3="true">
+      <img src="/assets/img/logo-plain.webp" slot="leading" class="logo" alt="peacock" style="width: 32px;" data-astro-cid-jrsah6v3>
+      Home
+    </wc-list-item>
+    <wc-list-item href="/components" aria-label="Go to Components" data-astro-cid-jrsah6v3="true">
+      <wc-icon slot="leading" name="settings" data-astro-cid-jrsah6v3="true"></wc-icon>
+      Components
+    </wc-list-item>
+    <wc-list-item href="/color" aria-label="Go to Colors" data-astro-cid-jrsah6v3="true">
+      <wc-icon slot="leading" name="palette" data-astro-cid-jrsah6v3="true"></wc-icon>
+      Colors
+    </wc-list-item>
+    <wc-list-item href="/components/text" aria-label="Go to Typography" data-astro-cid-jrsah6v3="true">
+      <wc-icon slot="leading" name="font_download" data-astro-cid-jrsah6v3="true"></wc-icon>
+      Typography
+    </wc-list-item>
+
+    <wc-list-item href="/blog" title="Go to Blog" data-astro-cid-jrsah6v3="true">
+      <wc-icon slot="leading" name="pages" data-astro-cid-jrsah6v3="true"></wc-icon>
+      Blog
+    </wc-list-item>
+
+    <wc-list-item href="/blocks" aria-label="Go to Blocks" data-astro-cid-jrsah6v3="true">
+      <wc-icon slot="leading" name="grid_view" data-astro-cid-jrsah6v3="true"></wc-icon>
+      Blocks
+    </wc-list-item>
+
+
+    <wc-list-item class="dir-switcher" aria-label="Toggle ltr/rtl direction" title="Go to Blog" data-astro-cid-jrsah6v3="true">
+      <wc-icon slot="leading" class="icon" data-astro-cid-jrsah6v3="true"></wc-icon>
+      Direction
+    </wc-list-item>
+
+    <wc-list-item class="theme-switcher" aria-label="Toggle light/dark mode" data-astro-cid-jrsah6v3="true">
+      <wc-icon slot="leading" class="icon" data-astro-cid-jrsah6v3="true"></wc-icon>
+      Theme
+    </wc-list-item>
+
+  </wc-list>
+</wc-side-sheet>
+
+<script type="module">const e=document.querySelector("#main-menu-modal");document.querySelector("#show-main-menu").addEventListener("click",()=>{e.show()});document.querySelector("#hide-main-menu").addEventListener("click",()=>{e.hide()});</script>
+
+      
+
+
+  <wc-container data-astro-cid-o5eku6zw="true">
+
+    <div class="color-container" data-astro-cid-o5eku6zw>
+
+
+      <pc-text data-astro-cid-o5eku6zw="true">primary</pc-text>
+
+            <div class="color-cards" data-astro-cid-o5eku6zw>
+            <div data-astro-cid-o5eku6zw>
+                <div class="color-card" style="background-color: var(--color-primary-0);" data-astro-cid-o5eku6zw>
+              </div>
+                <pc-text data-astro-cid-o5eku6zw="true">0 - </pc-text>
+              </div><div data-astro-cid-o5eku6zw>
+                <div class="color-card" style="background-color: var(--color-primary-10);" data-astro-cid-o5eku6zw>
+              </div>
+                <pc-text data-astro-cid-o5eku6zw="true">10 - </pc-text>
+              </div><div data-astro-cid-o5eku6zw>
+                <div class="color-card" style="background-color: var(--color-primary-20);" data-astro-cid-o5eku6zw>
+              </div>
+                <pc-text data-astro-cid-o5eku6zw="true">20 - </pc-text>
+              </div><div data-astro-cid-o5eku6zw>
+                <div class="color-card" style="background-color: var(--color-primary-30);" data-astro-cid-o5eku6zw>
+              </div>
+                <pc-text data-astro-cid-o5eku6zw="true">30 - </pc-text>
+              </div><div data-astro-cid-o5eku6zw>
+                <div class="color-card" style="background-color: var(--color-primary-40);" data-astro-cid-o5eku6zw>
+              </div>
+                <pc-text data-astro-cid-o5eku6zw="true">40 - </pc-text>
+              </div><div data-astro-cid-o5eku6zw>
+                <div class="color-card" style="background-color: var(--color-primary-50);" data-astro-cid-o5eku6zw>
+              </div>
+                <pc-text data-astro-cid-o5eku6zw="true">50 - </pc-text>
+              </div><div data-astro-cid-o5eku6zw>
+                <div class="color-card" style="background-color: var(--color-primary-60);" data-astro-cid-o5eku6zw>
+              </div>
+                <pc-text data-astro-cid-o5eku6zw="true">60 - </pc-text>
+              </div><div data-astro-cid-o5eku6zw>
+                <div class="color-card" style="background-color: var(--color-primary-70);" data-astro-cid-o5eku6zw>
+              </div>
+                <pc-text data-astro-cid-o5eku6zw="true">70 - </pc-text>
+              </div><div data-astro-cid-o5eku6zw>
+                <div class="color-card" style="background-color: var(--color-primary-80);" data-astro-cid-o5eku6zw>
+              </div>
+                <pc-text data-astro-cid-o5eku6zw="true">80 - </pc-text>
+              </div><div data-astro-cid-o5eku6zw>
+                <div class="color-card" style="background-color: var(--color-primary-90);" data-astro-cid-o5eku6zw>
+              </div>
+                <pc-text data-astro-cid-o5eku6zw="true">90 - </pc-text>
+              </div><div data-astro-cid-o5eku6zw>
+                <div class="color-card" style="background-color: var(--color-primary-95);" data-astro-cid-o5eku6zw>
+              </div>
+                <pc-text data-astro-cid-o5eku6zw="true">95 - </pc-text>
+              </div><div data-astro-cid-o5eku6zw>
+                <div class="color-card" style="background-color: var(--color-primary-98);" data-astro-cid-o5eku6zw>
+              </div>
+                <pc-text data-astro-cid-o5eku6zw="true">98 - </pc-text>
+              </div><div data-astro-cid-o5eku6zw>
+                <div class="color-card" style="background-color: var(--color-primary-100);" data-astro-cid-o5eku6zw>
+              </div>
+                <pc-text data-astro-cid-o5eku6zw="true">100 - </pc-text>
+              </div>
+          </div><pc-text data-astro-cid-o5eku6zw="true">secondary</pc-text>
+
+            <div class="color-cards" data-astro-cid-o5eku6zw>
+            <div data-astro-cid-o5eku6zw>
+                <div class="color-card" style="background-color: var(--color-secondary-0);" data-astro-cid-o5eku6zw>
+              </div>
+                <pc-text data-astro-cid-o5eku6zw="true">0 - </pc-text>
+              </div><div data-astro-cid-o5eku6zw>
+                <div class="color-card" style="background-color: var(--color-secondary-10);" data-astro-cid-o5eku6zw>
+              </div>
+                <pc-text data-astro-cid-o5eku6zw="true">10 - </pc-text>
+              </div><div data-astro-cid-o5eku6zw>
+                <div class="color-card" style="background-color: var(--color-secondary-20);" data-astro-cid-o5eku6zw>
+              </div>
+                <pc-text data-astro-cid-o5eku6zw="true">20 - </pc-text>
+              </div><div data-astro-cid-o5eku6zw>
+                <div class="color-card" style="background-color: var(--color-secondary-30);" data-astro-cid-o5eku6zw>
+              </div>
+                <pc-text data-astro-cid-o5eku6zw="true">30 - </pc-text>
+              </div><div data-astro-cid-o5eku6zw>
+                <div class="color-card" style="background-color: var(--color-secondary-40);" data-astro-cid-o5eku6zw>
+              </div>
+                <pc-text data-astro-cid-o5eku6zw="true">40 - </pc-text>
+              </div><div data-astro-cid-o5eku6zw>
+                <div class="color-card" style="background-color: var(--color-secondary-50);" data-astro-cid-o5eku6zw>
+              </div>
+                <pc-text data-astro-cid-o5eku6zw="true">50 - </pc-text>
+              </div><div data-astro-cid-o5eku6zw>
+                <div class="color-card" style="background-color: var(--color-secondary-60);" data-astro-cid-o5eku6zw>
+              </div>
+                <pc-text data-astro-cid-o5eku6zw="true">60 - </pc-text>
+              </div><div data-astro-cid-o5eku6zw>
+                <div class="color-card" style="background-color: var(--color-secondary-70);" data-astro-cid-o5eku6zw>
+              </div>
+                <pc-text data-astro-cid-o5eku6zw="true">70 - </pc-text>
+              </div><div data-astro-cid-o5eku6zw>
+                <div class="color-card" style="background-color: var(--color-secondary-80);" data-astro-cid-o5eku6zw>
+              </div>
+                <pc-text data-astro-cid-o5eku6zw="true">80 - </pc-text>
+              </div><div data-astro-cid-o5eku6zw>
+                <div class="color-card" style="background-color: var(--color-secondary-90);" data-astro-cid-o5eku6zw>
+              </div>
+                <pc-text data-astro-cid-o5eku6zw="true">90 - </pc-text>
+              </div><div data-astro-cid-o5eku6zw>
+                <div class="color-card" style="background-color: var(--color-secondary-95);" data-astro-cid-o5eku6zw>
+              </div>
+                <pc-text data-astro-cid-o5eku6zw="true">95 - </pc-text>
+              </div><div data-astro-cid-o5eku6zw>
+                <div class="color-card" style="background-color: var(--color-secondary-98);" data-astro-cid-o5eku6zw>
+              </div>
+                <pc-text data-astro-cid-o5eku6zw="true">98 - </pc-text>
+              </div><div data-astro-cid-o5eku6zw>
+                <div class="color-card" style="background-color: var(--color-secondary-100);" data-astro-cid-o5eku6zw>
+              </div>
+                <pc-text data-astro-cid-o5eku6zw="true">100 - </pc-text>
+              </div>
+          </div><pc-text data-astro-cid-o5eku6zw="true">tertiary</pc-text>
+
+            <div class="color-cards" data-astro-cid-o5eku6zw>
+            <div data-astro-cid-o5eku6zw>
+                <div class="color-card" style="background-color: var(--color-tertiary-0);" data-astro-cid-o5eku6zw>
+              </div>
+                <pc-text data-astro-cid-o5eku6zw="true">0 - </pc-text>
+              </div><div data-astro-cid-o5eku6zw>
+                <div class="color-card" style="background-color: var(--color-tertiary-10);" data-astro-cid-o5eku6zw>
+              </div>
+                <pc-text data-astro-cid-o5eku6zw="true">10 - </pc-text>
+              </div><div data-astro-cid-o5eku6zw>
+                <div class="color-card" style="background-color: var(--color-tertiary-20);" data-astro-cid-o5eku6zw>
+              </div>
+                <pc-text data-astro-cid-o5eku6zw="true">20 - </pc-text>
+              </div><div data-astro-cid-o5eku6zw>
+                <div class="color-card" style="background-color: var(--color-tertiary-30);" data-astro-cid-o5eku6zw>
+              </div>
+                <pc-text data-astro-cid-o5eku6zw="true">30 - </pc-text>
+              </div><div data-astro-cid-o5eku6zw>
+                <div class="color-card" style="background-color: var(--color-tertiary-40);" data-astro-cid-o5eku6zw>
+              </div>
+                <pc-text data-astro-cid-o5eku6zw="true">40 - </pc-text>
+              </div><div data-astro-cid-o5eku6zw>
+                <div class="color-card" style="background-color: var(--color-tertiary-50);" data-astro-cid-o5eku6zw>
+              </div>
+                <pc-text data-astro-cid-o5eku6zw="true">50 - </pc-text>
+              </div><div data-astro-cid-o5eku6zw>
+                <div class="color-card" style="background-color: var(--color-tertiary-60);" data-astro-cid-o5eku6zw>
+              </div>
+                <pc-text data-astro-cid-o5eku6zw="true">60 - </pc-text>
+              </div><div data-astro-cid-o5eku6zw>
+                <div class="color-card" style="background-color: var(--color-tertiary-70);" data-astro-cid-o5eku6zw>
+              </div>
+                <pc-text data-astro-cid-o5eku6zw="true">70 - </pc-text>
+              </div><div data-astro-cid-o5eku6zw>
+                <div class="color-card" style="background-color: var(--color-tertiary-80);" data-astro-cid-o5eku6zw>
+              </div>
+                <pc-text data-astro-cid-o5eku6zw="true">80 - </pc-text>
+              </div><div data-astro-cid-o5eku6zw>
+                <div class="color-card" style="background-color: var(--color-tertiary-90);" data-astro-cid-o5eku6zw>
+              </div>
+                <pc-text data-astro-cid-o5eku6zw="true">90 - </pc-text>
+              </div><div data-astro-cid-o5eku6zw>
+                <div class="color-card" style="background-color: var(--color-tertiary-95);" data-astro-cid-o5eku6zw>
+              </div>
+                <pc-text data-astro-cid-o5eku6zw="true">95 - </pc-text>
+              </div><div data-astro-cid-o5eku6zw>
+                <div class="color-card" style="background-color: var(--color-tertiary-98);" data-astro-cid-o5eku6zw>
+              </div>
+                <pc-text data-astro-cid-o5eku6zw="true">98 - </pc-text>
+              </div><div data-astro-cid-o5eku6zw>
+                <div class="color-card" style="background-color: var(--color-tertiary-100);" data-astro-cid-o5eku6zw>
+              </div>
+                <pc-text data-astro-cid-o5eku6zw="true">100 - </pc-text>
+              </div>
+          </div><pc-text data-astro-cid-o5eku6zw="true">neutral</pc-text>
+
+            <div class="color-cards" data-astro-cid-o5eku6zw>
+            <div data-astro-cid-o5eku6zw>
+                <div class="color-card" style="background-color: var(--color-neutral-0);" data-astro-cid-o5eku6zw>
+              </div>
+                <pc-text data-astro-cid-o5eku6zw="true">0 - </pc-text>
+              </div><div data-astro-cid-o5eku6zw>
+                <div class="color-card" style="background-color: var(--color-neutral-10);" data-astro-cid-o5eku6zw>
+              </div>
+                <pc-text data-astro-cid-o5eku6zw="true">10 - </pc-text>
+              </div><div data-astro-cid-o5eku6zw>
+                <div class="color-card" style="background-color: var(--color-neutral-20);" data-astro-cid-o5eku6zw>
+              </div>
+                <pc-text data-astro-cid-o5eku6zw="true">20 - </pc-text>
+              </div><div data-astro-cid-o5eku6zw>
+                <div class="color-card" style="background-color: var(--color-neutral-30);" data-astro-cid-o5eku6zw>
+              </div>
+                <pc-text data-astro-cid-o5eku6zw="true">30 - </pc-text>
+              </div><div data-astro-cid-o5eku6zw>
+                <div class="color-card" style="background-color: var(--color-neutral-40);" data-astro-cid-o5eku6zw>
+              </div>
+                <pc-text data-astro-cid-o5eku6zw="true">40 - </pc-text>
+              </div><div data-astro-cid-o5eku6zw>
+                <div class="color-card" style="background-color: var(--color-neutral-50);" data-astro-cid-o5eku6zw>
+              </div>
+                <pc-text data-astro-cid-o5eku6zw="true">50 - </pc-text>
+              </div><div data-astro-cid-o5eku6zw>
+                <div class="color-card" style="background-color: var(--color-neutral-60);" data-astro-cid-o5eku6zw>
+              </div>
+                <pc-text data-astro-cid-o5eku6zw="true">60 - </pc-text>
+              </div><div data-astro-cid-o5eku6zw>
+                <div class="color-card" style="background-color: var(--color-neutral-70);" data-astro-cid-o5eku6zw>
+              </div>
+                <pc-text data-astro-cid-o5eku6zw="true">70 - </pc-text>
+              </div><div data-astro-cid-o5eku6zw>
+                <div class="color-card" style="background-color: var(--color-neutral-80);" data-astro-cid-o5eku6zw>
+              </div>
+                <pc-text data-astro-cid-o5eku6zw="true">80 - </pc-text>
+              </div><div data-astro-cid-o5eku6zw>
+                <div class="color-card" style="background-color: var(--color-neutral-90);" data-astro-cid-o5eku6zw>
+              </div>
+                <pc-text data-astro-cid-o5eku6zw="true">90 - </pc-text>
+              </div><div data-astro-cid-o5eku6zw>
+                <div class="color-card" style="background-color: var(--color-neutral-95);" data-astro-cid-o5eku6zw>
+              </div>
+                <pc-text data-astro-cid-o5eku6zw="true">95 - </pc-text>
+              </div><div data-astro-cid-o5eku6zw>
+                <div class="color-card" style="background-color: var(--color-neutral-98);" data-astro-cid-o5eku6zw>
+              </div>
+                <pc-text data-astro-cid-o5eku6zw="true">98 - </pc-text>
+              </div><div data-astro-cid-o5eku6zw>
+                <div class="color-card" style="background-color: var(--color-neutral-100);" data-astro-cid-o5eku6zw>
+              </div>
+                <pc-text data-astro-cid-o5eku6zw="true">100 - </pc-text>
+              </div>
+          </div><pc-text data-astro-cid-o5eku6zw="true">neutral-variant</pc-text>
+
+            <div class="color-cards" data-astro-cid-o5eku6zw>
+            <div data-astro-cid-o5eku6zw>
+                <div class="color-card" style="background-color: var(--color-neutral-variant-0);" data-astro-cid-o5eku6zw>
+              </div>
+                <pc-text data-astro-cid-o5eku6zw="true">0 - </pc-text>
+              </div><div data-astro-cid-o5eku6zw>
+                <div class="color-card" style="background-color: var(--color-neutral-variant-10);" data-astro-cid-o5eku6zw>
+              </div>
+                <pc-text data-astro-cid-o5eku6zw="true">10 - </pc-text>
+              </div><div data-astro-cid-o5eku6zw>
+                <div class="color-card" style="background-color: var(--color-neutral-variant-20);" data-astro-cid-o5eku6zw>
+              </div>
+                <pc-text data-astro-cid-o5eku6zw="true">20 - </pc-text>
+              </div><div data-astro-cid-o5eku6zw>
+                <div class="color-card" style="background-color: var(--color-neutral-variant-30);" data-astro-cid-o5eku6zw>
+              </div>
+                <pc-text data-astro-cid-o5eku6zw="true">30 - </pc-text>
+              </div><div data-astro-cid-o5eku6zw>
+                <div class="color-card" style="background-color: var(--color-neutral-variant-40);" data-astro-cid-o5eku6zw>
+              </div>
+                <pc-text data-astro-cid-o5eku6zw="true">40 - </pc-text>
+              </div><div data-astro-cid-o5eku6zw>
+                <div class="color-card" style="background-color: var(--color-neutral-variant-50);" data-astro-cid-o5eku6zw>
+              </div>
+                <pc-text data-astro-cid-o5eku6zw="true">50 - </pc-text>
+              </div><div data-astro-cid-o5eku6zw>
+                <div class="color-card" style="background-color: var(--color-neutral-variant-60);" data-astro-cid-o5eku6zw>
+              </div>
+                <pc-text data-astro-cid-o5eku6zw="true">60 - </pc-text>
+              </div><div data-astro-cid-o5eku6zw>
+                <div class="color-card" style="background-color: var(--color-neutral-variant-70);" data-astro-cid-o5eku6zw>
+              </div>
+                <pc-text data-astro-cid-o5eku6zw="true">70 - </pc-text>
+              </div><div data-astro-cid-o5eku6zw>
+                <div class="color-card" style="background-color: var(--color-neutral-variant-80);" data-astro-cid-o5eku6zw>
+              </div>
+                <pc-text data-astro-cid-o5eku6zw="true">80 - </pc-text>
+              </div><div data-astro-cid-o5eku6zw>
+                <div class="color-card" style="background-color: var(--color-neutral-variant-90);" data-astro-cid-o5eku6zw>
+              </div>
+                <pc-text data-astro-cid-o5eku6zw="true">90 - </pc-text>
+              </div><div data-astro-cid-o5eku6zw>
+                <div class="color-card" style="background-color: var(--color-neutral-variant-95);" data-astro-cid-o5eku6zw>
+              </div>
+                <pc-text data-astro-cid-o5eku6zw="true">95 - </pc-text>
+              </div><div data-astro-cid-o5eku6zw>
+                <div class="color-card" style="background-color: var(--color-neutral-variant-98);" data-astro-cid-o5eku6zw>
+              </div>
+                <pc-text data-astro-cid-o5eku6zw="true">98 - </pc-text>
+              </div><div data-astro-cid-o5eku6zw>
+                <div class="color-card" style="background-color: var(--color-neutral-variant-100);" data-astro-cid-o5eku6zw>
+              </div>
+                <pc-text data-astro-cid-o5eku6zw="true">100 - </pc-text>
+              </div>
+          </div><pc-text data-astro-cid-o5eku6zw="true">red</pc-text>
+
+            <div class="color-cards" data-astro-cid-o5eku6zw>
+            <div data-astro-cid-o5eku6zw>
+                <div class="color-card" style="background-color: var(--color-red-0);" data-astro-cid-o5eku6zw>
+              </div>
+                <pc-text data-astro-cid-o5eku6zw="true">0 - </pc-text>
+              </div><div data-astro-cid-o5eku6zw>
+                <div class="color-card" style="background-color: var(--color-red-10);" data-astro-cid-o5eku6zw>
+              </div>
+                <pc-text data-astro-cid-o5eku6zw="true">10 - </pc-text>
+              </div><div data-astro-cid-o5eku6zw>
+                <div class="color-card" style="background-color: var(--color-red-20);" data-astro-cid-o5eku6zw>
+              </div>
+                <pc-text data-astro-cid-o5eku6zw="true">20 - </pc-text>
+              </div><div data-astro-cid-o5eku6zw>
+                <div class="color-card" style="background-color: var(--color-red-30);" data-astro-cid-o5eku6zw>
+              </div>
+                <pc-text data-astro-cid-o5eku6zw="true">30 - </pc-text>
+              </div><div data-astro-cid-o5eku6zw>
+                <div class="color-card" style="background-color: var(--color-red-40);" data-astro-cid-o5eku6zw>
+              </div>
+                <pc-text data-astro-cid-o5eku6zw="true">40 - </pc-text>
+              </div><div data-astro-cid-o5eku6zw>
+                <div class="color-card" style="background-color: var(--color-red-50);" data-astro-cid-o5eku6zw>
+              </div>
+                <pc-text data-astro-cid-o5eku6zw="true">50 - </pc-text>
+              </div><div data-astro-cid-o5eku6zw>
+                <div class="color-card" style="background-color: var(--color-red-60);" data-astro-cid-o5eku6zw>
+              </div>
+                <pc-text data-astro-cid-o5eku6zw="true">60 - </pc-text>
+              </div><div data-astro-cid-o5eku6zw>
+                <div class="color-card" style="background-color: var(--color-red-70);" data-astro-cid-o5eku6zw>
+              </div>
+                <pc-text data-astro-cid-o5eku6zw="true">70 - </pc-text>
+              </div><div data-astro-cid-o5eku6zw>
+                <div class="color-card" style="background-color: var(--color-red-80);" data-astro-cid-o5eku6zw>
+              </div>
+                <pc-text data-astro-cid-o5eku6zw="true">80 - </pc-text>
+              </div><div data-astro-cid-o5eku6zw>
+                <div class="color-card" style="background-color: var(--color-red-90);" data-astro-cid-o5eku6zw>
+              </div>
+                <pc-text data-astro-cid-o5eku6zw="true">90 - </pc-text>
+              </div><div data-astro-cid-o5eku6zw>
+                <div class="color-card" style="background-color: var(--color-red-95);" data-astro-cid-o5eku6zw>
+              </div>
+                <pc-text data-astro-cid-o5eku6zw="true">95 - </pc-text>
+              </div><div data-astro-cid-o5eku6zw>
+                <div class="color-card" style="background-color: var(--color-red-98);" data-astro-cid-o5eku6zw>
+              </div>
+                <pc-text data-astro-cid-o5eku6zw="true">98 - </pc-text>
+              </div><div data-astro-cid-o5eku6zw>
+                <div class="color-card" style="background-color: var(--color-red-100);" data-astro-cid-o5eku6zw>
+              </div>
+                <pc-text data-astro-cid-o5eku6zw="true">100 - </pc-text>
+              </div>
+          </div><pc-text data-astro-cid-o5eku6zw="true">green</pc-text>
+
+            <div class="color-cards" data-astro-cid-o5eku6zw>
+            <div data-astro-cid-o5eku6zw>
+                <div class="color-card" style="background-color: var(--color-green-0);" data-astro-cid-o5eku6zw>
+              </div>
+                <pc-text data-astro-cid-o5eku6zw="true">0 - </pc-text>
+              </div><div data-astro-cid-o5eku6zw>
+                <div class="color-card" style="background-color: var(--color-green-10);" data-astro-cid-o5eku6zw>
+              </div>
+                <pc-text data-astro-cid-o5eku6zw="true">10 - </pc-text>
+              </div><div data-astro-cid-o5eku6zw>
+                <div class="color-card" style="background-color: var(--color-green-20);" data-astro-cid-o5eku6zw>
+              </div>
+                <pc-text data-astro-cid-o5eku6zw="true">20 - </pc-text>
+              </div><div data-astro-cid-o5eku6zw>
+                <div class="color-card" style="background-color: var(--color-green-30);" data-astro-cid-o5eku6zw>
+              </div>
+                <pc-text data-astro-cid-o5eku6zw="true">30 - </pc-text>
+              </div><div data-astro-cid-o5eku6zw>
+                <div class="color-card" style="background-color: var(--color-green-40);" data-astro-cid-o5eku6zw>
+              </div>
+                <pc-text data-astro-cid-o5eku6zw="true">40 - </pc-text>
+              </div><div data-astro-cid-o5eku6zw>
+                <div class="color-card" style="background-color: var(--color-green-50);" data-astro-cid-o5eku6zw>
+              </div>
+                <pc-text data-astro-cid-o5eku6zw="true">50 - </pc-text>
+              </div><div data-astro-cid-o5eku6zw>
+                <div class="color-card" style="background-color: var(--color-green-60);" data-astro-cid-o5eku6zw>
+              </div>
+                <pc-text data-astro-cid-o5eku6zw="true">60 - </pc-text>
+              </div><div data-astro-cid-o5eku6zw>
+                <div class="color-card" style="background-color: var(--color-green-70);" data-astro-cid-o5eku6zw>
+              </div>
+                <pc-text data-astro-cid-o5eku6zw="true">70 - </pc-text>
+              </div><div data-astro-cid-o5eku6zw>
+                <div class="color-card" style="background-color: var(--color-green-80);" data-astro-cid-o5eku6zw>
+              </div>
+                <pc-text data-astro-cid-o5eku6zw="true">80 - </pc-text>
+              </div><div data-astro-cid-o5eku6zw>
+                <div class="color-card" style="background-color: var(--color-green-90);" data-astro-cid-o5eku6zw>
+              </div>
+                <pc-text data-astro-cid-o5eku6zw="true">90 - </pc-text>
+              </div><div data-astro-cid-o5eku6zw>
+                <div class="color-card" style="background-color: var(--color-green-95);" data-astro-cid-o5eku6zw>
+              </div>
+                <pc-text data-astro-cid-o5eku6zw="true">95 - </pc-text>
+              </div><div data-astro-cid-o5eku6zw>
+                <div class="color-card" style="background-color: var(--color-green-98);" data-astro-cid-o5eku6zw>
+              </div>
+                <pc-text data-astro-cid-o5eku6zw="true">98 - </pc-text>
+              </div><div data-astro-cid-o5eku6zw>
+                <div class="color-card" style="background-color: var(--color-green-100);" data-astro-cid-o5eku6zw>
+              </div>
+                <pc-text data-astro-cid-o5eku6zw="true">100 - </pc-text>
+              </div>
+          </div><pc-text data-astro-cid-o5eku6zw="true">yellow</pc-text>
+
+            <div class="color-cards" data-astro-cid-o5eku6zw>
+            <div data-astro-cid-o5eku6zw>
+                <div class="color-card" style="background-color: var(--color-yellow-0);" data-astro-cid-o5eku6zw>
+              </div>
+                <pc-text data-astro-cid-o5eku6zw="true">0 - </pc-text>
+              </div><div data-astro-cid-o5eku6zw>
+                <div class="color-card" style="background-color: var(--color-yellow-10);" data-astro-cid-o5eku6zw>
+              </div>
+                <pc-text data-astro-cid-o5eku6zw="true">10 - </pc-text>
+              </div><div data-astro-cid-o5eku6zw>
+                <div class="color-card" style="background-color: var(--color-yellow-20);" data-astro-cid-o5eku6zw>
+              </div>
+                <pc-text data-astro-cid-o5eku6zw="true">20 - </pc-text>
+              </div><div data-astro-cid-o5eku6zw>
+                <div class="color-card" style="background-color: var(--color-yellow-30);" data-astro-cid-o5eku6zw>
+              </div>
+                <pc-text data-astro-cid-o5eku6zw="true">30 - </pc-text>
+              </div><div data-astro-cid-o5eku6zw>
+                <div class="color-card" style="background-color: var(--color-yellow-40);" data-astro-cid-o5eku6zw>
+              </div>
+                <pc-text data-astro-cid-o5eku6zw="true">40 - </pc-text>
+              </div><div data-astro-cid-o5eku6zw>
+                <div class="color-card" style="background-color: var(--color-yellow-50);" data-astro-cid-o5eku6zw>
+              </div>
+                <pc-text data-astro-cid-o5eku6zw="true">50 - </pc-text>
+              </div><div data-astro-cid-o5eku6zw>
+                <div class="color-card" style="background-color: var(--color-yellow-60);" data-astro-cid-o5eku6zw>
+              </div>
+                <pc-text data-astro-cid-o5eku6zw="true">60 - </pc-text>
+              </div><div data-astro-cid-o5eku6zw>
+                <div class="color-card" style="background-color: var(--color-yellow-70);" data-astro-cid-o5eku6zw>
+              </div>
+                <pc-text data-astro-cid-o5eku6zw="true">70 - </pc-text>
+              </div><div data-astro-cid-o5eku6zw>
+                <div class="color-card" style="background-color: var(--color-yellow-80);" data-astro-cid-o5eku6zw>
+              </div>
+                <pc-text data-astro-cid-o5eku6zw="true">80 - </pc-text>
+              </div><div data-astro-cid-o5eku6zw>
+                <div class="color-card" style="background-color: var(--color-yellow-90);" data-astro-cid-o5eku6zw>
+              </div>
+                <pc-text data-astro-cid-o5eku6zw="true">90 - </pc-text>
+              </div><div data-astro-cid-o5eku6zw>
+                <div class="color-card" style="background-color: var(--color-yellow-95);" data-astro-cid-o5eku6zw>
+              </div>
+                <pc-text data-astro-cid-o5eku6zw="true">95 - </pc-text>
+              </div><div data-astro-cid-o5eku6zw>
+                <div class="color-card" style="background-color: var(--color-yellow-98);" data-astro-cid-o5eku6zw>
+              </div>
+                <pc-text data-astro-cid-o5eku6zw="true">98 - </pc-text>
+              </div><div data-astro-cid-o5eku6zw>
+                <div class="color-card" style="background-color: var(--color-yellow-100);" data-astro-cid-o5eku6zw>
+              </div>
+                <pc-text data-astro-cid-o5eku6zw="true">100 - </pc-text>
+              </div>
+          </div><pc-text data-astro-cid-o5eku6zw="true">blue</pc-text>
+
+            <div class="color-cards" data-astro-cid-o5eku6zw>
+            <div data-astro-cid-o5eku6zw>
+                <div class="color-card" style="background-color: var(--color-blue-0);" data-astro-cid-o5eku6zw>
+              </div>
+                <pc-text data-astro-cid-o5eku6zw="true">0 - </pc-text>
+              </div><div data-astro-cid-o5eku6zw>
+                <div class="color-card" style="background-color: var(--color-blue-10);" data-astro-cid-o5eku6zw>
+              </div>
+                <pc-text data-astro-cid-o5eku6zw="true">10 - </pc-text>
+              </div><div data-astro-cid-o5eku6zw>
+                <div class="color-card" style="background-color: var(--color-blue-20);" data-astro-cid-o5eku6zw>
+              </div>
+                <pc-text data-astro-cid-o5eku6zw="true">20 - </pc-text>
+              </div><div data-astro-cid-o5eku6zw>
+                <div class="color-card" style="background-color: var(--color-blue-30);" data-astro-cid-o5eku6zw>
+              </div>
+                <pc-text data-astro-cid-o5eku6zw="true">30 - </pc-text>
+              </div><div data-astro-cid-o5eku6zw>
+                <div class="color-card" style="background-color: var(--color-blue-40);" data-astro-cid-o5eku6zw>
+              </div>
+                <pc-text data-astro-cid-o5eku6zw="true">40 - </pc-text>
+              </div><div data-astro-cid-o5eku6zw>
+                <div class="color-card" style="background-color: var(--color-blue-50);" data-astro-cid-o5eku6zw>
+              </div>
+                <pc-text data-astro-cid-o5eku6zw="true">50 - </pc-text>
+              </div><div data-astro-cid-o5eku6zw>
+                <div class="color-card" style="background-color: var(--color-blue-60);" data-astro-cid-o5eku6zw>
+              </div>
+                <pc-text data-astro-cid-o5eku6zw="true">60 - </pc-text>
+              </div><div data-astro-cid-o5eku6zw>
+                <div class="color-card" style="background-color: var(--color-blue-70);" data-astro-cid-o5eku6zw>
+              </div>
+                <pc-text data-astro-cid-o5eku6zw="true">70 - </pc-text>
+              </div><div data-astro-cid-o5eku6zw>
+                <div class="color-card" style="background-color: var(--color-blue-80);" data-astro-cid-o5eku6zw>
+              </div>
+                <pc-text data-astro-cid-o5eku6zw="true">80 - </pc-text>
+              </div><div data-astro-cid-o5eku6zw>
+                <div class="color-card" style="background-color: var(--color-blue-90);" data-astro-cid-o5eku6zw>
+              </div>
+                <pc-text data-astro-cid-o5eku6zw="true">90 - </pc-text>
+              </div><div data-astro-cid-o5eku6zw>
+                <div class="color-card" style="background-color: var(--color-blue-95);" data-astro-cid-o5eku6zw>
+              </div>
+                <pc-text data-astro-cid-o5eku6zw="true">95 - </pc-text>
+              </div><div data-astro-cid-o5eku6zw>
+                <div class="color-card" style="background-color: var(--color-blue-98);" data-astro-cid-o5eku6zw>
+              </div>
+                <pc-text data-astro-cid-o5eku6zw="true">98 - </pc-text>
+              </div><div data-astro-cid-o5eku6zw>
+                <div class="color-card" style="background-color: var(--color-blue-100);" data-astro-cid-o5eku6zw>
+              </div>
+                <pc-text data-astro-cid-o5eku6zw="true">100 - </pc-text>
+              </div>
+          </div>
+
+
+      <style>
+        .app {
+          width: 100%;
+          height: 300px;
+          position: relative;
+          display: flow-root;
+          border: 1px solid var(--color-outline);
+        }
+        .nav {
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;
+          width: 60px;
+          border-inline-end: 1px solid var(--color-outline-variant);
+        }
+
+        .main {
+          margin: 1rem 1rem 1rem calc(60px + 1rem);
+          height: calc(100% - 2rem);
+        }
+      </style>
+      <div class="app surface" data-astro-cid-o5eku6zw>
+          <div class="nav surface-container-highest" data-astro-cid-o5eku6zw></div>
+
+          <div class="main surface-container" data-astro-cid-o5eku6zw>
+
+          </div>
+      </div>
+
+    </div>
+
+  </wc-container>
+
+
+
+  <footer class="footer-with-about">
+
+  <section class="about">
+      <div class="about-content">
+        <h2 class="text-headline section-title">Peacock</h2>
+        <p class="text-body-large">Our mission is to empower developers with high-quality, customizable, and accessible web components that promote web standards and best practices.</p>
+        <p class="text-body-large">
+
+          Built by&nbsp;<wc-link href="https://shivajivarma.com" target="_blank">Shivaji Varma</wc-link>. Built using&nbsp;<wc-link class="link" href="//lit.dev" target="_blank">Lit</wc-link>.
+          Source code on&nbsp;<wc-link class="link" href="https://github.com/redvars/peacock" target="_blank">GitHub</wc-link>.
+        </p>
+      </div>
+  </section>
+
+  <nav class="footer-links" aria-label="Footer links">
+    <h2 class="text-title-large section-title">Links</h2>
+    <ul class="section-nav-links">
+      <li><wc-link href="/privacy">Privacy Policy</wc-link></li>
+      <li><wc-link href="/license">License</wc-link></li>
+      <li><wc-link href="https://github.com/sponsors/shivajivarma" target="_blank">Sponsor</wc-link></li>
+    </ul>
+  </nav>
+
+  <div class="footer-social-links" aria-label="Social links">
+    <h2 class="text-title-large section-title">Social</h2>
+
+    <ul class="section-nav-links">
+      <li>
+        <wc-icon-button variant="outlined" color="surface" href="https://github.com/redvars/peacock" target="_blank" aria-label="GitHub">
+          <wc-icon name="logo--github" provider="carbon"></wc-icon>
+        </wc-icon-button>
+      </li>
+      <li>
+        <wc-icon-button variant="outlined" color="surface" href="https://twitter.com/red_vars" target="_blank" aria-label="X (Twitter)">
+          <wc-icon name="logo--x" provider="carbon"></wc-icon>
+        </wc-icon-button>
+      </li>
+    </ul>
+  </div>
+</footer>
+
+
+    </div>
+  </div>
+
+  <wc-notification-manager position="bottom-right" class="page-notification-manager"></wc-notification-manager>
+
+  <pagefind-modal></pagefind-modal>
+ <link href="/pagefind/pagefind-component-ui.css" rel="stylesheet">
+ <script src="/pagefind/pagefind-component-ui.js" type="module"></script>
+
+ <script type="module">
+   // Wire the search FAB to open the Pagefind UI when clicked.
+   // Try several common selectors and call the public open/show method
+   // or set the `open` attribute as a fallback.
+   document.addEventListener('DOMContentLoaded', () => {
+     const btn = document.querySelectorAll('.search-button');
+     if (!btn.length) return;
+     btn.forEach((el) => {
+       el.addEventListener('click', (ev) => {
+         ev.preventDefault();
+
+         const candidates = [
+           'pagefind-modal',
+           'pagefind-component-ui',
+           'pagefind-ui',
+           'pagefind',
+         ];
+
+         let found = null;
+         for (const sel of candidates) {
+           const el = document.querySelector(sel);
+           if (el) {
+             found = el;
+             break;
+           }
+         }
+
+         function openFound(el) {
+           try {
+             if (!el) return;
+             if (typeof el.open === 'function') el.open();
+             else if (typeof el.show === 'function') el.show();
+             else el.setAttribute('open', '');
+           } catch (err) {
+             // ignore
+           }
+         }
+
+         if (!found) {
+           // pagefind may create its element asynchronously; try shortly after.
+           setTimeout(() => {
+             for (const sel of candidates) {
+               const el = document.querySelector(sel);
+               if (el) {
+                 found = el;
+                 break;
+               }
+             }
+             openFound(found);
+           }, 50);
+           return;
+         }
+
+         openFound(found);
+       });
+     });
+   });
+ </script>
+
+
+  
+  <script src="/assets/js/main.js"></script>
+
+
+
+<!-- GoatUI scripts -->
+<script type="module" src="https://cdn.jsdelivr.net/npm/@redvars/peacock@3.8.4/dist/loader.js" onerror="let s=document.createElement('script'); s.type='module'; s.src='https://cdn.jsdelivr.net/npm/@redvars/peacock@3.8.3/dist/loader.js'; document.head.appendChild(s);">
+      </script>
+
+
+<!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-YVVYZC1HFF"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag('js', new Date());
+  gtag('config', 'G-YVVYZC1HFF');
+</script>
+</body></html>

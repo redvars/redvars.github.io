@@ -1,0 +1,23 @@
+---
+export const title = 'Usage';
+export const order = 100;
+import HighlighterCard from '../../../../components/HighlighterCard.astro';
+import DemoComponentCard from '../../../../components/DemoComponentCard.astro';
+const GOOGLE_ICONS_URL = "https://fonts.google.com/icons";
+---
+
+<p>
+  Google icons are used by the <code>wc-icon</code> component. You can find the name from Google Icons{" "}
+  <a class='link' href={GOOGLE_ICONS_URL} target='_blank'>{GOOGLE_ICONS_URL}</a>.
+</p>
+
+<p>Carbon icons can used by specifing `provider` value. <a class='link' target='_blank' href='https://carbondesignsystem.com/elements/icons/library/'>https://carbondesignsystem.com/elements/icons/library/</a>
+</p>
+
+
+<DemoComponentCard lang={'html'} inline>
+
+  <wc-icon name='alarm'></wc-icon>
+  <wc-icon src='https://icons.getbootstrap.com/assets/icons/bug.svg'></wc-icon>
+  <wc-icon provider='carbon' name='logo--github'></wc-icon>
+</DemoComponentCard>

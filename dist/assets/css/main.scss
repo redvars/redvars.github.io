@@ -1,0 +1,256 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+@charset "utf-8";
+@import "mixin";
+@import "bootstrap-grid";
+
+html {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  visibility: hidden;
+  background: var(--background);
+  font-family: var(--font-family-base);
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html.hydrated {
+  visibility: visible;
+}
+
+#nav-search-input {
+  margin: 0;
+}
+
+.color-brand {
+  color: var(--color-brand-primary);
+}
+
+.color-success {
+  color: var(--color-success);
+}
+
+.section-container {
+  max-width: var(--container-xl);
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 var(--spacing-8);
+}
+
+:root {
+  --header-height: 4rem;
+  --color-brand-primary-10: var(--color-primary-10);
+  --color-brand-primary-20: var(--color-primary-20);
+  --color-brand-primary-30: var(--color-primary-30);
+  --color-brand-primary-40: var(--color-primary-40);
+  --color-brand-primary-50: var(--color-primary-50);
+  --color-brand-primary-60: var(--color-primary-60);
+
+  --color-brand-primary: var(--color-primary);
+  --color-brand-secondary-10: var(--color-primary-10);
+  --color-brand-secondary-20: var(--color-primary-20);
+  --color-brand-secondary-30: var(--color-primary-30);
+  --color-brand-secondary-40: var(--color-primary-40);
+  --color-brand-secondary-50: var(--color-primary-50);
+  --color-brand-secondary-60: var(--color-primary-60);
+
+}
+
+.header {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: var(--color-primary-10);
+  .slot-right {
+    margin-right: .5rem;
+  }
+}
+
+.sections-wrapper {
+  padding: var(--spacing-12) 0;
+}
+
+.sections-wrapper .section {
+  padding-bottom: var(--spacing-09);
+}
+
+.footer {
+  border-top: 1px solid var(--active-ui);
+  padding: var(--spacing-08) 0;
+
+  goat-divider {
+    height: 100%;
+  }
+
+  .section-container {
+    padding-bottom: var(--spacing-4);
+  }
+
+  .social-links {
+    display: flex;
+    align-items: center;
+    padding-top: var(--spacing-4);
+    gap: var(--spacing-4);
+
+    .social-links__links {
+      display: flex;
+      gap: var(--spacing-4);
+    }
+  }
+
+  .first-row {
+    padding-top: var(--spacing-4);
+    display: flex;
+    align-items: center;
+
+    .logo {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      height: 2.5rem;
+      gap: .5rem;
+      padding: .5rem 0;
+
+      .name {
+        margin: 0;
+      }
+
+      img {
+        height: 2rem;
+      }
+    }
+
+    .global-links {
+      display: flex;
+      gap: var(--spacing-08);
+    }
+  }
+}
+
+
+
+.made-in-india {
+  display: flex;
+  position: fixed;
+  font-size: 1rem;
+  transform-origin: bottom left;
+  transform: rotate(-90deg);
+  bottom: 2rem;
+  left: 2rem;
+  text-align: left;
+  align-items: center;
+  gap: 1rem;
+  .country-flag {
+    height: 1rem;
+    padding: 0 var(--spacing-02);
+  }
+
+  &:before {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    height: 1px;
+    width: 25px;
+    background: var(--text-primary);
+    gap: .5rem;
+  }
+}
+
+
+.social-icons {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  position: fixed;
+  font-size: 1rem;
+  bottom: 2rem;
+  right: 0;
+  gap: 1rem;
+
+  &:after {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    height: 25px;
+    width: 1px;
+    background: var(--text-primary);
+  }
+}
+
+.banner-title {
+  width: 100vw;
+  height: 15rem;
+  padding-top: var(--header-height);
+  background: var(--color-brand-secondary-10);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+html[data-theme="dark"] .banner-title {
+  background: var(--color-black)
+}
+
+.project-content {
+  padding-top: var(--spacing-8);
+  padding-bottom: var(--spacing-8);
+}
+
+section {
+  padding: var(--spacing-4) 0;
+}
+
+.check-mark {
+  margin-right: var(--spacing-2);
+}
+
+goat-code-highlighter {
+  height: inherit;
+}
+
+.pager {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  .previous {
+    flex: 1;
+  }
+}
+
+.post {
+  padding-top: var(--header-height);
+  article {
+    padding: var(--spacing-4) 0;
+  }
+}
+
+.post-container {
+  padding: var(--spacing-8) 0;
+}
+
+.blog-posts {
+  margin-top: var(--spacing-4);
+  .item {
+     [type="heading"] {
+       margin-bottom: 0;
+     }
+    margin-bottom: var(--spacing-4);
+  }
+}
+
+.img-responsive {
+  width: 100%;
+  height: auto;
+}
+
+a.url {
+  word-break: break-all;
+}

@@ -1,0 +1,69 @@
+---
+const pathname = Astro.url.pathname;
+
+const isTypographyPage = pathname === '/components/text';
+const isComponentsPage =
+  pathname === '/components' ||
+  (pathname.startsWith('/components/') && !isTypographyPage);
+const isColorsPage = pathname === '/color';
+const isBlogPage = pathname === '/blog' || pathname.startsWith('/blog/');
+const isHomePage = pathname === '/';
+const isBlocksPage = pathname === '/blocks' || pathname.startsWith('/blocks/');
+---
+
+<style lang="scss">
+  .navigation-rail {
+    position: fixed;
+    --nav-rail-width: var(--side-navigation-width);
+    --nav-rail-container-color: var(--container-surface-container-high);
+  }
+</style>
+
+<wc-navigation-rail class="navigation-rail">
+
+
+
+  <wc-fab slot="header" id="search-btn"
+        class="search-button"
+        lowered
+        color="primary"
+        aria-label='Search components'
+  ><wc-icon name="search"></wc-icon
+  ></wc-fab>
+
+  <wc-navigation-rail-item href="/#" aria-label='Go to Home' active={isHomePage ? true : null}>
+    <img src="/assets/img/logo-plain.webp" slot="icon" class="logo" alt="peacock" style="width: 32px;">
+    Home
+  </wc-navigation-rail-item>
+  <wc-navigation-rail-item href='/components' aria-label='Go to Components' active={isComponentsPage ? true : null}>
+    <wc-icon slot="icon" name="settings"></wc-icon>
+    Components
+  </wc-navigation-rail-item>
+  <wc-navigation-rail-item href='/color' aria-label='Go to Colors' active={isColorsPage ? true : null}>
+    <wc-icon slot="icon" name="palette"></wc-icon>
+    Colors
+  </wc-navigation-rail-item>
+  <wc-navigation-rail-item href='/components/text' aria-label='Go to Typography' active={isTypographyPage ? true : null}>
+    <wc-icon slot="icon" name="font_download"></wc-icon>
+    Typography
+  </wc-navigation-rail-item>
+
+  <wc-navigation-rail-item href='/blog' title='Go to Blog' active={isBlogPage ? true : null}>
+    <wc-icon slot="icon" name="pages"></wc-icon>
+    Blog
+  </wc-navigation-rail-item>
+
+  <wc-navigation-rail-item href='/blocks' aria-label='Go to Blocks' active={isBlocksPage ? true : null}>
+    <wc-icon slot="icon" name="grid_view"></wc-icon>
+    Blocks
+  </wc-navigation-rail-item>
+
+
+  <wc-navigation-rail-item slot="footer" class="dir-switcher" aria-label='Toggle ltr/rtl direction'>
+    <wc-icon slot="icon" class="icon"></wc-icon>
+  </wc-navigation-rail-item>
+
+  <wc-navigation-rail-item slot="footer" class="theme-switcher" aria-label='Toggle light/dark mode'>
+    <wc-icon slot="icon" class="icon"></wc-icon>
+  </wc-navigation-rail-item>
+</wc-navigation-rail>

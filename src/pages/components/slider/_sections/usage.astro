@@ -1,0 +1,35 @@
+---
+export const title = 'Usage';
+export const order = 100;
+import DemoComponentCard from '../../../../components/DemoComponentCard.astro';
+---
+
+
+<style is:inline>
+  #slider,
+  #slider-with-value {
+    padding: 0 3rem;
+  }
+</style>
+
+<p>Default slider behavior with hover/focus tooltip label.</p>
+
+<DemoComponentCard lang={'html'}>
+  <wc-slider id='slider' value='60' step='1'></wc-slider>
+</DemoComponentCard>
+
+<p>Enable a persistent value display with <code>show-value</code>.</p>
+
+<DemoComponentCard lang={'html'}>
+  <wc-slider id='slider-with-value' value='25' min='0' max='100' step='1' show-value></wc-slider>
+</DemoComponentCard>
+
+<script is:inline>
+  const slider = document.querySelector('#slider');
+  slider.addEventListener('change', e => {
+    myConsole.warn(JSON.stringify(e.detail, null, 4), e.type);
+  });
+  slider.addEventListener('input', e => {
+    myConsole.log(JSON.stringify(e.detail, null, 4), e.type);
+  });
+</script>

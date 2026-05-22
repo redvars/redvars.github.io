@@ -1,0 +1,17 @@
+---
+export const title = 'Usage';
+export const order = 100;
+import DemoComponentCard from '../../../../components/DemoComponentCard.astro';
+---
+<DemoComponentCard lang={'html'}>
+  <wc-linear-progress value='40' label='Progress' helper-text='Optional helper text goes here...'></wc-linear-progress>
+</DemoComponentCard>
+
+
+<DemoComponentCard lang={'html'}>
+    <wc-linear-progress label='Indeterminate' indeterminate></wc-linear-progress>
+</DemoComponentCard>
+
+<DemoComponentCard lang={'html'}>
+  <wc-linear-progress label='Inline' helper-text='Optional helper text goes here...' inline></wc-linear-progress>
+</DemoComponentCard>

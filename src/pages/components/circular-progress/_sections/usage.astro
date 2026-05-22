@@ -1,0 +1,18 @@
+---
+export const title = 'Usage';
+export const order = 100;
+import DemoComponentCard from '../../../../components/DemoComponentCard.astro';
+---
+
+<DemoComponentCard lang={'html'}>
+  <wc-circular-progress value='40'></wc-circular-progress>
+</DemoComponentCard>
+
+<DemoComponentCard lang={'html'}>
+  <wc-circular-progress label='Indeterminate' helper-text='Testing' indeterminate></wc-circular-progress>
+</DemoComponentCard>
+
+
+<DemoComponentCard lang={'html'}>
+  <wc-circular-progress label='Indeterminate' inline helper-text='Testing' indeterminate></wc-circular-progress>
+</DemoComponentCard>

@@ -1,0 +1,13 @@
+---
+export const title = 'Variants';
+export const order = 200;
+import DemoComponentCard from '../../../../components/DemoComponentCard.astro';
+---
+<p>Fancy larger or smaller tag? Add size attribute for additional sizes.</p>
+
+<DemoComponentCard lang={'html'}>
+  <wc-tag variant='filled' color='blue'><wc-icon name='home' slot='icon'></wc-icon> Filled</wc-tag>
+  <wc-tag variant='tonal' color='blue'><wc-icon name='home' slot='icon'></wc-icon> Tonal</wc-tag>
+  <wc-tag variant='elevated' color='blue'><wc-icon name='home' slot='icon'></wc-icon> Elevated</wc-tag>
+  <wc-tag variant='outlined' color='blue'><wc-icon name='home' slot='icon'></wc-icon> Outlined</wc-tag>
+</DemoComponentCard>

@@ -1,0 +1,20 @@
+---
+export const title = 'Usage';
+export const order = 100;
+import DemoComponentCard from '../../../../components/DemoComponentCard.astro';
+---
+<p>Here are different types of inputs.</p>
+
+<DemoComponentCard lang={'html'}>
+  <wc-number-counter id="number-counter" value="4282828"></wc-number-counter>
+
+  <script is:inline>
+    customElements.whenDefined('wc-number-counter').then(() => {
+      const $counter = document.querySelector('#number-counter');
+
+      setInterval(() => {
+        $counter.value = $counter.value + Math.floor(Math.random() * 1000);
+      }, 1000);
+    });
+  </script>
+</DemoComponentCard>

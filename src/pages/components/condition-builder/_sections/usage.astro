@@ -1,0 +1,73 @@
+---
+export const title = 'Usage';
+export const order = 100;
+import DemoComponentCard from '../../../../components/DemoComponentCard.astro';
+---
+<style is:inline>
+  #simple-condition-builder {
+    width: 35rem;
+  }
+</style>
+
+<DemoComponentCard lang={'html'}>
+  <wc-condition-builder id='simple-condition-builder'>
+
+    <wc-cb-predicate condition-operator='or'>
+      <wc-cb-predicate vertical='true' condition-operator='and'>
+        <wc-cb-compound-expression field-label='Age' condition-operator='or'>
+          <wc-cb-expression id='age'>
+            <wc-input inline placeholder='Select Value'></wc-input>
+          </wc-cb-expression>
+          <wc-cb-expression id='age2'>
+            <wc-input inline placeholder='Select Value'></wc-input>
+          </wc-cb-expression>
+          <wc-button size='sm' icon='add' slot='end'>Add expression</wc-button>
+        </wc-cb-compound-expression>
+        <wc-cb-compound-expression field-label='State'>
+          <wc-cb-expression id='state'>
+            <wc-input inline placeholder='Select Value'></wc-input>
+          </wc-cb-expression>
+        </wc-cb-compound-expression>
+
+        <wc-button slot='end' size='sm' icon='add'>Add predicate</wc-button>
+      </wc-cb-predicate>
+    </wc-cb-predicate>
+
+    <wc-cb-predicate condition-operator='or'>
+      <wc-cb-predicate vertical='true'>
+        <wc-cb-compound-expression field-label='State'>
+          <wc-cb-expression id='state2'>
+            <wc-input inline placeholder='Select Value'></wc-input>
+          </wc-cb-expression>
+        </wc-cb-compound-expression>
+        <wc-button slot='end' size='sm' icon='add'>Add predicate</wc-button>
+      </wc-cb-predicate>
+    </wc-cb-predicate>
+
+    <wc-cb-predicate>
+      <wc-cb-compound-expression field-label='City'>
+        <wc-cb-expression id='city'>
+          <wc-input inline placeholder='Select Value'></wc-input>
+        </wc-cb-expression>
+      </wc-cb-compound-expression>
+      <wc-button slot='end' size='sm' icon='add'>Add predicate</wc-button>
+    </wc-cb-predicate>
+
+    <wc-button size='sm' icon='add'>Add rule</wc-button>
+
+  </wc-condition-builder>
+
+  <script is:inline>
+    const ageExpression = document.querySelector('#age');
+    if (ageExpression) {
+      ageExpression.operators = [{
+        label: 'Less than',
+        value: 'less-than',
+      },
+        {
+          label: 'More than',
+          value: 'more-than',
+        }];
+    }
+  </script>
+</DemoComponentCard>

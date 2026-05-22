@@ -1,0 +1,18 @@
+---
+export const title = 'Usage';
+export const order = 100;
+import HighlighterCard from '../../../../components/HighlighterCard.astro';
+import DemoComponentCard from '../../../../components/DemoComponentCard.astro';
+---
+<DemoComponentCard lang={'html'}>
+  <wc-tag>Gray</wc-tag>
+  <wc-tag color='blue'>Blue</wc-tag>
+  <wc-tag color='red'>Red</wc-tag>
+  <wc-tag
+    color='green'
+  >
+    <wc-icon name='home' slot='icon'></wc-icon>
+    Green
+  </wc-tag>
+  <wc-tag color='yellow' dismissible>Yellow</wc-tag>
+</DemoComponentCard>

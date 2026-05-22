@@ -1,0 +1,67 @@
+---
+interface Props {
+  lang: any;
+  inline?: boolean
+}
+
+let { lang, inline } = Astro.props;
+
+let html = '';
+if (Astro.slots.has('default')) {
+  html = await Astro.slots.render('default');
+  html = html.replaceAll('<', '&lt;');
+  html = html.replaceAll('<script>', '&lt;script&gt;').replaceAll('</script>', '&lt;/script&gt;');
+}
+let cssClasses = '';
+if (inline) {
+  cssClasses = 'inline';
+}
+---
+
+<style is:inline>
+  .demo-card {
+    container: democardcontainer / inline-size;
+    margin-bottom: var(--spacing-200);
+
+    .demo-area {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 10rem;
+
+      background: var(--color-surface);
+      padding: var(--spacing-200);
+      border-bottom: 1px solid var(--color-outline-variant);
+    }
+
+    .demo-area-content {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: start;
+      justify-content: center;
+      gap: var(--spacing-200);
+      width: 100%;
+    }
+
+    .demo-area.inline {
+      flex-direction: row;
+    }
+
+    .demo-component-divider {
+      --divider-spacing: 0;
+    }
+  }
+</style>
+
+<wc-card variant="outlined" class='demo-card'>
+  <wc-card-content class={'demo-area ' + cssClasses}>
+    <div class='demo-area-content'>
+       <slot></slot>
+    </div>
+  </wc-card-content>
+  <div class='body'>
+    <wc-code-highlighter language={lang}>
+      <pre><code><Fragment set:html={html} /></code></pre>
+    </wc-code-highlighter>
+  </div>
+</wc-card>

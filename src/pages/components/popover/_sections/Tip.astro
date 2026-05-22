@@ -1,0 +1,41 @@
+---
+export const title = 'Trigger';
+export const order = 300;
+import DemoComponentCard from '../../../../components/DemoComponentCard.astro';
+---
+
+<p class='text-body-medium'>
+  The <code>trigger</code> attribute controls how the popover opens.
+  Use <code>click</code> to toggle on click, <code>hover</code> to open on mouse-over,
+  or <code>manual</code> to drive visibility programmatically via the <code>open</code> attribute
+  or <code>show()</code> / <code>hide()</code> methods.
+</p>
+
+<style is:inline>
+  .demo-trigger-container .demo-area {
+    min-height: 16rem !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+</style>
+
+<DemoComponentCard lang='html' cssClasses='demo-trigger-container'>
+  <wc-popover trigger='hover'>
+    <wc-button variant='tonal'>hover</wc-button>
+    <wc-popover-content>Opens on hover</wc-popover-content>
+  </wc-popover>
+
+  <wc-popover trigger='click'>
+    <wc-button variant='tonal'>click</wc-button>
+    <wc-popover-content>Opens on click</wc-popover-content>
+  </wc-popover>
+
+  <wc-popover trigger='manual' open>
+    <wc-button variant='tonal'>manual (open)</wc-button>
+    <wc-popover-content>Manually controlled</wc-popover-content>
+  </wc-popover>
+</DemoComponentCard>
+

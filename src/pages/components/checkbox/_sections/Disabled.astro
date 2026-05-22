@@ -1,0 +1,13 @@
+---
+export const title = 'Disabled';
+export const order = 500;
+import DemoComponentCard from '../../../../components/DemoComponentCard.astro';
+---
+<p>
+Disabled checkboxes prevent user interaction and appear at 38% opacity following Material Design 3 guidelines. Add the <code class='highlighter-rouge' data-lang='html'>disabled</code> boolean attribute to disable the checkbox.
+</p>
+
+<DemoComponentCard lang={'html'}>
+  <wc-checkbox disabled>Disabled checkbox</wc-checkbox>
+  <wc-checkbox disabled value='true'>Disabled checked</wc-checkbox>
+</DemoComponentCard>
