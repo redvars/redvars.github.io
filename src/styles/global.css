@@ -1,4 +1,4 @@
-/* Redvars red as Peacock's primary colour, until the brand kit (COE-16) sets one.
+/* Redvars red as Peacock's primary colour.
    The extra :root raises specificity above Peacock's own token rules. */
 :root:not([data-theme=dark]) {
   --color-primary: var(--color-red-40);

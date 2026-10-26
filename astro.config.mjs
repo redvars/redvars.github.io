@@ -2,8 +2,8 @@ import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
 import { peacockRedirects } from './peacock-redirects.mjs';
 
-// The waitlist is a Microsoft Form in our Microsoft 365 account (SITES.md 5.3). The site links
-// to redvars.com/waitlist, which redirects here, so shared links survive when sign-up replaces it.
+// The waitlist is a Microsoft Form. The site links to redvars.com/waitlist, which redirects
+// here, so shared links survive when sign-up replaces it.
 const waitlistFormUrl = 'https://forms.cloud.microsoft/r/w27zVpnfdR';
 
 // https://astro.build/config

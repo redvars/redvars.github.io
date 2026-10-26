@@ -1,6 +1,6 @@
 # redvars.com
 
-The Redvars website: an [Astro](https://astro.build) static site built with [Peacock](https://peacock.redvars.com) components and design tokens. What it holds and where it is going are in [SITES.md](https://github.com/redvars/engineering/blob/main/SITES.md).
+The Redvars website: an [Astro](https://astro.build) static site built with [Peacock](https://peacock.redvars.com) components and design tokens.
 
 ## Develop
 
@@ -27,4 +27,4 @@ Peacock loads from its npm release on jsDelivr. To move to a new release, change
 
 ## Deploy
 
-[`.github/workflows/astro.yml`](.github/workflows/astro.yml) builds every pull request and deploys `main` to GitHub Pages. In the repository's Pages settings the source is **GitHub Actions** and the custom domain is `redvars.com`. ADR-0006 moves the site to Cloudflare Pages with a preview per pull request (CORE-93); only the deploy step changes.
+[`.github/workflows/astro.yml`](.github/workflows/astro.yml) builds every pull request and deploys `main` to GitHub Pages. In the repository's Pages settings the source is **GitHub Actions** and the custom domain is `redvars.com`.

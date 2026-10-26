@@ -1,7 +1,6 @@
 // redvars.com used to serve a copy of the Peacock docs. Each of those pages now sends
-// visitors to the same path on peacock.redvars.com (COE-23). GitHub Pages has no server
-// redirects, so Astro writes a page per path that redirects in the browser; on Cloudflare
-// Pages (CORE-93) a `_redirects` file with one rule per folder replaces this list.
+// visitors to the same path on peacock.redvars.com. GitHub Pages has no server redirects,
+// so Astro writes a page per path that redirects in the browser.
 
 const components = [
     'accordion', 'alert', 'app-bar', 'avatar', 'badge', 'bottom-sheet', 'breadcrumb', 'button',

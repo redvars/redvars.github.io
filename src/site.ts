@@ -1,4 +1,4 @@
-// What the site says about Redvars, from the brand section of the manifesto.
+// What the site says about Redvars.
 export const site = {
     name: 'Redvars',
     tagline: 'The Modern Platform for Enterprise Applications.',
