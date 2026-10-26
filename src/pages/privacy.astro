@@ -1,0 +1,52 @@
+---
+import Base from '../layouts/Base.astro';
+import { site } from '../site';
+---
+
+<Base title="Privacy" description="What redvars.com collects about its visitors: nothing of its own.">
+  <article class="container">
+    <h1>Privacy</h1>
+    <p class="updated">Last updated 26 October 2026</p>
+
+    <p>
+      redvars.com is a static website. It sets no cookies, runs no analytics or advertising and has no forms, so it
+      collects no personal data of its own.
+    </p>
+
+    <p>Two services see each visit, because they deliver the site to your browser:</p>
+    <ul>
+      <li>
+        <a href="https://docs.github.com/en/pages/getting-started-with-github-pages/about-github-pages#data-collection">GitHub Pages</a>
+        hosts the site and logs visitors' IP addresses for security.
+      </li>
+      <li>
+        <a href="https://www.jsdelivr.com/terms/privacy-policy-jsdelivr-net">jsDelivr</a> serves the Peacock components
+        the pages are built with.
+      </li>
+    </ul>
+    <p>Fonts are served from redvars.com itself.</p>
+
+    <p>Questions about privacy go to <a href={`mailto:${site.email}`}>{site.email}</a>.</p>
+  </article>
+</Base>
+
+<style>
+  article {
+    padding-block: var(--spacing-600);
+  }
+
+  article > * {
+    max-width: 44rem;
+  }
+
+  h1 {
+    margin: 0;
+    font-size: var(--typography-headline-large-font-size);
+  }
+
+  .updated {
+    margin-top: var(--spacing-100);
+    color: var(--color-on-surface-variant);
+    font-size: var(--typography-body-medium-font-size);
+  }
+</style>

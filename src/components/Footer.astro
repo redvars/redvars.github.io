@@ -1,0 +1,45 @@
+---
+import { site } from '../site';
+
+const year = new Date().getFullYear();
+---
+
+<footer>
+  <div class="container">
+    <p>© {year} {site.name}</p>
+    <nav aria-label="Footer">
+      <wc-link href={`mailto:${site.email}`}>{site.email}</wc-link>
+      <wc-link href="/privacy/">Privacy</wc-link>
+      <wc-link href={site.peacockUrl}>Peacock</wc-link>
+      <wc-link href={site.githubUrl}>GitHub</wc-link>
+    </nav>
+  </div>
+</footer>
+
+<style>
+  footer {
+    margin-top: var(--spacing-800);
+    padding-block: var(--spacing-300);
+    border-top: 1px solid var(--color-outline-variant);
+    color: var(--color-on-surface-variant);
+    font-size: var(--typography-body-medium-font-size);
+  }
+
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--spacing-200);
+  }
+
+  p {
+    margin: 0;
+  }
+
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-300);
+  }
+</style>

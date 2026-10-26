@@ -1,0 +1,137 @@
+---
+import Base from '../layouts/Base.astro';
+import { site } from '../site';
+
+const pillars = [
+  {
+    title: 'Code less.',
+    text: 'Describe tables, forms, rules and access as metadata, and Redvars runs them as a secured application. Where metadata is not enough, write code without leaving the platform.',
+  },
+  {
+    title: 'Scale everywhere.',
+    text: 'Start on a laptop with one command and grow without re-architecting. Every customer runs an instance of their own, with its own database.',
+  },
+  {
+    title: 'Build natively.',
+    text: 'Built on web standards: TypeScript, PostgreSQL and Peacock, our Lit web components. Every read and write passes the same authorization check.',
+  },
+];
+---
+
+<Base>
+  <section class="hero container">
+    <div>
+      <wc-tag color="red">Coming soon</wc-tag>
+      <h1>{site.tagline}</h1>
+      <p class="motto">{site.motto}</p>
+      <p class="lede">{site.description}</p>
+      <div class="actions">
+        <wc-button size="md" href={`mailto:${site.email}`}>Get in touch</wc-button>
+        <wc-button size="md" variant="outlined" href={site.peacockUrl}>Explore Peacock</wc-button>
+      </div>
+    </div>
+    <img class="panda" src="/red-panda.svg" alt="The Redvars red panda" width="320" height="320" />
+  </section>
+
+  <section class="container" aria-label="What Redvars does">
+    <ul class="pillars">
+      {
+        pillars.map((pillar) => (
+          <li>
+            <wc-card variant="filled">
+              <wc-card-content>
+                <h2>{pillar.title}</h2>
+                <p>{pillar.text}</p>
+              </wc-card-content>
+            </wc-card>
+          </li>
+        ))
+      }
+    </ul>
+  </section>
+</Base>
+
+<style>
+  .hero {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    gap: var(--spacing-600);
+    padding-block: var(--spacing-800);
+  }
+
+  h1 {
+    margin: var(--spacing-200) 0 0;
+    font-size: clamp(var(--typography-headline-large-font-size), 5vw, var(--typography-display-large-font-size));
+    line-height: 1.15;
+    font-weight: var(--font-weight-bold);
+    letter-spacing: -0.01em;
+  }
+
+  .motto {
+    margin: var(--spacing-200) 0 0;
+    color: var(--color-primary);
+    font-size: var(--typography-title-large-font-size);
+    font-weight: var(--font-weight-semi-bold);
+  }
+
+  .lede {
+    max-width: 40rem;
+    margin: var(--spacing-200) 0 0;
+    color: var(--color-on-surface-variant);
+  }
+
+  .actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-150);
+    margin-top: var(--spacing-400);
+  }
+
+  .panda {
+    width: clamp(10rem, 28vw, 20rem);
+    height: auto;
+  }
+
+  .pillars {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+    gap: var(--spacing-300);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  wc-card {
+    height: 100%;
+  }
+
+  wc-card-content {
+    display: block;
+    padding: var(--spacing-300);
+  }
+
+  h2 {
+    margin: 0;
+    font-size: var(--typography-title-large-font-size);
+    font-weight: var(--font-weight-semi-bold);
+  }
+
+  .pillars p {
+    margin: var(--spacing-100) 0 0;
+    color: var(--color-on-surface-variant);
+  }
+
+  @media (max-width: 48rem) {
+    .hero {
+      grid-template-columns: 1fr;
+      gap: var(--spacing-300);
+      padding-block: var(--spacing-400);
+    }
+
+    .panda {
+      order: -1;
+      width: 8rem;
+    }
+  }
+</style>

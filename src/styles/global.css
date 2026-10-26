@@ -1,0 +1,44 @@
+/* Redvars red as Peacock's primary colour, until the brand kit (COE-16) sets one.
+   The extra :root raises specificity above Peacock's own token rules. */
+:root:not([data-theme=dark]) {
+  --color-primary: var(--color-red-40);
+  --color-on-primary: var(--color-red-100);
+  --color-primary-container: var(--color-red-90);
+  --color-on-primary-container: var(--color-red-10);
+  --color-inverse-primary: var(--color-red-80);
+  color-scheme: light;
+}
+
+:root[data-theme=dark] {
+  --color-primary: var(--color-red-80);
+  --color-on-primary: var(--color-red-20);
+  --color-primary-container: var(--color-red-30);
+  --color-on-primary-container: var(--color-red-90);
+  --color-inverse-primary: var(--color-red-40);
+  color-scheme: dark;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--color-surface);
+  color: var(--color-on-surface);
+  font-family: var(--font-family-sans);
+  font-size: var(--typography-body-large-font-size);
+  line-height: var(--typography-body-large-line-height);
+}
+
+main {
+  flex: 1;
+}
+
+a {
+  color: var(--color-primary);
+}
+
+.container {
+  width: min(100% - 2 * var(--spacing-200), 72rem);
+  margin-inline: auto;
+}

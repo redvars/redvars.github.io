@@ -1,0 +1,40 @@
+---
+import { site } from '../site';
+---
+
+<header class="container">
+  <a class="brand" href="/">
+    <img src="/red-panda.svg" alt="" width="40" height="40" />
+    <span>{site.name}</span>
+  </a>
+  <nav aria-label="Main">
+    <wc-button variant="text" href={site.peacockUrl}>Peacock</wc-button>
+    <wc-button variant="tonal" href={`mailto:${site.email}`}>Contact</wc-button>
+  </nav>
+</header>
+
+<style>
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--spacing-200);
+    padding-block: var(--spacing-200);
+  }
+
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-100);
+    color: var(--color-on-surface);
+    text-decoration: none;
+    font-size: var(--typography-title-large-font-size);
+    font-weight: var(--font-weight-bold);
+  }
+
+  nav {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-100);
+  }
+</style>

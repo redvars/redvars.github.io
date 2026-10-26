@@ -1,0 +1,14 @@
+# Build output
+dist/
+.astro/
+
+# Dependencies
+node_modules/
+
+# Logs and local files
+*.log
+.env
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
