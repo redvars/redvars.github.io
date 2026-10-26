@@ -3,17 +3,35 @@ import Base from '../layouts/Base.astro';
 import { site } from '../site';
 ---
 
-<Base title="Privacy" description="What redvars.com collects about its visitors: nothing of its own.">
+<Base title="Privacy" description="What redvars.com and its waitlist collect about visitors, and who else sees each visit.">
   <article class="container">
     <h1>Privacy</h1>
     <p class="updated">Last updated 26 October 2026</p>
 
     <p>
-      redvars.com is a static website. It sets no cookies, runs no analytics or advertising and has no forms, so it
-      collects no personal data of its own.
+      redvars.com is a static website with no accounts. It collects data about visitors in two ways: the waitlist form
+      keeps what you enter in it, and Google Analytics records visits.
     </p>
 
-    <p>Two services see each visit, because they deliver the site to your browser:</p>
+    <h2>Waitlist</h2>
+    <p>
+      Joining the waitlist opens a form in Microsoft Forms, which Microsoft runs for our Microsoft 365 account. It asks
+      for your email address and name and, if you choose, your company, your role and what you want to build. We use
+      your answers only to invite you
+      to Redvars and to write to you about it. To have them deleted, write to
+      <a href={`mailto:${site.email}`}>{site.email}</a>. Microsoft's
+      <a href="https://privacy.microsoft.com/privacystatement">privacy statement</a> covers how it handles the form.
+    </p>
+
+    <h2>Google Analytics</h2>
+    <p>
+      We use Google Analytics to count visits and see which pages people read. It sets cookies in your browser and
+      sends Google your IP address, details of your browser and device, and the pages you visit. Google's
+      <a href="https://policies.google.com/privacy">privacy policy</a> explains how it uses that data, and its
+      <a href="https://tools.google.com/dlpage/gaoptout">opt-out browser add-on</a> stops it.
+    </p>
+
+    <h2>Services that deliver the site</h2>
     <ul>
       <li>
         <a href="https://docs.github.com/en/pages/getting-started-with-github-pages/about-github-pages#data-collection">GitHub Pages</a>
@@ -42,6 +60,11 @@ import { site } from '../site';
   h1 {
     margin: 0;
     font-size: var(--typography-headline-large-font-size);
+  }
+
+  h2 {
+    margin-top: var(--spacing-400);
+    font-size: var(--typography-title-large-font-size);
   }
 
   .updated {

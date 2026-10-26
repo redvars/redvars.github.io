@@ -4,9 +4,9 @@ import Base from '../layouts/Base.astro';
 
 <Base title="Page not found">
   <section class="container">
-    <img src="/red-panda.svg" alt="" width="128" height="128" />
+    <img src="/logo.webp" alt="" width="96" height="96" />
     <h1>Page not found</h1>
-    <p>The red panda looked everywhere, but this page is not here.</p>
+    <p>This page does not exist, or it has moved.</p>
     <wc-button href="/">Go to the home page</wc-button>
   </section>
 </Base>
@@ -18,6 +18,10 @@ import Base from '../layouts/Base.astro';
     align-items: center;
     padding-block: var(--spacing-1000);
     text-align: center;
+  }
+
+  img {
+    border-radius: var(--shape-corner-large);
   }
 
   h1 {

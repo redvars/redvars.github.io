@@ -26,11 +26,11 @@ const pillars = [
       <p class="motto">{site.motto}</p>
       <p class="lede">{site.description}</p>
       <div class="actions">
-        <wc-button size="md" href={`mailto:${site.email}`}>Get in touch</wc-button>
-        <wc-button size="md" variant="outlined" href={site.peacockUrl}>Explore Peacock</wc-button>
+        <wc-button size="md" href="/waitlist/">Join the waitlist</wc-button>
+        <wc-button size="md" variant="outlined" href={`mailto:${site.email}`}>Get in touch</wc-button>
       </div>
     </div>
-    <img class="panda" src="/red-panda.svg" alt="The Redvars red panda" width="320" height="320" />
+    <img class="logo" src="/logo.webp" alt="The Redvars logo" width="256" height="256" />
   </section>
 
   <section class="container" aria-label="What Redvars does">
@@ -88,9 +88,10 @@ const pillars = [
     margin-top: var(--spacing-400);
   }
 
-  .panda {
-    width: clamp(10rem, 28vw, 20rem);
+  .logo {
+    width: clamp(8rem, 22vw, 16rem);
     height: auto;
+    border-radius: var(--shape-corner-extra-large);
   }
 
   .pillars {
@@ -129,9 +130,8 @@ const pillars = [
       padding-block: var(--spacing-400);
     }
 
-    .panda {
-      order: -1;
-      width: 8rem;
+    .logo {
+      display: none;
     }
   }
 </style>

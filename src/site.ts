@@ -6,7 +6,6 @@ export const site = {
     description:
         'A unified, high-performance platform that simplifies and accelerates the engineering of secure, resilient, and enterprise-grade software from the core database layer to the user interface.',
     email: 'hello@redvars.com',
-    peacockUrl: 'https://peacock.redvars.com',
     githubUrl: 'https://github.com/redvars',
 };
 

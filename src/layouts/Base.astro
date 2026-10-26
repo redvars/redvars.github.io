@@ -6,6 +6,7 @@ import '@fontsource/noto-sans/700.css';
 import '../styles/global.css';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import GoogleAnalytics from '../components/GoogleAnalytics.astro';
 import { site, peacockAsset } from '../site';
 
 interface Props {
@@ -23,10 +24,12 @@ const canonicalUrl = new URL(Astro.url.pathname, Astro.site);
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    {import.meta.env.PROD && <GoogleAnalytics />}
     <title>{pageTitle}</title>
     <meta name="description" content={description} />
     <link rel="canonical" href={canonicalUrl} />
-    <link rel="icon" href="/red-panda.svg" type="image/svg+xml" />
+    <link rel="icon" href="/logo.webp" type="image/webp" />
+    <link rel="apple-touch-icon" href="/logo.webp" />
     <link rel="sitemap" href="/sitemap-index.xml" />
 
     <meta property="og:type" content="website" />

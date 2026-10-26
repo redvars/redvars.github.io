@@ -4,11 +4,10 @@ import { site } from '../site';
 
 <header class="container">
   <a class="brand" href="/">
-    <img src="/red-panda.svg" alt="" width="40" height="40" />
+    <img src="/logo.webp" alt="" width="40" height="40" />
     <span>{site.name}</span>
   </a>
   <nav aria-label="Main">
-    <wc-button variant="text" href={site.peacockUrl}>Peacock</wc-button>
     <wc-button variant="tonal" href={`mailto:${site.email}`}>Contact</wc-button>
   </nav>
 </header>
@@ -32,9 +31,7 @@ import { site } from '../site';
     font-weight: var(--font-weight-bold);
   }
 
-  nav {
-    display: flex;
-    align-items: center;
-    gap: var(--spacing-100);
+  .brand img {
+    border-radius: var(--shape-corner-small);
   }
 </style>

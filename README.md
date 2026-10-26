@@ -19,7 +19,8 @@ The dev server runs at http://localhost:4000. `npm run build` type-checks the si
 | `src/layouts/Base.astro` | The page shell: head, Peacock, fonts, header and footer |
 | `src/pages/` | One file per page |
 | `src/styles/global.css` | Page-wide styles; maps Peacock's primary colour to Redvars red |
-| `public/` | Files copied as they are, such as the red panda and `robots.txt` |
+| `public/` | Files copied as they are, such as the logo and `robots.txt` |
+| `src/components/GoogleAnalytics.astro` | The Google tag, loaded only in production builds |
 | `peacock-redirects.mjs` | The old Peacock paths, sent on to peacock.redvars.com |
 
 Peacock loads from its npm release on jsDelivr. To move to a new release, change `peacockVersion` in `src/site.ts`.
