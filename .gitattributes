@@ -1,0 +1,3 @@
+# The CLI's installers are served as they are checked out: bash needs LF, and CMD wants CRLF.
+public/install.sh text eol=lf
+public/install.cmd text eol=crlf
