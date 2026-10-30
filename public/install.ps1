@@ -3,10 +3,11 @@
 #   irm https://redvars.com/install.ps1 | iex
 #   & ([scriptblock]::Create((irm https://redvars.com/install.ps1))) preview    # or a version, such as 0.3.0
 #
-# Reads the version and the executable's SHA-256 from the store (v1/cli/<stable|preview|version>.txt
-# on https://store.redvars.com), downloads the executable from the store's GitHub release, checks the
-# digest, puts it in %USERPROFILE%\.local\bin, or in %ProgramFiles%\redvars from an elevated prompt
-# so that services can run it, and adds that folder to the user's (or the machine's) Path.
+# Reads the version and the download's SHA-256 from the store (v1/cli/<stable|preview|version>.txt
+# on https://store.redvars.com), downloads the executable, gzip-compressed, from the store's GitHub
+# release, checks the digest before it unpacks it, puts it in %USERPROFILE%\.local\bin, or in
+# %ProgramFiles%\redvars from an elevated prompt so that services can run it, and adds that folder to
+# the user's (or the machine's) Path.
 # `redvars upgrade` updates it and `redvars uninstall` removes it.
 #
 # PLATFORM_STORE_URL and PLATFORM_RELEASES_URL point it at a mirror of the store and its releases.
@@ -30,6 +31,18 @@ param(
     $content = (Invoke-WebRequest -UseBasicParsing -Uri $Url).Content
     if ($content -is [byte[]]) { return [Text.Encoding]::UTF8.GetString($content) }
     return $content
+  }
+
+  # Unpacks a gzip file with .NET's GZipStream, which Windows PowerShell 5.1 has.
+  function Expand-Gzip([string]$Path, [string]$Destination) {
+    $in = [IO.File]::OpenRead($Path)
+    try {
+      $gzip = New-Object IO.Compression.GZipStream($in, [IO.Compression.CompressionMode]::Decompress)
+      $out = [IO.File]::Create($Destination)
+      try { $gzip.CopyTo($out) } finally { $out.Dispose(); $gzip.Dispose() }
+    } finally {
+      $in.Dispose()
+    }
   }
 
   # Tells Explorer the Path changed, so terminals opened from now on see it.
@@ -95,13 +108,21 @@ public static extern IntPtr SendMessageTimeout(IntPtr hWnd, uint Msg, UIntPtr wP
     $exe = Join-Path $dir "redvars.exe"
 
     # Downloaded into the install folder, so the last steps are renames, even over a running redvars.exe.
+    # The store serves the executable gzip-compressed; releases before it did list the executable itself.
     $download = Join-Path $dir ".redvars-$version.download.exe"
+    $fetched = if ($file.EndsWith(".gz")) { "$download.gz" } else { $download }
     try {
       Write-Host "Downloading redvars $version for $($entry[0])"
-      try { Invoke-WebRequest -UseBasicParsing -Uri "$releases/$file" -OutFile $download }
+      try { Invoke-WebRequest -UseBasicParsing -Uri "$releases/$file" -OutFile $fetched }
       catch { Fail "could not download $releases/$file ($($_.Exception.Message))" }
-      $actual = (Get-FileHash -Algorithm SHA256 -LiteralPath $download).Hash.ToLowerInvariant()
+      # The digest is the download's, so nothing unchecked is unpacked.
+      $actual = (Get-FileHash -Algorithm SHA256 -LiteralPath $fetched).Hash.ToLowerInvariant()
       if ($actual -ne $digest) { Fail "the download's SHA-256 is $actual, not $digest as the store lists it; nothing was installed" }
+      if ($fetched -ne $download) {
+        try { Expand-Gzip $fetched $download }
+        catch { Fail "could not unpack $file ($($_.Exception.Message)); nothing was installed" }
+        Remove-Item -LiteralPath $fetched -Force
+      }
       $runs = try { $null = & $download --version; $LASTEXITCODE -eq 0 } catch { $false }
       if (-not $runs) { Fail "redvars $version does not run on this system; nothing was installed" }
 
@@ -115,7 +136,7 @@ public static extern IntPtr SendMessageTimeout(IntPtr hWnd, uint Msg, UIntPtr wP
       }
       Move-Item -LiteralPath $download -Destination $exe -Force
     } finally {
-      Remove-Item -LiteralPath $download -Force -ErrorAction SilentlyContinue
+      Remove-Item -LiteralPath $download, "$download.gz" -Force -ErrorAction SilentlyContinue
     }
     Write-Host "Installed redvars $version at $exe"
 
