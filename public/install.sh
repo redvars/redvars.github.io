@@ -4,10 +4,11 @@
 #   curl -fsSL https://redvars.com/install.sh | bash
 #   curl -fsSL https://redvars.com/install.sh | bash -s preview    # or a version, such as 0.3.0
 #
-# Reads the version and the executable's SHA-256 from the store (v1/cli/<stable|preview|version>.txt
-# on https://store.redvars.com), downloads the executable from the store's GitHub release, checks the
-# digest, and puts it in ~/.local/bin, or in /usr/local/bin when run as root, so that services can
-# run it. `redvars upgrade` updates it and `redvars uninstall` removes it.
+# Reads the version and the download's SHA-256 from the store (v1/cli/<stable|preview|version>.txt
+# on https://store.redvars.com), downloads the executable, gzip-compressed, from the store's GitHub
+# release, checks the digest before it unpacks it, and puts it in ~/.local/bin, or in /usr/local/bin
+# when run as root, so that services can run it. `redvars upgrade` updates it and `redvars uninstall`
+# removes it.
 #
 # PLATFORM_STORE_URL and PLATFORM_RELEASES_URL point it at a mirror of the store and its releases.
 
@@ -66,6 +67,12 @@ main() {
   if ! [[ "$digest" =~ ^[0-9a-f]{64}$ && "$file" =~ ^[A-Za-z0-9._-]+/[A-Za-z0-9._-]+$ ]]; then
     fail "the store's list for $target is not one this installer reads"
   fi
+  # The store serves the executable gzip-compressed; releases before it did list the executable itself.
+  local packed=false
+  case "$file" in *.gz) packed=true ;; esac
+  if [ "$packed" = true ]; then
+    command -v gzip >/dev/null 2>&1 || fail "needs gzip to unpack the download"
+  fi
 
   local dir
   if [ "$(id -u)" = 0 ]; then dir=/usr/local/bin; else dir="$HOME/.local/bin"; fi
@@ -73,13 +80,20 @@ main() {
 
   # Downloaded into the install folder, so the last step is a rename, even over a running redvars.
   download="$dir/.redvars-$version.download"
-  trap 'rm -f "$download"' EXIT
+  trap 'rm -f "$download" "$download.gz"' EXIT
+  local fetched="$download"
+  if [ "$packed" = true ]; then fetched="$download.gz"; fi
   echo "Downloading redvars $version for $os-$arch"
-  fetch "$releases/$file" >"$download" || fail "could not download $releases/$file"
+  fetch "$releases/$file" >"$fetched" || fail "could not download $releases/$file"
+  # The digest is the download's, so nothing unchecked is unpacked.
   local actual
-  actual="$(sha256 "$download")"
+  actual="$(sha256 "$fetched")"
   if [ "$actual" != "$digest" ]; then
     fail "the download's SHA-256 is $actual, not $digest as the store lists it; nothing was installed"
+  fi
+  if [ "$packed" = true ]; then
+    gzip -dc "$fetched" >"$download" || fail "could not unpack $file; nothing was installed"
+    rm -f "$fetched"
   fi
   chmod 755 "$download"
   "$download" --version >/dev/null 2>&1 || fail "redvars $version does not run on this system; nothing was installed"
