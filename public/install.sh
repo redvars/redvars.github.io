@@ -5,10 +5,10 @@
 #   curl -fsSL https://redvars.com/install.sh | bash -s preview    # or a version, such as 0.3.0
 #
 # Reads the version and the download's SHA-256 from the store (v1/cli/<stable|preview|version>.txt
-# on https://store.redvars.com), downloads the executable, gzip-compressed, from the store's GitHub
-# release, checks the digest before it unpacks it, and puts it in ~/.local/bin, or in /usr/local/bin
-# when run as root, so that services can run it. `redvars upgrade` updates it and `redvars uninstall`
-# removes it.
+# on https://store.redvars.com), downloads the executable, gzip-compressed, from the store's
+# releases (https://store.redvars.com/releases), checks the digest before it unpacks it, and puts it
+# in ~/.local/bin, or in /usr/local/bin when run as root, so that services can run it.
+# `redvars upgrade` updates it and `redvars uninstall` removes it.
 #
 # PLATFORM_STORE_URL and PLATFORM_RELEASES_URL point it at a mirror of the store and its releases.
 
@@ -24,7 +24,7 @@ main() {
     fail "the version is stable, preview or a version such as 0.3.0, not \"$target\""
   fi
   local store="${PLATFORM_STORE_URL:-https://store.redvars.com}"
-  local releases="${PLATFORM_RELEASES_URL:-https://github.com/redvars/store/releases/download}"
+  local releases="${PLATFORM_RELEASES_URL:-https://store.redvars.com/releases}"
   command -v curl >/dev/null 2>&1 || command -v wget >/dev/null 2>&1 || fail "needs curl or wget"
   command -v sha256sum >/dev/null 2>&1 || command -v shasum >/dev/null 2>&1 || fail "needs sha256sum or shasum to check the download"
 

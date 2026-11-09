@@ -4,10 +4,10 @@
 #   & ([scriptblock]::Create((irm https://redvars.com/install.ps1))) preview    # or a version, such as 0.3.0
 #
 # Reads the version and the download's SHA-256 from the store (v1/cli/<stable|preview|version>.txt
-# on https://store.redvars.com), downloads the executable, gzip-compressed, from the store's GitHub
-# release, checks the digest before it unpacks it, puts it in %USERPROFILE%\.local\bin, or in
-# %ProgramFiles%\redvars from an elevated prompt so that services can run it, and adds that folder to
-# the user's (or the machine's) Path.
+# on https://store.redvars.com), downloads the executable, gzip-compressed, from the store's
+# releases (https://store.redvars.com/releases), checks the digest before it unpacks it, puts it in
+# %USERPROFILE%\.local\bin, or in %ProgramFiles%\redvars from an elevated prompt so that services
+# can run it, and adds that folder to the user's (or the machine's) Path.
 # `redvars upgrade` updates it and `redvars uninstall` removes it.
 #
 # PLATFORM_STORE_URL and PLATFORM_RELEASES_URL point it at a mirror of the store and its releases.
@@ -62,8 +62,8 @@ public static extern IntPtr SendMessageTimeout(IntPtr hWnd, uint Msg, UIntPtr wP
       Fail "the version is stable, preview or a version such as 0.3.0, not `"$Target`""
     }
     $store = if ($env:PLATFORM_STORE_URL) { $env:PLATFORM_STORE_URL } else { "https://store.redvars.com" }
-    $releases = if ($env:PLATFORM_RELEASES_URL) { $env:PLATFORM_RELEASES_URL } else { "https://github.com/redvars/store/releases/download" }
-    # Windows PowerShell 5.1 may offer only TLS 1.0, which GitHub refuses.
+    $releases = if ($env:PLATFORM_RELEASES_URL) { $env:PLATFORM_RELEASES_URL } else { "https://store.redvars.com/releases" }
+    # Windows PowerShell 5.1 may offer only TLS 1.0, which today's servers refuse.
     [Net.ServicePointManager]::SecurityProtocol = [Net.ServicePointManager]::SecurityProtocol -bor [Net.SecurityProtocolType]::Tls12
 
     # An x64 PowerShell on an Arm PC reports AMD64 in PROCESSOR_ARCHITECTURE and the machine's in
